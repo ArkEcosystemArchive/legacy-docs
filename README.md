@@ -13,10 +13,11 @@ Also read blog post for more info : https://blog.ark.io/want-to-help-write-artic
 All the guides and content must be in markdown structure and format. Keep your folder structure organized (include assets folder where you will add images, keep the main markdown files on the root level of your folder, do not split the guide into more files).
 
 Please follow the general structure, and add your topics in between. The general structure must consist of:
-Introduction
-Before you begin section (with possible links to previous content)
-Your content (free to organize according to your preferences)
-Conclusion (with next steps links to other content, if available)
+
+- Introduction
+- Before you begin section (with possible links to previous content)
+- Your content (free to organize according to your preferences)
+- Conclusion (with next steps and links to other content, if available)
 
 ## How to submit new documentation or guide
 Fork the ARK docs repository. All of our guides are stored in the github.com/ARKEcosystem/docs repository. You will need to clone forked repository to your local computer. Check the project tasks, to see which guides are already in progress and what is still free. Please make sure your topic or guide is accepted first, before continuing work on it. After you are done with your work submit a pull-request with your content at https://github.com/ArkEcosystem/docs/pulls, we’ll review it and get back to you.
