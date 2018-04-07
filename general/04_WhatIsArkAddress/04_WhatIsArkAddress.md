@@ -8,6 +8,13 @@ Blockchain is a database where records are stored after a concensus processed by
 
 ## Schematic diagram
 
+```mermaid
+graph LR
+A[Passphrase] --> C{SHA 256} -->|seed| D{slice 0,21} --> E{base58_check} --> F(Address)
+B[Modifier]
+B -->|+| E 
+​```
+
 ## ARK are stored on address
 
 ## Dive more
