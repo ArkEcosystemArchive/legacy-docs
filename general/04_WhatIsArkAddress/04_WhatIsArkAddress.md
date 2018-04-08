@@ -4,7 +4,7 @@
 
 **Cryptography**
 
-In blockchain, an account is defined by the possibility to sign data using a `private key` and to provide a `public key` letting everyone check signature issued with the `private key`. It is a proof of ownership. Cryptography allow this kind of dual keys and ARK uses [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve with [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
+In blockchain, an account is defined by the possibility to sign data using a `private key` and to provide a `public key` letting everyone check signature issued with the `private key`. It is a proof of ownership. Cryptography allow this kind of dual keys and ARK uses [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
 
 ECDSA generates `private key` and `public key` from a unique 32-bytes-size `seed`. This `seed` is not very human readable so it is generated from something more handy&nbsp;: the `passphrase`.
 
@@ -85,15 +85,19 @@ Here is the table giving the address start char according to hexadecimal `modifi
 
 ## Dive more
 
+### Second passphrase
+
 ### Wallet and address
 
-### Cold address 
+### BIP39 security
 
-### BIP39
+Choosing 12 words randomly from the [2048 words](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md) available in BIP39 list gives&nbsp;:
 
-TODO&nbsp;: security of BIP39 passphrase
+<img src="https://latex.codecogs.com/svg.latex?\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}" title="\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}"/>
 
-### BIP32
+**5.2715379713014884e+39 combinaisons**
+
+### BIP32 HD wallets
 
 ## FAQ
 
