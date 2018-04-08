@@ -1,20 +1,16 @@
-# All you want to know about ARK address
+# What is ARK address
 
 ## Foreword
 
-Blockchain is a database where records are stored after a concensus processed by network nodes. The unitary element used in this process is a peer to peer transaction containing informations such as `vendorField`, `asset`, `amount` and `fee`. Because it is peer to peer, account needs to be identified and here comes the ARK address.
-
 **Cryptography**
 
-ARK uses SECP256k1 curve from [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm).
+In blockchain, an account is defined by the possibility to sign data using a `private key` and to provide a `public key` letting everyone check signature issued with the `private key`. It is a proof of ownership. Cryptography allow this kind of dual keys and ARK uses [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve with [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
 
-An account is defined by the possibility to sign data using a private key and to provide a public key letting everyone check signature issued with the private key. It is a proof of ownership.
-
-In ARK, transaction have to be signed before broadcast. ECDSA generates [private key/public key] pair from a unique 32-bytes `seed`. This `seed` is not something easy to handle so it is generated from something more human : the `passphrase`.
+ECDSA generates `private key` and `public key` from a unique 32-bytes `seed`. This `seed` is not very human readable so it is generated from something more handy&nbsp;: the `passphrase`.
 
 **Passphrase**
 
-Passphrase is a simple text. The more complex it is, the more it secures the account. In blockchain, passphrase are generaly made of twelve words according to [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). It is not mandatory since a `seed` can be generated from one single char...
+`passphrase` is a simple text. In blockchain, it is generaly made of twelve words according to [Bitcoin Improvement Protocol #39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (BIP39). It is not mandatory since a `seed` can be generated from one single char… But the more complex it is, the more it secures the account.
 
 ```python
 >>> import hashlib
@@ -26,37 +22,50 @@ Passphrase is a simple text. The more complex it is, the more it secures the acc
 '1be075706dd9f09c91b8506701ef88cac64b5c6a307b9b7ec83790bd8f2be130'
 ```
 
+**From passphrase to private and public keys**
+```mermaid
+graph LR
+    P(passphrase) --> S{SHA 256}
+    S -- "32-byte-size seed" --> T{<center>ECDSA<br/>SECP256k1</center>}
+    T --> P1(private key)
+    T --> P2(public key)
+style P fill:#ccf,stroke:#66f,stroke-width:4px
+style P1 fill:#fcc,stroke:#f66,stroke-width:4px
+style P2 fill:#fcc,stroke:#f66,stroke-width:4px
+```
+
 ## ARK address
 
-An address can store amount of ARK, it is a proof of existence in the blockchain. 
+Blockchain is a database where records are stored after a concensus proceeded by network nodes. The unitary element used in this process is an account to account transaction containing informations such as `vendorField`, `asset`, `amount` and `fee`. Account needs to be identified and here comes the `address`.
 
-### How it is generated
+**From public key to ARK address**
 
-Ark address is derived from the `passphrase` trough a complex flow:
+Ark `address` is derived from the `public key`.
 
 ```mermaid
 graph LR
-
-    P(passphrase) --> S{SHA 256}
-    S -- seed --> T{<center>ECDSA<br/>SECP256k1</center>}
-    T --> P1>private key]
-    T --> P2>public key]
-    R --> X{"slice(0,20)"}
+    P2(public key) --> R{RIPEMD 160}
+    R -- "20-byte-size seed" --> X{"slice(0,19)"}
     X --> O{+}
     M(modifier) --> O
-    O --> B{<center>BASE58<br/>enc_chk</center>}
-    B --> A("&#1126;ddress")
-    P2 --> R{RIPEMD 160}
-
-style M fill:#ccf,stroke:#66f,stroke-width:6px
-style P fill:#ccf,stroke:#66f,stroke-width:6px
-style A fill:#fcc,stroke:#f66,stroke-width:6px
+    O --> B{<center>BASE 58<br/>encode_check</center>}
+    B --> A(<center>address<center>)
+style M fill:#ccf,stroke:#66f,stroke-width:4px
+style P2 fill:#ccf,stroke:#66f,stroke-width:4px
+style A fill:#fcc,stroke:#f66,stroke-width:4px
 ```
 
-As we can see on the chart above, it is impossible to find `passphrase` from `ARK address`, even with brute force computation, because of the `slice` applied during the flow. `modifier` is a byte used to customize the address. It is usefull to diferenciate developpement network addresses from main network ones.
+As we can see on the chart above, it is impossible to find `passphrase` from `address`, even with brute force computation, because of the `slice` applied during the flow. `modifier` is a byte used to customize the `address`. It is usefull to differenciate networks.
+
+For example&nbsp;:
+ + On ARK mainnet `modifier` = `0x17` so ARK address starts with `A`
+ + On ARK devnet `modifier` = `0x1e` so DARK address starts with `D`
+ + On KAPU mainnet `modifier` = `0x2d` so KAPU address starts with `K`
+
+Here is the table giving the address start char according to hexadecimal `modifier` value&nbsp;:
 
 <table>
-<tr><th>hex</th><th>start with</th><th>hex</th><th>start with</th><th>hex</th><th>start with</th><th>hex</th><th>start with</th><th>hex</th><th>start with</th></tr>
+<tr><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th></tr>
 <tr><td>00</td><td>1</td>     <td>10</td><td>7</td>     <td>20</td><td>D or E</td><td>30</td><td>L</td>     <td>40</td><td>S or T</td></tr>
 <tr><td>01</td><td>Q or o</td><td>11</td><td>7 or 8</td><td>21</td><td>E</td>     <td>31</td><td>L or M</td><td>41</td><td>T</td></tr>
 <tr><td>02</td><td>o or 2</td><td>12</td><td>8</td>     <td>22</td><td>E or F</td><td>32</td><td>M</td>     <td>42</td><td>T</td></tr>
@@ -76,26 +85,36 @@ As we can see on the chart above, it is impossible to find `passphrase` from `AR
 </table>
 
 <table>
-<tr><th>hex</th><th>start with</th><th>hex</th><th>start with</th><th>hex</th><th>start with</th><th>hex</th><th>start with</th><th>hex</th><th>start with</th></tr>
+<tr><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th></tr>
 <tr><td>50</td><td>Z</td>     <td>60</td><td>f or g</td><td>70</td><td>n</td>     <td>80</td><td>t</td>     <td>90</td><td>z or 2</td></tr>
-<tr><td>51</td><td>Z</td>     <td>61</td><td>g</td>     <td>71</td><td>n</td>     <td>81</td><td>t or u</td><td>91</td><td>2</td></tr>
-<tr><td>52</td><td>Z or a</td><td>62</td><td>g</td>     <td>72</td><td>n or o</td><td>82</td><td>u</td>     <td>92</td><td>2</td></tr>
-<tr><td>53</td><td>a</td>     <td>63</td><td>g or h</td><td>73</td><td>o</td>     <td>83</td><td>u or v</td><td>93</td><td>2</td></tr>
-<tr><td>54</td><td>a or b</td><td>64</td><td>h</td>     <td>74</td><td>o or p</td><td>84</td><td>v</td>     <td>94</td><td>2</td></tr>
-<tr><td>55</td><td>b</td>     <td>65</td><td>h or i</td><td>75</td><td>p</td>     <td>85</td><td>v</td>     <td>95</td><td>2</td></tr>
-<tr><td>56</td><td>b or c</td><td>66</td><td>i</td>     <td>76</td><td>p</td>     <td>86</td><td>v or w</td><td>96</td><td>2</td></tr>
-<tr><td>57</td><td>c</td>     <td>67</td><td>i</td>     <td>77</td><td>p or q</td><td>87</td><td>w</td>     <td>97</td><td>2</td></tr>
-<tr><td>58</td><td>c</td>     <td>68</td><td>i or j</td><td>78</td><td>q</td>     <td>88</td><td>w or x</td><td>98</td><td>2</td></tr>
-<tr><td>59</td><td>c or d</td><td>69</td><td>j</td>     <td>79</td><td>q or r</td><td>89</td><td>x</td>     <td>99</td><td>2</td></tr>
-<tr><td>5a</td><td>d</td>     <td>6a</td><td>j or k</td><td>7a</td><td>r</td>     <td>8a</td><td>x</td>     <td>9a</td><td>2</td></tr>
-<tr><td>5b</td><td>d or e</td><td>6b</td><td>k</td>     <td>7b</td><td>r</td>     <td>8b</td><td>x or y</td><td>9b</td><td>2</td></tr>
-<tr><td>5c</td><td>e</td>     <td>6c</td><td>k</td>     <td>7c</td><td>r or s</td><td>8c</td><td>y</td>     <td>9c</td><td>2</td></tr>
-<tr><td>5d</td><td>e</td>     <td>6d</td><td>k or m</td><td>7d</td><td>s</td>     <td>8d</td><td>y or z</td><td>9d</td><td>2</td></tr>
-<tr><td>5e</td><td>e or f</td><td>6e</td><td>m</td>     <td>7e</td><td>s or t</td><td>8e</td><td>z</td>     <td>9e</td><td>2</td></tr>
-<tr><td>5f</td><td>f</td>     <td>6f</td><td>m or n</td><td>7f</td><td>t</td>     <td>8f</td><td>z</td>     <td>9f</td><td>...</td></tr>
+<tr><td>51</td><td>Z</td>     <td>61</td><td>g</td>     <td>71</td><td>n</td>     <td>81</td><td>t or u</td><td>&ge;91</td><td>2</td></tr>
+<tr><td>52</td><td>Z or a</td><td>62</td><td>g</td>     <td>72</td><td>n or o</td><td>82</td><td>u</td>     </tr>
+<tr><td>53</td><td>a</td>     <td>63</td><td>g or h</td><td>73</td><td>o</td>     <td>83</td><td>u or v</td></tr>
+<tr><td>54</td><td>a or b</td><td>64</td><td>h</td>     <td>74</td><td>o or p</td><td>84</td><td>v</td>     </tr>
+<tr><td>55</td><td>b</td>     <td>65</td><td>h or i</td><td>75</td><td>p</td>     <td>85</td><td>v</td>     </tr>
+<tr><td>56</td><td>b or c</td><td>66</td><td>i</td>     <td>76</td><td>p</td>     <td>86</td><td>v or w</td></tr>
+<tr><td>57</td><td>c</td>     <td>67</td><td>i</td>     <td>77</td><td>p or q</td><td>87</td><td>w</td>     </tr>
+<tr><td>58</td><td>c</td>     <td>68</td><td>i or j</td><td>78</td><td>q</td>     <td>88</td><td>w or x</td></tr>
+<tr><td>59</td><td>c or d</td><td>69</td><td>j</td>     <td>79</td><td>q or r</td><td>89</td><td>x</td>     </tr>
+<tr><td>5a</td><td>d</td>     <td>6a</td><td>j or k</td><td>7a</td><td>r</td>     <td>8a</td><td>x</td>     </tr>
+<tr><td>5b</td><td>d or e</td><td>6b</td><td>k</td>     <td>7b</td><td>r</td>     <td>8b</td><td>x or y</td></tr>
+<tr><td>5c</td><td>e</td>     <td>6c</td><td>k</td>     <td>7c</td><td>r or s</td><td>8c</td><td>y</td>     </tr>
+<tr><td>5d</td><td>e</td>     <td>6d</td><td>k or m</td><td>7d</td><td>s</td>     <td>8d</td><td>y or z</td></tr>
+<tr><td>5e</td><td>e or f</td><td>6e</td><td>m</td>     <td>7e</td><td>s or t</td><td>8e</td><td>z</td>     </tr>
+<tr><td>5f</td><td>f</td>     <td>6f</td><td>m or n</td><td>7f</td><td>t</td>     <td>8f</td><td>z</td>     </tr>
 </table>
 
 ## Dive more
+
+### Wallet and address
+
+### Cold address 
+
+### BIP39
+
+TODO&nbsp;: security of BIP39 passphrase
+
+### BIP32
 
 ## FAQ
 
