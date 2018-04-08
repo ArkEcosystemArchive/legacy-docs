@@ -6,7 +6,7 @@
 
 In blockchain, an account is defined by the possibility to sign data using a `private key` and to provide a `public key` letting everyone check signature issued with the `private key`. It is a proof of ownership. Cryptography allow this kind of dual keys and ARK uses [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve with [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
 
-ECDSA generates `private key` and `public key` from a unique 32-bytes `seed`. This `seed` is not very human readable so it is generated from something more handy&nbsp;: the `passphrase`.
+ECDSA generates `private key` and `public key` from a unique 32-bytes-size `seed`. This `seed` is not very human readable so it is generated from something more handy&nbsp;: the `passphrase`.
 
 **Passphrase**
 
@@ -45,45 +45,43 @@ For example&nbsp;:
 
 Here is the table giving the address start char according to hexadecimal `modifier` value&nbsp;:
 
-<table>
-<tr><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th></tr>
-<tr><td>00</td><td>1</td>     <td>10</td><td>7</td>     <td>20</td><td>D or E</td><td>30</td><td>L</td>     <td>40</td><td>S or T</td></tr>
-<tr><td>01</td><td>Q or o</td><td>11</td><td>7 or 8</td><td>21</td><td>E</td>     <td>31</td><td>L or M</td><td>41</td><td>T</td></tr>
-<tr><td>02</td><td>o or 2</td><td>12</td><td>8</td>     <td>22</td><td>E or F</td><td>32</td><td>M</td>     <td>42</td><td>T</td></tr>
-<tr><td>03</td><td>2</td>     <td>13</td><td>8 or 9</td><td>23</td><td>F</td>     <td>33</td><td>M</td>     <td>43</td><td>T or U</td></tr>
-<tr><td>04</td><td>2 or 3</td><td>14</td><td>9</td>     <td>24</td><td>F</td>     <td>34</td><td>M or N</td><td>44</td><td>U</td></tr>
-<tr><td>05</td><td>3</td>     <td>15</td><td>9</td>     <td>25</td><td>F or G</td><td>35</td><td>N</td>     <td>45</td><td>U or V</td></tr>
-<tr><td>06</td><td>3</td>     <td>16</td><td>9 or A</td><td>26</td><td>G</td>     <td>36</td><td>N or P</td><td>46</td><td>V</td></tr>
-<tr><td>07</td><td>3 or 4</td><td>17</td><td>A</td>     <td>27</td><td>G or H</td><td>37</td><td>P</td>     <td>47</td><td>V</td></tr>
-<tr><td>08</td><td>4</td>     <td>18</td><td>A or B</td><td>28</td><td>H</td>     <td>38</td><td>P</td>     <td>48</td><td>V or W</td></tr>
-<tr><td>09</td><td>4 or 5</td><td>19</td><td>B</td>     <td>29</td><td>H</td>     <td>39</td><td>P or Q</td><td>49</td><td>W</td></tr>
-<tr><td>0a</td><td>5</td>     <td>1a</td><td>B</td>     <td>2a</td><td>H or J</td><td>3a</td><td>Q</td>     <td>4a</td><td>W or X</td></tr>
-<tr><td>0b</td><td>5</td>     <td>1b</td><td>B or C</td><td>2b</td><td>J</td>     <td>3b</td><td>Q or R</td><td>4b</td><td>X</td></tr>
-<tr><td>0c</td><td>5 or 6</td><td>1c</td><td>C</td>     <td>2c</td><td>J or K</td><td>3c</td><td>R</td>     <td>4c</td><td>X</td></tr>
-<tr><td>0d</td><td>6</td>     <td>1d</td><td>C or D</td><td>2d</td><td>K</td>     <td>3d</td><td>R</td>     <td>4d</td><td>X or Y</td></tr>
-<tr><td>0e</td><td>6 or 7</td><td>1e</td><td>D</td>     <td>2e</td><td>K</td>     <td>3e</td><td>R or S</td><td>4e</td><td>Y</td></tr>
-<tr><td>0f</td><td>7</td>     <td>1f</td><td>D</td>     <td>2f</td><td>K or L</td><td>3f</td><td>S</td>     <td>4f</td><td>Y or Z</td></tr>
-</table>
+|hex|start char|hex|start char|hex|start char|hex|start char|hex|start char|
+|:-:|:--------:|:-:|:--------:|:-:|:--------:|:-:|:--------:|:-:|:--------:|
+|00 |1         |10 |7         |20 |D or E    |30 |L         |40 |S or T    |
+|01 |Q or o    |11 |7 or 8    |21 |E         |31 |L or M    |41 |T         |
+|02 |o or 2    |12 |8         |22 |E or F    |32 |M         |42 |T         |
+|03 |2         |13 |8 or 9    |23 |F         |33 |M         |43 |T or U    |
+|04 |2 or 3    |14 |9         |24 |F         |34 |M or N    |44 |U         |
+|05 |3         |15 |9         |25 |F or G    |35 |N         |45 |U or V    |
+|06 |3         |16 |9 or A    |26 |G         |36 |N or P    |46 |V         |
+|07 |3 or 4    |17 |A         |27 |G or H    |37 |P         |47 |V         |
+|08 |4         |18 |A or B    |28 |H         |38 |P         |48 |V or W    |
+|09 |4 or 5    |19 |B         |29 |H         |39 |P or Q    |49 |W         |
+|0a |5         |1a |B         |2a |H or J    |3a |Q         |4a |W or X    |
+|0b |5         |1b |B or C    |2b |J         |3b |Q or R    |4b |X         |
+|0c |5 or 6    |1c |C         |2c |J or K    |3c |R         |4c |X         |
+|0d |6         |1d |C or D    |2d |K         |3d |R         |4d |X or Y    |
+|0e |6 or 7    |1e |D         |2e |K         |3e |R or S    |4e |Y         |
+|0f |7         |1f |D         |2f |K or L    |3f |S         |4f |Y or Z    |
 
-<table>
-<tr><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th><th>hex</th><th>start char</th></tr>
-<tr><td>50</td><td>Z</td>     <td>60</td><td>f or g</td><td>70</td><td>n</td>     <td>80</td><td>t</td>     <td>90</td><td>z or 2</td></tr>
-<tr><td>51</td><td>Z</td>     <td>61</td><td>g</td>     <td>71</td><td>n</td>     <td>81</td><td>t or u</td><td>&ge;91</td><td>2</td></tr>
-<tr><td>52</td><td>Z or a</td><td>62</td><td>g</td>     <td>72</td><td>n or o</td><td>82</td><td>u</td>     </tr>
-<tr><td>53</td><td>a</td>     <td>63</td><td>g or h</td><td>73</td><td>o</td>     <td>83</td><td>u or v</td></tr>
-<tr><td>54</td><td>a or b</td><td>64</td><td>h</td>     <td>74</td><td>o or p</td><td>84</td><td>v</td>     </tr>
-<tr><td>55</td><td>b</td>     <td>65</td><td>h or i</td><td>75</td><td>p</td>     <td>85</td><td>v</td>     </tr>
-<tr><td>56</td><td>b or c</td><td>66</td><td>i</td>     <td>76</td><td>p</td>     <td>86</td><td>v or w</td></tr>
-<tr><td>57</td><td>c</td>     <td>67</td><td>i</td>     <td>77</td><td>p or q</td><td>87</td><td>w</td>     </tr>
-<tr><td>58</td><td>c</td>     <td>68</td><td>i or j</td><td>78</td><td>q</td>     <td>88</td><td>w or x</td></tr>
-<tr><td>59</td><td>c or d</td><td>69</td><td>j</td>     <td>79</td><td>q or r</td><td>89</td><td>x</td>     </tr>
-<tr><td>5a</td><td>d</td>     <td>6a</td><td>j or k</td><td>7a</td><td>r</td>     <td>8a</td><td>x</td>     </tr>
-<tr><td>5b</td><td>d or e</td><td>6b</td><td>k</td>     <td>7b</td><td>r</td>     <td>8b</td><td>x or y</td></tr>
-<tr><td>5c</td><td>e</td>     <td>6c</td><td>k</td>     <td>7c</td><td>r or s</td><td>8c</td><td>y</td>     </tr>
-<tr><td>5d</td><td>e</td>     <td>6d</td><td>k or m</td><td>7d</td><td>s</td>     <td>8d</td><td>y or z</td></tr>
-<tr><td>5e</td><td>e or f</td><td>6e</td><td>m</td>     <td>7e</td><td>s or t</td><td>8e</td><td>z</td>     </tr>
-<tr><td>5f</td><td>f</td>     <td>6f</td><td>m or n</td><td>7f</td><td>t</td>     <td>8f</td><td>z</td>     </tr>
-</table>
+|hex|start char|hex|start char|hex|start char|hex|start char|hex   |start char|
+|:-:|:--------:|:-:|:--------:|:-:|:--------:|:-:|:--------:|:----:|:--------:|
+|50 |Z         |60 |f or g    |70 |n         |80 |t         |90    |z or 2    |
+|51 |Z         |61 |g         |71 |n         |81 |t or u    |&ge;91|2         |
+|52 |Z or a    |62 |g         |72 |n or o    |82 |u         |
+|53 |a         |63 |g or h    |73 |o         |83 |u or v    |
+|54 |a or b    |64 |h         |74 |o or p    |84 |v         |
+|55 |b         |65 |h or i    |75 |p         |85 |v         |
+|56 |b or c    |66 |i         |76 |p         |86 |v or w    |
+|57 |c         |67 |i         |77 |p or q    |87 |w         |
+|58 |c         |68 |i or j    |78 |q         |88 |w or x    |
+|59 |c or d    |69 |j         |79 |q or r    |89 |x         |
+|5a |d         |6a |j or k    |7a |r         |8a |x         |
+|5b |d or e    |6b |k         |7b |r         |8b |x or y    |
+|5c |e         |6c |k         |7c |r or s    |8c |y         |
+|5d |e         |6d |k or m    |7d |s         |8d |y or z    |
+|5e |e or f    |6e |m         |7e |s or t    |8e |z         |
+|5f |f         |6f |m or n    |7f |t         |8f |z         |
 
 ## Dive more
 
