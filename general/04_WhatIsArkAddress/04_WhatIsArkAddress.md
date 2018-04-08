@@ -23,16 +23,8 @@ ECDSA generates `private key` and `public key` from a unique 32-bytes `seed`. Th
 ```
 
 **From passphrase to private and public keys**
-```mermaid
-graph LR
-    P(passphrase) --> S{SHA 256}
-    S -- "32-byte-size seed" --> T{<center>ECDSA<br/>SECP256k1</center>}
-    T --> P1(private key)
-    T --> P2(public key)
-style P fill:#ccf,stroke:#66f,stroke-width:4px
-style P1 fill:#fcc,stroke:#f66,stroke-width:4px
-style P2 fill:#fcc,stroke:#f66,stroke-width:4px
-```
+
+![Diagram 001](https://github.com/Moustikitos/docs/blob/master/assets/img/arkDiagram04-001.png)
 
 ## ARK address
 
@@ -42,18 +34,7 @@ Blockchain is a database where records are stored after a concensus proceeded by
 
 Ark `address` is derived from the `public key`.
 
-```mermaid
-graph LR
-    P2(public key) --> R{RIPEMD 160}
-    R -- "20-byte-size seed" --> X{"slice(0,19)"}
-    X --> O{+}
-    M(modifier) --> O
-    O --> B{<center>BASE 58<br/>encode_check</center>}
-    B --> A(<center>address<center>)
-style M fill:#ccf,stroke:#66f,stroke-width:4px
-style P2 fill:#ccf,stroke:#66f,stroke-width:4px
-style A fill:#fcc,stroke:#f66,stroke-width:4px
-```
+![Diagram 002](https://github.com/Moustikitos/docs/blob/master/assets/img/arkDiagram04-002.png)
 
 As we can see on the chart above, it is impossible to find `passphrase` from `address`, even with brute force computation, because of the `slice` applied during the flow. `modifier` is a byte used to customize the `address`. It is usefull to differenciate networks.
 
