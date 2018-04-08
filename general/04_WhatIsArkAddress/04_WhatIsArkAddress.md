@@ -4,13 +4,14 @@
 
 **Cryptography**
 
-In blockchain, an account is defined by the possibility to sign data using a `private key` and to provide a `public key` letting everyone check signature issued with the `private key`. It is a proof of ownership. Cryptography allow this kind of dual keys and ARK uses [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
+A blockchain account is defined by its `public key`. It allows everyone to verify that data is signed by the corresponding `private key`. This signature acts as proof of ownership. 
+Cryptography allows this kind of dual keys and ARK uses the [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from the [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
 
-ECDSA generates `private key` and `public key` from a unique 32-bytes-size `seed`. This `seed` is not very human readable so it is generated from something more handy&nbsp;: the `passphrase`.
+ECDSA generates the `private key` and the `public key` from a unique 32-bytes-size `seed`. This `seed` is not very human readable. Thus keys are generated from something more convenient &nbsp;: a `passphrase`.
 
 **Passphrase**
 
-`passphrase` is a simple text. In blockchain, it is generaly made of twelve words according to [Bitcoin Improvement Protocol #39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (BIP39). It is not mandatory since a `seed` can be generated from one single char… But the more complex it is, the more it secures the account.
+The `passphrase` is a simple text. It often consists of twelve words according to the [Bitcoin Improvement Protocol #39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (BIP39). Usage of the protocol is not mandatory as a `seed` can be generated from any text. A passphrase needs enough complexity and has to be random enough in order to be considered secure.
 
 ```python
 >>> import hashlib
@@ -22,21 +23,21 @@ ECDSA generates `private key` and `public key` from a unique 32-bytes-size `seed
 '1be075706dd9f09c91b8506701ef88cac64b5c6a307b9b7ec83790bd8f2be130'
 ```
 
-**From passphrase to private and public keys**
+**From a passphrase to private and public keys**
 
 ![Diagram 001](https://github.com/Moustikitos/docs/blob/master/assets/img/arkDiagram04-001.png)
 
 ## ARK address
 
-Blockchain is a database where records are stored after a concensus proceeded by network nodes. The unitary element used in this process is an account to account transaction containing informations such as `vendorField`, `asset`, `amount` and `fee`. Account needs to be identified and here comes the `address`.
+A blockchain is a database where records are stored according to a consensus mechanism executed by a network of nodes. The unitary element used in this process is an account to account transaction containing information such as `sender`, `recipient`, `amount` and `fee`. A sender and recipient account needs to be identifiable. This is made possible by an `address`.
 
-**From public key to ARK address**
+**From a public key to an ARK address**
 
-Ark `address` is derived from the `public key`.
+An Ark `address` is derived from the `public key`.
 
 ![Diagram 002](https://github.com/Moustikitos/docs/blob/master/assets/img/arkDiagram04-002.png)
 
-As we can see on the chart above, it is impossible to find `passphrase` from `address`, even with brute force computation, because of the `slice` applied during the flow. `modifier` is a byte used to customize the `address`. It is usefull to differenciate networks.
+As we can see on the chart above, it is impossible to derive a `passphrase` based on an `address`. Even brute force computation will not work. The main reason for this is the `slice` applied during the generation process. A `modifier` is a byte used to customize the `address`. It is useful to differentiate networks.
 
 For example&nbsp;:
  + On ARK mainnet `modifier` = `0x17` so ARK address starts with `A`
@@ -95,7 +96,7 @@ Choosing 12 words randomly from the [2048 words](https://github.com/bitcoin/bips
 
 <img src="https://latex.codecogs.com/svg.latex?\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}" title="\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}"/>
 
-**5.2715379713014884e+39 combinaisons**
+**5.2715379713014884e+39 combinations**
 
 ### BIP32 HD wallets
 
