@@ -51,6 +51,7 @@ Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/asse
 
 ### Top Menu Bar
 **ARK ICON:** This will take you back to the ARK explorer home page 
+
 **Drop Down Menu:** This contains the following Information 
 -    Home- This will take you back to the explorer home page 
 -    Top Wallets - This will show you the wallets, descending from high to low, that hold the most ARK.  From there you will be able to see their numerical ranking (in relation to total balance), wallet address, balance and the percentage of total supply they control.  Currently the ARK development team holds the largest percentage of ARK, which is used to pay for projects and developers to improve network functionality and other projects that bring value to the ARK community.   If you'd like to know more about ARK community projects visit their page. (INSERT LINK)
@@ -79,10 +80,19 @@ If you click on a delegates username you will be taken to delegates wallet adddr
 ![Block Explorer Overview](/assets/HEADER overview.png)
 Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/HEADER overview.png)
 
-The last three menu option are as follows 
-**Search Bar:** Here you can input any ARK wallet address, transaction or block ID to find detailed information about them.  For example, most users will use this to check the status of a transaction that they sent or are to receive.   If you were sending someone a transaction of 5 ARK, once you send the payment a transaction ID will be generated, and you will be able to forward that information to the recipient as both a validation of payment and a digital tracking ID as to its dispostion in the network.
-**Currency Pairing:** The currency symbol can be changed to reflect the live price of ARK to your national currency of choice. 
-**Day/Night Mode:** This is merely an aesthetic choice depending on the user and how they prefer the interface to look. 
+The last three menu option are as follows
+
+**Search Bar:** 
+
+Here you can input any ARK wallet address, transaction or block ID to find detailed information about them.  For example, most users will use this to check the status of a transaction that they sent or are to receive.   If you were sending someone a transaction of 5 ARK, once you send the payment a transaction ID will be generated, and you will be able to forward that information to the recipient as both a validation of payment and a digital tracking ID as to its dispostion in the network.
+
+**Currency Pairing:** 
+
+The currency symbol can be changed to reflect the live price of ARK to your national currency of choice. 
+
+**Day/Night Mode:** 
+
+This is merely an aesthetic choice depending on the user and how they prefer the interface to look. 
 it is important to note that there are few minor differences between the desktop and mobile versions of the explorer, although the vast majority of the experience is the same.  The most marked difference is a price graph on the home page of the block explorer.  This interactive graph allows you to see ARK price in relation to your chosen national currency  over day,week,month, quarter and year views.  The other two functionality differences are in the network information bare neare the top of the page.  
 
 With this information you can now take advantage of the full breadth of functionality contained within the ARK explorer.  While this may seem like a simple tool, this is a window into why cryptocurrencies are so powerful.  Block explorers help individuals like yourself to see that the blockchain is a permanent record of transactions so that trust can be placed in a trustless system. 
