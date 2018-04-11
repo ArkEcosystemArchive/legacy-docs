@@ -1,18 +1,20 @@
-#What is a block explorer?
+# What is a block explorer?
 
 If a Blockchain is a highway of transactional records, from the very first to the most current, a block explorer is your Hollywood tour bus; a guide to every aspect of that highway as you travel through it.  Most people when they use the block explorer are only doing so to confirm a transaction they have sent or are receiving, this however only taps into a tiny fraction of the power contained within the explorer. 
 Block explorers can give anyone access to all the information contained within that blockchain.  You can search every block ever created, see every transaction an address has conducted as well as a snapshot of the current status of that network in totality. 
 Every Blockchain uses has block explorer and ARK is no different; however we pride ourselves on making all our interfaces intuitive and easy to read for users at any level, from novice to advanced and our block explorer is an example of that committment.  
 Lets begin our journey into the ARK explorer, first looking at mobile functionality followed by the slightly more robust desktop experience.
-![Block Explorer Overview](/assets/Mobile Block Explorer Overview.png)
-Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/Mobile Block Explorer Overview.png)
+
+![Block Explorer Overview](https://github.com/ArkEcosystem/docs/blob/blkexpl/assets/img/MobileBlockExplorerOverview.png)
 When you first arrive at explorer.ark.io you will find the following information immediately available. 
 If you are using the desktop version of the ARK block explorer you will see a price graph on the home page.  This interactive graph allows you to see ARK price in relation to your chosen national currency  over day,week,month, quarter and year views.  
 
 ![Block Explorer Overview](/assets/Latest Transaction Overview.png)
 Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/Latest Transaction Overview.png)
 
-##Latest Transactions:  This will be a list of the most recent transactions that have been broadcast to the network.  Inside each transaction you will be able to find out the following information 
+### Latest Transactions:
+
+This will be a list of the most recent transactions that have been broadcast to the network.  Inside each transaction you will be able to find out the following information 
 -    **ID:** This will show the unique idnetification (ID) number for this transaction.  This can be used to prove to another party that this transaction was sent from an address to another address and approved by the network.  If you click on this ID you will be able to see how many confirmations it has received and most importantly what Block it was included in.  By being writing into a block it proves that the network has accepted it as a valid transaction and is forever written in to the ARK blockchain.
 -    **Timestamp:** This indicates the exact time that the transaction was broadcasted and accepted by the network.  
 -    **Sender:** This field shows the ARK wallet address that initiated the transaction, i.e. who is sending the transaction. 
@@ -23,7 +25,7 @@ Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/asse
 
 ![Block Explorer Overview](/assets/Latest Block Overview.png)
 Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/Latest Block Overview.png)
-##Latest Blocks: 
+### Latest Blocks: 
 -    **ID:** This will the show unique indentification (ID) for the Block that was forged. For more information on what blocks and are blockchain's please click here (INSERT LINK)
 -    **Height:** This section will show how far from the initial (genesis) block, the blockchain has progressed.  For example, if you are looking at a block with the height listed as 1000, this will indicate that this specific block is the 999th since the first (genesis) block. 
 -    **Timestamp:** This indicates the date and time the block was forged and written onto the ARK blockchain.
@@ -35,7 +37,8 @@ Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/asse
 ![Block Explorer Overview](/assets/Network Information.png)
 Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/Network Information.png)
 
-##Network Information: Across the top of the page you will also see a list of information about the current state of the network you are viewing. 
+### Network Information: 
+Across the top of the page you will also see a list of information about the current state of the network you are viewing. 
 -    **Height:**  This will show live, how many blocks have been created since the first (genesis) block when the ARK blockchain was created. 
 -    **ARK/Fiat:** This indicates the current price of ARK in your chosen national currency. This will often be auto set to the national currency of wherever you are connecting to the internet from.  For mobile users, in the upper right-hand corner you can, by clicking the currency icon, change this setting to the national currency of your choice.  
 -    **Supply:** This area shows the total supply of ARK currently exists.  Depending on the coin total supply can mean all the coins that will ever exist, however in ARK's case this number goes up over time with a set number of coins created every year.  In.  If you want to learn more about how ARK is created via forging and delegates please click cere (INSERTLINK) 
@@ -46,7 +49,7 @@ Desktop users will find this information not available on mobile devices.
 ![Block Explorer Overview](/assets/DROP DOWN.png)
 Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/DROP DOWN.png)
 
-##Top Menu Bar
+### Top Menu Bar
 **ARK ICON:** This will take you back to the ARK explorer home page 
 **Drop Down Menu:** This contains the following Information 
 -    Home- This will take you back to the explorer home page 
