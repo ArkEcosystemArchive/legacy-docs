@@ -1,27 +1,15 @@
-# What is ARK address
+# What is ARK address ?
 
 ## Foreword
 
-**Cryptography**
+**Cryptography behind blockchain technology**
 
 A blockchain account is defined by its `public key`. It allows everyone to verify that data is signed by the corresponding `private key`. This signature acts as proof of ownership. 
 Cryptography allows this kind of dual keys and ARK uses the [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from the [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
 
 ECDSA generates the `private key` and the `public key` from a unique 32-bytes-size `seed`. This `seed` is not very human readable. Thus keys are generated from something more convenient &nbsp;: a `passphrase`.
 
-**Passphrase**
-
 The `passphrase` is a simple text. It often consists of twelve words according to the [Bitcoin Improvement Protocol #39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (BIP39). Usage of the protocol is not mandatory as a `seed` can be generated from any text. A passphrase needs enough complexity and has to be random enough in order to be considered secure.
-
-```python
->>> import hashlib
->>> # seed generated from a single char
->>> hashlib.sha256("a".encode("utf-8")).hexdigest()
-'ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb'
->>> # seed generated from a simple passphrase
->>> hashlib.sha256("a stronger passphrase".encode("utf-8")).hexdigest()
-'1be075706dd9f09c91b8506701ef88cac64b5c6a307b9b7ec83790bd8f2be130'
-```
 
 **From a passphrase to private and public keys**
 
@@ -29,15 +17,17 @@ The `passphrase` is a simple text. It often consists of twelve words according t
 
 ## ARK address
 
-A blockchain is a database where records are stored according to a consensus mechanism executed by a network of nodes. The unitary element used in this process is an account to account transaction containing information such as `sender`, `recipient`, `amount` and `fee`. A sender and recipient account needs to be identifiable. This is made possible by an `address`.
+A blockchain is a database where records are stored according to a consensus mechanism executed by a network of nodes. The unitary element used in this process is an account to account transaction containing information such as `senderId`, `recipientId`, `amount` and `fee`. A sender and recipient account needs to be identifiable. This is made possible by an `address`. It is a proof of existence in the blockchain and informations such as token balance and transaction history are linked to it.
+
+The ARK address is like a bank account where only the owner of the `private key` can validate and broadcast transactions. It is very important to keep the `passphrase` safe.
 
 **From a public key to an ARK address**
 
-An Ark `address` is derived from the `public key`.
+Ark `address` is derived from the `public key`.
 
 ![Diagram 002](https://github.com/Moustikitos/docs/blob/master/assets/img/arkDiagram04-002.png)
 
-As we can see on the chart above, it is impossible to derive a `passphrase` based on an `address`. Even brute force computation will not work. The main reason for this is the `slice` applied during the generation process. A `modifier` is a byte used to customize the `address`. It is useful to differentiate networks.
+A `modifier` is a byte used to customize the `address`. It is useful to differentiate networks.
 
 For example&nbsp;:
  + On ARK mainnet `modifier` = `0x17` so ARK address starts with `A`
@@ -83,22 +73,4 @@ Here is the table giving the address start char according to hexadecimal `modifi
 |5d |e         |6d |k or m    |7d |s         |8d |y or z    |
 |5e |e or f    |6e |m         |7e |s or t    |8e |z         |
 |5f |f         |6f |m or n    |7f |t         |8f |z         |
-
-## Dive more
-
-### Second passphrase
-
-### Wallet and address
-
-### BIP39 security
-
-Choosing 12 words randomly from the [2048 words](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md) available in BIP39 list gives&nbsp;:
-
-<img src="https://latex.codecogs.com/svg.latex?\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}" title="\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}"/>
-
-**5.2715379713014884e+39 combinations**
-
-### BIP32 HD wallets
-
-## FAQ
 
