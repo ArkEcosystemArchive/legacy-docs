@@ -4,9 +4,9 @@
 
 **Cryptography behind blockchain technology**
 
-A blockchain account is defined by its address that is derived from a public key. It allows everyone to verify that data is signed by the corresponding private key. This signature acts as proof of ownership. 
-
 Public-key or asymmetric cryptography, is an encryption scheme that uses a public key and a private key. The public key is used to encrypt and the private key is used to decrypt.
+
+A blockchain account is defined by its address that is derived from a public key. It allows everyone to verify that data is signed by the corresponding private key. This signature acts as proof of ownership. 
 
 It is impossible to compute the private key from the public key. Because of this, public keys can be freely shared, allowing users an easy and convenient method for encrypting content and verifying digital signatures, and private keys can be kept secret, ensuring only the owners of the private keys can decrypt content and create digital signatures [1].
 
@@ -29,7 +29,7 @@ The passphrase is a written in simple readable text. It often consists of twelve
 |private key|`9b449f2ac4525b0116c7a78ce52387aab2ad6d928749cd26e60f2588efc5c01d`  |
 |address    |`AJZkkwhCjDG5AS9gZcNfKzTa3s1qwvD44r`                                |
 
-A blockchain is a distributed database where records are stored according to a consensus mechanism (secure protocol) executed by a network of nodes (Peer-To-Peer network). The unitary element used in this process is an account to account transaction containing information such as `senderId`, `recipientId`, `amount` and `fee`. A sender and recipient account needs to be identifiable. This is enabled by using an address. It is a proof of existence in the blockchain and informations such as token balance and transaction history are linked to it.
+A blockchain is a distributed database where records are stored according to a consensus mechanism (secure protocol) executed by a network of nodes (Peer-To-Peer network). The unitary element used in this process is an account to account transaction containing information such as `senderId`, `recipientId`, `amount` and `fee`. A sender and recipient account needs to be identifiable. This is enabled by using an address and information realted to token balance and transaction history are linked to it.
 
 The ARK address is like a bank account where only the owner of the private key can validate and broadcast transactions. It is very important to keep the passphrase safe.
 
