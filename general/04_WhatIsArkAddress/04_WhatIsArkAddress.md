@@ -4,12 +4,17 @@
 
 **Cryptography behind blockchain technology**
 
-A blockchain account is defined by its public key. It allows everyone to verify that data is signed by the corresponding private key. This signature acts as proof of ownership. 
-Cryptography allows this kind of dual keys and ARK uses the [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from the [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
+A blockchain account is defined by its address that is derived from a public key. It allows everyone to verify that data is signed by the corresponding private key. This signature acts as proof of ownership. 
 
-ECDSA generates the private key and the public key from a unique 32-bytes-size seed. This seed is not very human readable. Thus keys are generated from something more convenient&nbsp;: a passphrase.
+Public-key or asymmetric cryptography, is an encryption scheme that uses a public key and a private key. The public key is used to encrypt and the private key is used to decrypt.
 
-The passphrase is a simple text. It often consists of twelve words according to the [Bitcoin Improvement Protocol #39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (BIP39). Usage of the protocol is not mandatory as a seed can be generated from any text. A passphrase needs enough complexity and has to be random enough in order to be considered secure.
+It is impossible to compute the private key from the public key. Because of this, public keys can be freely shared, allowing users an easy and convenient method for encrypting content and verifying digital signatures, and private keys can be kept secret, ensuring only the owners of the private keys can decrypt content and create digital signatures [GlobalSign](https://www.globalsign.com/en/ssl-information-center/what-is-public-key-cryptography/).
+
+ARK uses the [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from the [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
+
+ECDSA generates the private key and the public key pair from a unique 32-bytes-size seed. As the seeds are not very human readable, we have the option to generate the seed from something more convenient&nbsp;: a passphrase.
+
+The passphrase is a written in simple readable text. It often consists of twelve words according to the [Bitcoin Improvement Protocol #39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (BIP39). The usage of the protocol is not mandatory as a seed can be generated from any kind text, but is recommended. A passphrase needs enough complexity and has to be random enough in order to be considered secure.
 
 **From a passphrase to private and public keys**
 
@@ -24,7 +29,7 @@ The passphrase is a simple text. It often consists of twelve words according to 
 |private key|`9b449f2ac4525b0116c7a78ce52387aab2ad6d928749cd26e60f2588efc5c01d`  |
 |address    |`AJZkkwhCjDG5AS9gZcNfKzTa3s1qwvD44r`                                |
 
-A blockchain is a database where records are stored according to a consensus mechanism executed by a network of nodes. The unitary element used in this process is an account to account transaction containing information such as `senderId`, `recipientId`, `amount` and `fee`. A sender and recipient account needs to be identifiable. This is made possible by an address. It is a proof of existence in the blockchain and informations such as token balance and transaction history are linked to it.
+A blockchain is a distributed database where records are stored according to a consensus mechanism (secure protocol) executed by a network of nodes (Peer-To-Peer network). The unitary element used in this process is an account to account transaction containing information such as `senderId`, `recipientId`, `amount` and `fee`. A sender and recipient account needs to be identifiable. This is enabled by using an address. It is a proof of existence in the blockchain and informations such as token balance and transaction history are linked to it.
 
 The ARK address is like a bank account where only the owner of the private key can validate and broadcast transactions. It is very important to keep the passphrase safe.
 
@@ -79,9 +84,9 @@ Here is the table giving the address start char according to hexadecimal modifie
 
 ## Ledger Nano S
 
-The best way to secure ARK address is to use a device that can sign transactions off the network. ARK team developped an app running on [Ledger Nano S](https://www.ledgerwallet.com/products/ledger-nano-s) allowing such a security.
+The best way to secure ARK address is to use a device that can sign transactions off the network. ARK team developed an application running on [Ledger Nano S](https://www.ledgerwallet.com/products/ledger-nano-s) hardware wallet allowing such a security.
 
-The Ledger Nano S device does not store tokens. It is a device that generates public and private keys from a master seed. Keys are issued from the seed using a derivation path. for Ark blockchain (and cloned ones) the derivation path is structured like this&nbsp;:
+The Ledger Nano S device does not store tokens. It is a device that generates public and private keys from a master seed. Keys are issued from the seed using the derivation path. For Ark blockchain (and cloned ones) the derivation path is structured like this&nbsp;:
 
 `44'\111'\<account index>'\0\<address number>`
 
@@ -98,3 +103,6 @@ Choosing 12 words randomly from the [2048 words](https://github.com/bitcoin/bips
 <img src="https://latex.codecogs.com/svg.latex?\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}" title="\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}"/>
 
 **5&nbsp;271&nbsp;537&nbsp;971&nbsp;301&nbsp;488&nbsp;476&nbsp;000&nbsp;309&nbsp;317&nbsp;528&nbsp;200&nbsp;000&nbsp;000 combinations**
+
+#### References
+1. WebSite GlobalSign, https://www.globalsign.com/en/ssl-information-center/what-is-public-key-cryptography/
