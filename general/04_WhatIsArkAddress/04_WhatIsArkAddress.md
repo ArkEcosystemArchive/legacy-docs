@@ -8,7 +8,7 @@ A blockchain account is defined by its address that is derived from a public key
 
 Public-key or asymmetric cryptography, is an encryption scheme that uses a public key and a private key. The public key is used to encrypt and the private key is used to decrypt.
 
-It is impossible to compute the private key from the public key. Because of this, public keys can be freely shared, allowing users an easy and convenient method for encrypting content and verifying digital signatures, and private keys can be kept secret, ensuring only the owners of the private keys can decrypt content and create digital signatures ([GlobalSign])(https://www.globalsign.com/en/ssl-information-center/what-is-public-key-cryptography/).
+It is impossible to compute the private key from the public key. Because of this, public keys can be freely shared, allowing users an easy and convenient method for encrypting content and verifying digital signatures, and private keys can be kept secret, ensuring only the owners of the private keys can decrypt content and create digital signatures-[GlobalSign](https://www.globalsign.com/en/ssl-information-center/what-is-public-key-cryptography/).
 
 ARK uses the [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from the [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
 
