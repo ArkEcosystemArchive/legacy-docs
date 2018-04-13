@@ -212,7 +212,8 @@ If everything went as planned we should now be able to choose the `L` option
 from the menu and see the transmission of block data across our node.
 
 If you see `New block received` in your log congratulations, you now have a working
-ARK node.
+ARK node. If not you may need to wait a couple minutes as the last few blocks sync that
+were not in the latest snapshot.
 
 If you need to go back and setup your delegate node you can do so by using option
 `5` in the Main Menu.
