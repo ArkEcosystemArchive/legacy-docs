@@ -109,7 +109,7 @@ usermod -a -G sudo username
 
 Type `exit` and press enter. This will disconnect you from your server.
 
-## Installing the ARK Node
+## Installing your ARK Node
 We're now ready to begin installing ARK. The initial install may take awhile
 and at times appear to not be doing anything. Please have patience and let the process
 finish.
@@ -121,22 +121,20 @@ In our example we created a user with the name `ark`. So we would login as follo
 ```
 ssh ark@ipaddress
 ```
-### Installing ARK Commander
-
-#### Download ARK Commander
-Download ARK Commander using `wget` or `curl`.
+### Download ARK Commander
 
 ```
 wget https://ark.io/ARKcommander.sh
 ```
 
-#### Make ARK Commander Executable
+### Make ARK Commander Executable
 Next we need to make the file we just downloaded executable by our user.
 ```
 chmod +x ARKcommander.sh
 ```
 
-Now run the file and begin ARK Node installation.
+### Run ARK Commander
+Now we'll run the file we just downloaded and begin our ARK Node installation.
 ```
 ./ARKcommander.sh
 ```
@@ -147,14 +145,83 @@ and press enter.
 
 <center>![ark_commander_login](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/ark_commander_login.png)</center>
 
-#### System Updates
+#### System Updates and Prerequisites
 The first time you run ARK Commander it is going to update your system and make sure
-you have the latest updates to required dependencies. Please be patient, as it says,
-it can take quite awhile.
+you have the latest updates to required dependencies.
 
 <center>![ark_commander_login](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/update_ark_commander.png)</center>
 
+<center>![prerequisites](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/prerequisites.png)</center>
+
+#### Reboot System
+Once updates and prerequisites installation has finished reboot your system by
+typing the following command and pressing enter.
+
+<center>![reboot warning](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/reboot_warning.png)</center>
+
+```
+sudo reboot
+```
+
+You will be disconnected from your server once again. Let's go ahead and reconnect
+using our user we created.
+
+```
+ssh ark@ipaddress
+```
 
 
+### Run ARK Commander
+After reconnecting to the server go ahead and run ARK Commander
+```
+./ARKcommander.sh
+```
 
+### Install ARK Node
+Select option `1` to install ARK Node. Again, don't interup this process as it
+will take a few minutes to install the required packages.
 
+<center>![ark node installation](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/install_ark_node.png)</center>
+
+### Setting up a Delegate Node
+After ARK Node installs you will be asked if you want to setup your secret key.
+If you're just setting up a relay node, or not ready to setup your delegate node
+at this time select `N`. Otherwise select `Y` and enter your delegate node secret
+key now.
+
+<center>![setup secret](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/setup_secret.png)</center>
+
+### Restoring your Database from a Snapshot
+Letting the ARK blockchain download from peers can take a long time. We have
+the ability to download a snapshot of the blockchain and import it right into our
+database. Let's go ahead and do that now.
+
+Select option `4` from the menu and press enter. When asked if you would like to
+download the latest snapshot select `Y` and press enter.
+
+<center>![snapshot](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/snapshot.png)</center>
+
+Once the download finishes you will be asked if you would like to restore from
+this snapshot. Select `Y` and press enter. If everything goes as planned you should
+see the following once the restoration is complete. Press enter and return to the main menu.
+
+<center>![snapshot restored](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/snapshot_restored.png)</center>
+
+### Checking to See if Everything is Working
+If everything went as planned we should now be able to choose the `L` option
+from the menu and see the transmission of block data across our node.
+
+If you see `New block received` in your log congratulations, you now have a working
+ARK node.
+
+If you need to go back and setup your delegate node you can do so by using option
+`5` in the Main Menu.
+
+## What's Next?
+Great! you have a working node, but now you should really think about securing it.
+It is especially important if you plan on using this as your delegate node.
+
+In our next section we'll discuss making sure your ARK node is as secure as possible.
+As the ARK network grows, hacking attempts on delegate and relay nodes will become
+more prevalent. Defending against DDOS and other various attacks is extremely
+important in securing the network.
