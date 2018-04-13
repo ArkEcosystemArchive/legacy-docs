@@ -4,12 +4,12 @@
 
 **Cryptography behind blockchain technology**
 
-A blockchain account is defined by its `public key`. It allows everyone to verify that data is signed by the corresponding `private key`. This signature acts as proof of ownership. 
+A blockchain account is defined by its public key. It allows everyone to verify that data is signed by the corresponding private key. This signature acts as proof of ownership. 
 Cryptography allows this kind of dual keys and ARK uses the [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from the [eliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
 
-ECDSA generates the `private key` and the `public key` from a unique 32-bytes-size `seed`. This `seed` is not very human readable. Thus keys are generated from something more convenient &nbsp;: a `passphrase`.
+ECDSA generates the private key and the public key from a unique 32-bytes-size seed. This seed is not very human readable. Thus keys are generated from something more convenient&nbsp;: a passphrase.
 
-The `passphrase` is a simple text. It often consists of twelve words according to the [Bitcoin Improvement Protocol #39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (BIP39). Usage of the protocol is not mandatory as a `seed` can be generated from any text. A passphrase needs enough complexity and has to be random enough in order to be considered secure.
+The passphrase is a simple text. It often consists of twelve words according to the [Bitcoin Improvement Protocol #39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (BIP39). Usage of the protocol is not mandatory as a seed can be generated from any text. A passphrase needs enough complexity and has to be random enough in order to be considered secure.
 
 **From a passphrase to private and public keys**
 
@@ -17,24 +17,27 @@ The `passphrase` is a simple text. It often consists of twelve words according t
 
 ## ARK address
 
-A blockchain is a database where records are stored according to a consensus mechanism executed by a network of nodes. The unitary element used in this process is an account to account transaction containing information such as `senderId`, `recipientId`, `amount` and `fee`. A sender and recipient account needs to be identifiable. This is made possible by an `address`. It is a proof of existence in the blockchain and informations such as token balance and transaction history are linked to it.
+|passphrase |`simple secret`                                                     |
+|-----------|--------------------------------------------------------------------|
+|seed       |`b6af972cfcff450addadfecccc1d222de0f28c92c349a6bcbba4d4267dd3199c`  |
+|public key |`036f9f2b56926a8c28c3bcef02811b6b3338c4d67b06eb7a9e90bda0fb3eacedee`|
+|private key|`9b449f2ac4525b0116c7a78ce52387aab2ad6d928749cd26e60f2588efc5c01d`  |
+|address    |`AJZkkwhCjDG5AS9gZcNfKzTa3s1qwvD44r`                                |
 
-The ARK address is like a bank account where only the owner of the `private key` can validate and broadcast transactions. It is very important to keep the `passphrase` safe.
+A blockchain is a database where records are stored according to a consensus mechanism executed by a network of nodes. The unitary element used in this process is an account to account transaction containing information such as `senderId`, `recipientId`, `amount` and `fee`. A sender and recipient account needs to be identifiable. This is made possible by an address. It is a proof of existence in the blockchain and informations such as token balance and transaction history are linked to it.
+
+The ARK address is like a bank account where only the owner of the private key can validate and broadcast transactions. It is very important to keep the passphrase safe.
 
 **From a public key to an ARK address**
 
-Ark `address` is derived from the `public key`.
-
 ![Diagram 002](https://github.com/Moustikitos/docs/blob/master/assets/img/arkDiagram04-002.png)
 
-A `modifier` is a byte used to customize the `address`. It is useful to differentiate networks.
+A modifier is a byte used to customze the address. It is useful to differentiate networks&nbsp;:
+ + On ARK mainnet modifier = `0x17` so ARK address starts with `A`
+ + On ARK devnet modifier = `0x1e` so DARK address starts with `D`
+ + On KAPU mainnet modifier = `0x2d` so KAPU address starts with `K`
 
-For example&nbsp;:
- + On ARK mainnet `modifier` = `0x17` so ARK address starts with `A`
- + On ARK devnet `modifier` = `0x1e` so DARK address starts with `D`
- + On KAPU mainnet `modifier` = `0x2d` so KAPU address starts with `K`
-
-Here is the table giving the address start char according to hexadecimal `modifier` value&nbsp;:
+Here is the table giving the address start char according to hexadecimal modifier value&nbsp;:
 
 |hex|start char|hex|start char|hex|start char|hex|start char|hex|start char|
 |:-:|:--------:|:-:|:--------:|:-:|:--------:|:-:|:--------:|:-:|:--------:|
@@ -74,3 +77,24 @@ Here is the table giving the address start char according to hexadecimal `modifi
 |5e |e or f    |6e |m         |7e |s or t    |8e |z         |
 |5f |f         |6f |m or n    |7f |t         |8f |z         |
 
+## Ledger Nano S
+
+The best way to secure ARK address is to use a device that can sign transactions off the network. ARK team developped an app running on [Ledger Nano S](https://www.ledgerwallet.com/products/ledger-nano-s) allowing such a security.
+
+The Ledger Nano S device does not store tokens. It is a device that generates public and private keys from a master seed. Keys are issued from the seed using a derivation path. for Ark blockchain (and cloned ones) the derivation path is structured like this&nbsp;:
+
+`44'\111'\<account index>'\0\<address number>`
+
+So the derivation path of address #1 from account #1 is&nbsp;: 
+
+`44'\111'\0'\0\0`
+
+[Read more about HD wallets](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki)
+
+### BIP39 account possibilities
+
+Choosing 12 words randomly from the [2048 words](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md) available in BIP39 list gives&nbsp;:
+
+<img src="https://latex.codecogs.com/svg.latex?\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}" title="\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}"/>
+
+**5&nbsp;271&nbsp;537&nbsp;971&nbsp;301&nbsp;488&nbsp;476&nbsp;000&nbsp;309&nbsp;317&nbsp;528&nbsp;200&nbsp;000&nbsp;000 combinations**
