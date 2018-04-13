@@ -1,4 +1,4 @@
-# What is ARK address ?
+# What is ARK address?
 
 ## Foreword
 
