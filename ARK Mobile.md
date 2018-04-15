@@ -87,10 +87,12 @@ If you hit the triple bar on the top left corner, you get numerous options where
  - Contacts
   - You are able to save contacts by name and Ark Address for quicker sending/receiving 
  - Sign Out
-<center>![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet13.png)
-![Ark Mobile Wallet Settings](/assets/img/arkWallet12.png)</center>
+<center>![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet13.png)</center>
+<center>![Ark Mobile Wallet Settings](/assets/img/arkWallet12.png)</center>
 If you want to view an existing wallet and the transaction history, you will need to touch the rectangle(s) right below the 'Total Balance' text.
+
 <center>![Ark Mobile Wallet Balance](/assets/img/arkWallet14.png)</center>
+
 Once inside a wallet, you are able to view incoming and receiving transaction history, the public address, the Ark wallet balance and by touching the vertical ellipsis you are able to:
 - Register a Delegate
 - Vote for a Delegate
