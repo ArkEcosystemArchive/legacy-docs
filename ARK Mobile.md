@@ -23,9 +23,8 @@ Once you load the application you will be met with this screen:
 <center>![Image of Ark Welcome Screen](/assets/img/arkWallet.png)</center>
 
 You may skip the introduction or continue by hitting Next on the bottom right hand corner of your screen. If you hit Next, you will see the following screens:
-<center>![Second image of Ark Welcome Screen](/assets/img/arkWallet2.png)</center>
-
-<center>![Third image of Ark Welcome Screen](/assets/img/arkWallet3.png)</center>
+<center>![Second image of Ark Welcome Screen](/assets/img/arkWallet2.png)
+![Third image of Ark Welcome Screen](/assets/img/arkWallet3.png)</center>
 When we've either skipped or proceeded, you will be asked to create your profile:
 
 <center>![Create a Profile on Ark Mobile](/assets/img/arkWallet4.png)</center>
