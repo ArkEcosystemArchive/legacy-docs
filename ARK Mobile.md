@@ -50,8 +50,10 @@ After hitting '*Next*', you will be asked to input 3 of the words in your Secret
 If you choose to import a wallet and follow the prompts, you will have two options to import your wallet: QR Code or by putting in your secret passphrase or address manually. 
 **If you decide to copy and paste your information into the app, make sure your device does not add a space after your passphrase or address. If the space is there, it will create a new wallet and not import your own wallet**.
 
-The application may place you on a screen that shows your transactions, your public address and the amount of ARK tokens in your wallet. 
+The application may place you on a screen that shows your transactions, your public address and the amount of ARK tokens in your wallet.
+
 <center>![Ark Mobile Wallet Transactions](/assets/img/arkWallet10.png)</center>
+
 If you hit the triple bar on the top left corner, you get numerous options where you are able to view and select:
 - Main wallet balance screen
 - Vote for delegates
