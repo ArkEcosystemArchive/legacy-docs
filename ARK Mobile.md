@@ -23,14 +23,17 @@ Once you load the application you will be met with this screen:
 <center>![Image of Ark Welcome Screen](/assets/img/arkWallet.png)</center>
 
 You may skip the introduction or continue by hitting Next on the bottom right hand corner of your screen. If you hit Next, you will see the following screens:
-<center>![Second image of Ark Welcome Screen](/assets/img/arkWallet2.png)
-![Third image of Ark Welcome Screen](/assets/img/arkWallet3.png)</center>
+<center>![Second image of Ark Welcome Screen](/assets/img/arkWallet2.png)</center>
+<center>![Third image of Ark Welcome Screen](/assets/img/arkWallet3.png)</center>
 When we've either skipped or proceeded, you will be asked to create your profile:
+
 <center>![Create a Profile on Ark Mobile](/assets/img/arkWallet4.png)</center>
 After you hit the '*Create A Profile*'' button, you will be asked to create a 6 digit PIN and then confirm the PIN. **You will need to remember this PIN**.
 <center>![Create a Pin on Ark Mobile](/assets/img/arkWallet5.png)</center>
+
 You will be asked to create a name for your profile. You can create one for the Mainnet or the Devnet, which is the Development Network. For this guide we will be on the Mainnet.
 <center>![Create a Name on Ark Mobile](/assets/img/arkWallet6.png)</center>
+
 Once you've placed your name, you can sign in by touching onto the profile you created and by entering in the PIN you created earlier. From here, you can follow the prompts and click on the button that's displayed on the screen to import or create a wallet. If you are importing a wallet, click [here](#importWallet). If you are creating a new wallet, continue reading. 
 
 ## Creating a wallet <a id="createWallet"></a>
