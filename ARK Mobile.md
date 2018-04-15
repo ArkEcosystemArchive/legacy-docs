@@ -28,7 +28,7 @@ You may skip the introduction or continue by hitting Next on the bottom right ha
 When we've either skipped or proceeded, you will be asked to create your profile:
 
 <center>![Create a Profile on Ark Mobile](/assets/img/arkWallet4.png)</center>
-After you hit the '*Create A Profile*'' button, you will be asked to create a 6 digit PIN and then confirm the PIN. **You will need to remember this PIN**.
+After you hit the '*Create A Profile*' button, you will be asked to create a 6 digit PIN and then confirm the PIN. **You will need to remember this PIN**.
 <center>![Create a Pin on Ark Mobile](/assets/img/arkWallet5.png)</center>
 
 You will be asked to create a name for your profile. You can create one for the Mainnet or the Devnet, which is the Development Network. For this guide we will be on the Mainnet.
