@@ -13,14 +13,14 @@ Now for iOS devices, you will need to download Cydia Impactor and the .ipa file 
 We can download the .ipa [here!](https://github.com/vmunich/ark-mobile/blob/master/Ark%20Mobile%201.1%202018-04-09%2011-10-58.ipa) Once we have downloaded the Impactor, make sure the iOS device is recognized by your computer. **If you're on OS X**, open the Cydia Impactor Download and you can double click on Impactor. **If you're on Windows**, extract the zip folder and run the application in the folder that is created. 
 
 Once Cydia Impactor opens it should show your iOS device, if it doesn't make sure the device is plugged in and the screen is unlocked. Once it loads you will want to click **Device -> Install Package**.
-<center>![Image of Impactor](https://github.com/ArkEcosystem/docs/blob/master/assets/img/impactor.png)</center>
+<center>![Image of Impactor](/assets/img/impactor.png)</center>
 
 Find and choose the Ark Mobile .ipa file we downloaded earlier. Impactor will prompt you to type in your Apple ID and password so it may install the application. If you have 2 Factor Authentication enabled, you are going to need to login [here](https://appleid.apple.com/#!&page=signin). Navigate to the Security section so you may create an app-specific password. Once the password has been generated, use it on Impactor to install the wallet on your device. Impactor will now install the application. 
 
 ## Starting the Ark Wallet <a id="startWallet"></a>
 
-Once you load the application you will be met with this screen -
-<center>![Image of Ark Welcome Screen](/assets/img/arkWallet.png)</center> 
+Once you load the application you will be met with this screen:
+<center>![Image of Ark Welcome Screen](/assets/img/arkWallet.png)</center>
 You may skip the introduction or continue by hitting Next on the bottom right hand corner of your screen. If you hit Next, you will see the following screens:
 <center>![Second image of Ark Welcome Screen](/assets/img/arkWallet2.png)
 ![Third image of Ark Welcome Screen](/assets/img/arkWallet3.png)</center>
