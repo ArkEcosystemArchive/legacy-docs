@@ -22,14 +22,14 @@ Find and choose the Ark Mobile .ipa file we downloaded earlier. Impactor will pr
 Once you load the application you will be met with this screen -
 <center>![Image of Ark Welcome Screen](/assets/img/arkWallet.png)</center> 
 You may skip the introduction or continue by hitting Next on the bottom right hand corner of your screen. If you hit Next, you will see the following screens:
-<center>![Second image of Ark Welcome Screen](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet2.png)
-![Third image of Ark Welcome Screen](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet3.png)</center>
+<center>![Second image of Ark Welcome Screen](/assets/img/arkWallet2.png)
+![Third image of Ark Welcome Screen](/assets/img/arkWallet3.png)</center>
 When we've either skipped or proceeded, you will be asked to create your profile:
-<center>![Create a Profile on Ark Mobile](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet4.png)</center>
+<center>![Create a Profile on Ark Mobile](/assets/img/arkWallet4.png)</center>
 After you hit the '*Create A Profile*'' button, you will be asked to create a 6 digit PIN and then confirm the PIN. **You will need to remember this PIN**.
-<center>![Create a Pin on Ark Mobile](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet5.png)</center>
+<center>![Create a Pin on Ark Mobile](/assets/img/arkWallet5.png)</center>
 You will be asked to create a name for your profile. You can create one for the Mainnet or the Devnet, which is the Development Network. For this guide we will be on the Mainnet.
-<center>![Create a Name on Ark Mobile](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet6.png)</center>
+<center>![Create a Name on Ark Mobile](/assets/img/arkWallet6.png)</center>
 Once you've placed your name, you can sign in by touching onto the profile you created and by entering in the PIN you created earlier. From here, you can follow the prompts and click on the button that's displayed on the screen to import or create a wallet. If you are importing a wallet, click [here](#importWallet). If you are creating a new wallet, continue reading. 
 
 ## Creating a wallet <a id="createWallet"></a>
@@ -37,8 +37,8 @@ Once you've placed your name, you can sign in by touching onto the profile you c
 If you choose to generate a wallet and follow the prompts you will be shown your shareable Public Address and your Secret Passphrase. **Keep your secret passphrase safe and secure**, without it you will not be able to restore your wallet, send transactions, and you will **lose all of your ARK tokens**.
 
 After hitting '*Next*', you will be asked to input 3 of the words in your Secret Passphrase. Once you've placed the appropriate numbered word into its field, you will be asked to put in your PIN again. The next screen will show you the amount of ARK tokens you have in your wallets, your shareable Public Address, the Market Value of ARK in USD, Satoshi's, and the 24 hour Change.
-<center>![Ark Mobile Wallet Passphrase](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet8.png)
-![Ark Mobile Wallet Balance](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet9.png)</center>
+<center>![Ark Mobile Wallet Passphrase](/assets/img/arkWallet8.png)
+![Ark Mobile Wallet Balance](/assets/img/arkWallet9.png)</center>
 
 ## Importing a wallet <a id="importWallet"></a>
 
@@ -46,7 +46,7 @@ If you choose to import a wallet and follow the prompts, you will have two optio
 **If you decide to copy and paste your information into the app, make sure your device does not add a space after your passphrase or address. If the space is there, it will create a new wallet and not import your own wallet**.
 
 The application may place you on a screen that shows your transactions, your public address and the amount of ARK tokens in your wallet. 
-<center>![Ark Mobile Wallet Transactions](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet10.png)</center>
+<center>![Ark Mobile Wallet Transactions](/assets/img/arkWallet10.png)</center>
 If you hit the triple bar on the top left corner, you get numerous options where you are able to view and select:
 - Main wallet balance screen
 - Vote for delegates
@@ -61,8 +61,8 @@ If you hit the triple bar on the top left corner, you get numerous options where
  - Contacts
   - You are able to save contacts by name and Ark Address for quicker sending/receiving 
  - Sign Out
-<center>![Ark Mobile Wallet Triple Bar](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet11.png)
-![Ark Mobile Wallet Settings](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet12.png)</center>
+<center>![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet11.png)
+![Ark Mobile Wallet Settings](/assets/img/arkWallet12.png)</center>
 
 ## The Ark Wallet <a id="theWallet"></a>
 
@@ -82,17 +82,17 @@ If you hit the triple bar on the top left corner, you get numerous options where
  - Contacts
   - You are able to save contacts by name and Ark Address for quicker sending/receiving 
  - Sign Out
-<center>![Ark Mobile Wallet Triple Bar](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet13.png)
-![Ark Mobile Wallet Settings](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet12.png)</center>
+<center>![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet13.png)
+![Ark Mobile Wallet Settings](/assets/img/arkWallet12.png)</center>
 If you want to view an existing wallet and the transaction history, you will need to touch the rectangle(s) right below the 'Total Balance' text.
-<center>![Ark Mobile Wallet Balance](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet14.png)</center>
+<center>![Ark Mobile Wallet Balance](/assets/img/arkWallet14.png)</center>
 Once inside a wallet, you are able to view incoming and receiving transaction history, the public address, the Ark wallet balance and by touching the vertical ellipsis you are able to:
 - Register a Delegate
 - Vote for a Delegate
 - Rename your wallet
 - Backup your Wallet
 - Delete your wallet
-<center>![Ark Mobile Wallet Subsettings](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet15.png)</center>
+<center>![Ark Mobile Wallet Subsettings](/assets/img/arkWallet15.png)</center>
 
 ## Conclusion <a id="theConclusion"></a>
 
