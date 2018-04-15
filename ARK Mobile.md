@@ -20,7 +20,7 @@ Find and choose the Ark Mobile .ipa file we downloaded earlier. Impactor will pr
 ## Starting the Ark Wallet <a id="startWallet"></a>
 
 Once you load the application you will be met with this screen -
-<center>![Image of Ark Welcome Screen](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet.png)</center> 
+<center>[Image of Ark Welcome Screen](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet.png)</center> 
 You may skip the introduction or continue by hitting Next on the bottom right hand corner of your screen. If you hit Next, you will see the following screens:
 <center>![Second image of Ark Welcome Screen](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet2.png)
 ![Third image of Ark Welcome Screen](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkWallet3.png)</center>
