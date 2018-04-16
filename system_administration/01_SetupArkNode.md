@@ -30,7 +30,7 @@ and their uptime is of most importance in making sure the network runs smoothly.
 The recommended specifications are what we would consider the minimum specifications
 for delegate nodes. Smaller nodes are fine for relays or development purposes.
 
-With each provider the setup process for creating a new virtual server is going to
+With each provider, the setup process for creating a new virtual server is going to
 be different. If choosing one of the listed providers, we have created quick
 links below to quickly get started.
 
