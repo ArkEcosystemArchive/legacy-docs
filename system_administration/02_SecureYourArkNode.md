@@ -165,7 +165,7 @@ Here we're going to pick our opening and closing knock sequence. Choose three po
 
 Modify your config file to match the one below with your own ports. We do not recommend just copying and pasting this config. Replace `7000`, `8000`, `9000` with your own choices.
 
-Also don't forget to replace `55555` with the port you chose for `SSH`
+Also don't forget to replace `55555` with the port you chose for `SSH`.
 
 ```
 [options]
@@ -200,7 +200,7 @@ sudo ufw status
 #### Install knockd client
 Install a client for your operating system to make knocking easier. There even a couple of mobile apps you can use for quickly knocking on your server to open your ssh port.
 
-After knocking you will have **30 seconds** to login via `SSH` or your port will close.
+After knocking your port will remain open until you send the closing knock sequence.
 
 ##### Ubuntu 16.04
 ```
@@ -218,6 +218,7 @@ sudo apt-get install knockd
 #### Troubleshooting and Testing
 Logs for knockd appear in `syslog` and will be crucial if you need to troubleshot.
 
+Run the following command on your ARK node server.
 ```
 tail -f /var/log/syslog
 ```
@@ -225,7 +226,7 @@ tail -f /var/log/syslog
 Lets test our knocking! We set our SSH port, and we've enabled knocking. Now we need to test to make sure that when we send the correct knock that we open and close the port properly.
 
 ##### Open SSH Port
-From your personal computer either use the client you installed above or if you're running Linux install `knockd` by running `sudo apt-get install knockd` and use the following command to knock
+From your personal computer or mobile phone use the client you installed above or if you're running Linux install `knockd` by running `sudo apt-get install knockd` and use the following command to knock
 
 ```
 knock -v nodeip 7000 8000 9000
