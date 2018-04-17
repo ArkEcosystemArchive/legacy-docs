@@ -383,7 +383,8 @@ Press `CTRL+X` to exit the file, `Y` to save the file, and `ENTER` to write to t
 
 ##### Create Origin Certificate
 Scroll down to `Origin Certificates` and click the `Create Certificate` button. Keep this window open after Cloudflare generates your two keys.
-![cloudflare crypto](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/cloudflare_certificate.png)
+
+![cloudflare origin certificate](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/cloudflare_certificate.png)
 
 ##### Open Terminal on your ARK Node Server
 We need to create a new folder and copy our keys to our server.
