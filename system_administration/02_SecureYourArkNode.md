@@ -20,7 +20,7 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 ```
 
-:warning: ** REBOOT YOUR SERVER ** :warning:
+:warning: **REBOOT YOUR SERVER** :warning:
 
 ```
 sudo reboot
