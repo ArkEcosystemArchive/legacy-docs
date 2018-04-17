@@ -19,7 +19,7 @@ and securing the Ark Network.
 ## Prerequisite Setup
 ### Create a Linux Server
 We recommend using the cloud provider you are most comfortable with. Running an Ark Node
-is not like Bitcoin mining and thus there are more options to choose from when running a node.
+is not like Bitcoin mining and thus there are more options to choose from.
 AWS, Linode, Digital Ocean, Vultr, Microsoft Azure, and OVH are just a few
 recommended choices.
 
@@ -28,9 +28,9 @@ server when running a delegate nodes. These nodes are the security of our networ
 and their uptime is of most importance in making sure the network runs smoothly.
 
 The recommended specifications are what we would consider the minimum specifications
-for delegate nodes. Smaller nodes are fine for relays or development purposes.
+for delegate nodes. Smaller nodes are fine for relays or development purposes. We recommend using Ubuntu 16.04 however you are free to use any version of Linux you're comfortable with. These guides will use debian flavored Linux variants though.
 
-With each provider the setup process for creating a new virtual server is going to
+With each provider, the setup process for creating a new virtual server is going to
 be different. If choosing one of the listed providers, we have created quick
 links below to quickly get started.
 
@@ -178,7 +178,7 @@ After reconnecting to the server go ahead and run ARK Commander
 ```
 
 ### Install ARK Node
-Select option `1` to install ARK Node. Again, don't interup this process as it
+Select option `1` to install ARK Node. Again, don't interrupt this process as it
 will take a few minutes to install the required packages.
 
 <center>![ark node installation](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/install_ark_node.png)</center>
@@ -212,7 +212,7 @@ If everything went as planned we should now be able to choose the `L` option
 from the menu and see the transmission of block data across our node.
 
 If you see `New block received` in your log congratulations, you now have a working
-ARK node. If not you may need to wait a couple minutes as the last few blocks sync that
+ARK node. If not, you may need to wait a couple minutes as the last few blocks sync that
 were not in the latest snapshot.
 
 If you need to go back and setup your delegate node you can do so by using option
