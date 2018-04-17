@@ -1,6 +1,8 @@
 # Securing your ARK Nodes
 When running an ARK node, especially a delegate node, you should have security
-as first class citizen in your network. This guide will walk you through securing your nodes. You could do more, but this is a good start. You will need to have created a user in our previous guide [Setup Your ARK Node]() to follow along completely.
+as first class citizen in your network. This guide will walk you through securing your nodes.
+You could do more, but this is a good start. You will need to have created a user in our
+previous guide [Setup Your ARK Node]() to follow along completely.
 
 :warning:
 **It is very important you follow this guide closely, not doing so could mean losing access to your node. If you lose access to your node there is no possible way for us to help you get it back. You will have to start over with a fresh server.**
@@ -18,7 +20,7 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 ```
 
-** :warning: REBOOT YOUR SERVER :warning: **
+:warning: ** REBOOT YOUR SERVER ** :warning:
 
 ```
 sudo reboot
@@ -265,7 +267,7 @@ Apr 17 04:23:37 node1 knockd: closeSSH: running command: ufw delete allow 55555/
 ```
 
 ### Connect to SSH using Keys
-:warning: **IF YOU DO NOT COPY THIS KEY TO YOUR SERVER IN THE CORRECT LOCATION YOU WILL LOSE ACCESS TO YOUR SERVER**
+:warning: **IF YOU DO NOT COPY THIS KEY TO YOUR SERVER IN THE CORRECT LOCATION YOU WILL LOSE ACCESS** :warning:
 
 If you are not comfortable with this you can continue logging in via password, but it is less secure.
 
@@ -304,7 +306,7 @@ Windows users can generate their ssh key using [PuTTY Key Generator](https://www
 
 Copy the contents of your `id_rsa.pub` file on your local machine to your `~/.ssh/authorized_keys` on your ARK node server.
 
-### Disable Password Authentication
+#### Disable Password Authentication
 ```
 sudo nano /etc/ssh/sshd_config
 ```
