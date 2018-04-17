@@ -270,7 +270,7 @@ Apr 17 04:23:37 node1 knockd: closeSSH: running command: ufw delete allow 55555/
 ```
 
 ### Connect to SSH using Keys
-:warning: **IF YOU DO NOT COPY THIS KEY TO YOUR SERVER IN THE CORRECT LOCATION YOU WILL LOSE ACCESS** :warning:
+:warning: **IF YOU DO NOT COPY THE CORRECT KEY TO YOUR SERVER IN THE CORRECT LOCATION YOU WILL LOSE ACCESS** :warning:
 
 If you are not comfortable with this you can continue logging in via password, but it is less secure.
 
