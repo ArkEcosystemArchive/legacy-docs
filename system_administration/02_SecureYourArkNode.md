@@ -165,6 +165,8 @@ Here we're going to pick our opening and closing knock sequence. Choose three po
 
 Modify your config file to match the one below with your own ports. We do not recommend just copying and pasting this config. Replace `7000`, `8000`, `9000` with your own choices.
 
+Also don't forget to replace `55555` with the port you chose for `SSH`
+
 ```
 [options]
         UseSyslog
