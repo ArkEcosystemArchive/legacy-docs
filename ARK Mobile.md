@@ -21,24 +21,24 @@ Find and choose the Ark Mobile .ipa file we downloaded earlier. Impactor will pr
 
 Once you load the application you will be met with this screen:
 
-![Image of Ark Welcome Screen](/assets/img/arkWallet1.png)
+![Image of Ark Welcome Screen](/assets/img/arkWallet1.PNG)
 
 You may skip the introduction or continue by hitting Next on the bottom right hand corner of your screen. If you hit Next, you will see the following screens:
 
-![Second image of Ark Welcome Screen](/assets/img/arkWallet2.png) ![Third image of Ark Welcome Screen](/assets/img/arkWallet3.png)
+![Second image of Ark Welcome Screen](/assets/img/arkWallet2.PNG) ![Third image of Ark Welcome Screen](/assets/img/arkWallet3.PNG)
 
 When we've either skipped or proceeded, you will be asked to create your profile:
 
-![Create a Profile on Ark Mobile](/assets/img/arkWallet4.png)
+![Create a Profile on Ark Mobile](/assets/img/arkWallet4.PNG)
 
 After you hit the '*Create A Profile*' button, you will be asked to create a 6 digit PIN and then confirm the PIN. 
 **You will need to remember this PIN**.
 
-![Create a Pin on Ark Mobile](/assets/img/arkWallet5.png)
+![Create a Pin on Ark Mobile](/assets/img/arkWallet5.PNG)
 
 You will be asked to create a name for your profile. You can create one for the Mainnet or the Devnet, which is the Development Network. For this guide we will be on the Mainnet.
 
-![Create a Name on Ark Mobile](/assets/img/arkWallet6.png)
+![Create a Name on Ark Mobile](/assets/img/arkWallet6.PNG)
 
 Once you've placed your name, you can sign in by touching onto the profile you created and by entering in the PIN you created earlier. From here, you can follow the prompts and click on the button that's displayed on the screen to import or create a wallet. If you are importing a wallet, click [here](#importWallet). If you are creating a new wallet, continue reading. 
 
@@ -48,7 +48,7 @@ If you choose to generate a wallet and follow the prompts you will be shown your
 
 After hitting '*Next*', you will be asked to input 3 of the words in your Secret Passphrase. Once you've placed the appropriate numbered word into its field, you will be asked to put in your PIN again. The next screen will show you the amount of ARK tokens you have in your wallets, your shareable Public Address, the Market Value of ARK in USD, Satoshi's, and the 24 hour Change.
 
-![Ark Mobile Wallet Passphrase](/assets/img/arkWallet8.png)![Ark Mobile Wallet Balance](/assets/img/arkWallet9.png)
+![Ark Mobile Wallet Passphrase](/assets/img/arkWallet8.PNG)![Ark Mobile Wallet Balance](/assets/img/arkWallet9.PNG)
 
 ## Importing a wallet <a id="importWallet"></a>
 
@@ -57,7 +57,7 @@ If you choose to import a wallet and follow the prompts, you will have two optio
 
 The application may place you on a screen that shows your transactions, your public address and the amount of ARK tokens in your wallet.
 
-![Ark Mobile Wallet Transactions](/assets/img/arkWallet10.png)
+![Ark Mobile Wallet Transactions](/assets/img/arkWallet10.PNG)
 
 If you hit the triple bar on the top left corner, you get numerous options where you are able to view and select:
 - Main wallet balance screen
@@ -74,7 +74,7 @@ If you hit the triple bar on the top left corner, you get numerous options where
   - You are able to save contacts by name and Ark Address for quicker sending/receiving 
  - Sign Out
  
-![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet11.png)![Ark Mobile Wallet Settings](/assets/img/arkWallet12.png)
+![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet11.PNG)![Ark Mobile Wallet Settings](/assets/img/arkWallet12.PNG)
 
 ## The Ark Wallet <a id="theWallet"></a>
 
@@ -95,11 +95,11 @@ If you hit the triple bar on the top left corner, you get numerous options where
   - You are able to save contacts by name and Ark Address for quicker sending/receiving 
  - Sign Out
  
-![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet13.png)![Ark Mobile Wallet Settings](/assets/img/arkWallet12.png)
+![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet13.PNG)![Ark Mobile Wallet Settings](/assets/img/arkWallet12.PNG)
 
 If you want to view an existing wallet and the transaction history, you will need to touch the rectangle(s) right below the 'Total Balance' text.
 
-![Ark Mobile Wallet Balance](/assets/img/arkWallet14.png)
+![Ark Mobile Wallet Balance](/assets/img/arkWallet14.PNG)
 
 Once inside a wallet, you are able to view incoming and receiving transaction history, the public address, the Ark wallet balance and by touching the vertical ellipsis you are able to:
 - Register a Delegate
@@ -108,7 +108,7 @@ Once inside a wallet, you are able to view incoming and receiving transaction hi
 - Backup your Wallet
 - Delete your wallet
 
-![Ark Mobile Wallet Subsettings](/assets/img/arkWallet15.png)
+![Ark Mobile Wallet Subsettings](/assets/img/arkWallet15.PNG)
 
 ## Conclusion <a id="theConclusion"></a>
 
