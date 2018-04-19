@@ -5,12 +5,12 @@ Block explorers can give anyone access to all the information contained within t
 Every Blockchain uses has block explorer and ARK is no different; however, we pride ourselves on making all our interfaces intuitive and easy to read for users at any level, from novice to advanced and our block explorer is an example of that committment.  
 Let’s begin our journey into the ARK explorer, first looking at mobile functionality followed by the slightly more robust desktop experience.
 
-![Block Explorer Overview](https://github.com/ArkEcosystem/docs/blob/blkexpl/assets/img/MobileBlockExplorerOverview.png)
+![MOBILE BLOCK EXPL Overview](https://github.com/dustindreifuerst/docs/blob/blkexpl/assets/img/MobileBlockExplorerOverview.png)
+
 When you first arrive at explorer.ark.io you will find the following information immediately available. 
 If you are using the desktop version of the ARK block explorer, you will see a price graph on the home page.  This interactive graph allows you to see ARK price in relation to your chosen national currency over periods of day, week, month, quarter and year views.  
 
-![Block Explorer Overview](/assets/Latest Transaction Overview.png)
-Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/Latest Transaction Overview.png)
+![LATEST TRANSACTION Overview](https://github.com/dustindreifuerst/docs/blob/blkexpl/assets/img/LatestTransactionOverview.png)
 
 ### Latest Transactions:
 
@@ -19,52 +19,46 @@ This will be a list of the most recent transactions that have been broadcast to 
 -    **Timestamp:** This indicates the exact time that the transaction was broadcasted and accepted by the network.  
 -    **Sender:** This field shows the ARK wallet address that initiated the transaction, i.e. who is sending the transaction. 
 -    **Recipient:** Here we see the wallet address who the sender (above) wished to send this transaction to, i.e. who is receiving the transaction. 
--    **Smart bridge:** This field indicates the ARK SmartBridge that was used in the transaction.  SmartBridges are the groundbreaking innovation that drives the ARK Ecosystem; allowing for disparate blockchains to interact with each other.  Think of each blockchain like an island with no communication between them. If you work on Ethereum Island but your business partner only works on Bitcoin island you can't trade or work together.  ARK SmartBridges are like an airstrip, cargo barge, cellphone towers and internet all rolled into one.  You can do business with any of the other islands from any other island, instantaneously and nearly friction free.  A more detailed explanation of Smart bridges can be found here. **(INSERTLINK)**   
+-    **Smart bridge:** This field indicates the ARK SmartBridge that was used in the transaction.  SmartBridges are the groundbreaking innovation that drives the ARK Ecosystem; allowing for disparate blockchains to interact with each other.  Think of each blockchain like an island with no communication between them. If you work on Ethereum Island but your business partner only works on Bitcoin island you can't trade or work together.  ARK SmartBridges are like an airstrip, cargo barge, cellphone towers and internet all rolled into one.  You can do business with any of the other islands from any other island, instantaneously and nearly friction free.  A more detailed explanation of Smart bridges can be found in our section [**What are bridge chains and how to use them**](http://ark.io/*   
 -    **Amount:** This will indicate the amount of ARK that was send from the Sender to the Recipient 
--    **Fee:** This indicates the fee paid to send the transaction.  A list of current fees on the ARK network can be found here. **(INSERTLINK)**         
+-    **Fee:** This indicates the fee paid to send the transaction.  A list of current fees on the ARK network can be found in [**ARK: Frequently Asked Questions — FAQ**](https://blog.ark.io/ark-frequently-asked-questions-faq-bcb90a0537cc)
 
-![Block Explorer Overview](/assets/Latest Block Overview.png)
-Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/Latest Block Overview.png)
+![LATEST BLOCK Overview](https://github.com/dustindreifuerst/docs/blob/blkexpl/assets/img/LatestBlockOverview.png)
 ### Latest Blocks: 
--    **ID:** This will the show unique identification (ID) for the Block that was forged. For more information on what blocks and are blockchain's please click here. **(INSERT LINK)**
+-    **ID:** This will the show unique identification (ID) for the Block that was forged.    If you want to learn more about blockchain refer to our section on [**What is a blockchain and why do we need it?**](http://ark.io/)
 -    **Height:** This section will show how far from the initial (genesis) block, the blockchain has progressed.  For example, if you are looking at a block with the height listed as 1000, this will indicate that this specific block is the 999th since the first (genesis) block. 
 -    **Timestamp:** This indicates the date and time the block was forged and written onto the ARK blockchain.
 -    **Transactions:** Here you will see how many transactions were included in this block.
--    **Generated By:** Refers to which delegate forged this specific block.  For more information on delegated proof of stake (DPOS) and ARK delegates go here. **(INSTERLINK)**
+-    **Generated By:** Refers to which delegate forged this specific block. For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](http://ark.io/)
 -    **Amount:** Indicates the total amount of ARK for all transactions inside the block 
 -    **Fee:** Shows the total fees associated with all transactions within the block. 
 
-![Block Explorer Overview](/assets/Network Information.png)
-Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/Network Information.png)
+![NETWORK INFORMATIION Overview](https://github.com/dustindreifuerst/docs/blob/blkexpl/assets/img/NetworkInformation.png)
 
 ### Network Information: 
 Across the top of the page you will also see a list of information about the current state of the network you are viewing. 
 -    **Height:**  This is current live view of how many blocks have been created since the first (genesis) block when the ARK blockchain was created. 
 -    **ARK/Fiat:** This indicates the current price of ARK in your chosen national currency. This will often be auto set to the national currency of wherever you are connecting to the internet from.  For mobile users, in the upper right-hand corner you can, by clicking the currency icon, change this setting to the national currency of your choice.  
--    **Supply:** This area shows the total supply of ARK currently exists.  Depending on the coin, total supply can mean the total amount of coins that will ever exist, however in ARK's case this number goes up over time with a set number of coins created every year.  If you want to learn more about how ARK is created via forging and delegates, please click here. **(INSERTLINK)** 
+-    **Supply:** This area shows the total supply of ARK currently exists.  Depending on the coin, total supply can mean the total amount of coins that will ever exist, however in ARK's case this number goes up over time with a set number of coins created every year.  For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](http://ark.io/)
 
 -    **Network:** This will indicate whether you are viewing the mainnet or testnet. Mainnet is where transactions are conducted and settled in real time. In contrast the testnet is used by developers to test functionality before introducing features or other applications onto the mainnet.  For the average user this is of no consequence and your experience will always be on the mainnet. 
 -    **Market Cap:** This refers to the market capitalization of ARK, the total value of all the ARK that exist by multiplying the Total Supply by the current price of your chosen national currency.
 
-![Block Explorer Overview](/assets/DROP DOWN.png)
-Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/DROP DOWN.png)
+![DROPDOWN Overview](https://github.com/dustindreifuerst/docs/blob/blkexpl/assets/img/DROPDOWN.png)
 
 ### Top Menu Bar
 **ARK ICON:** This will take you back to the ARK explorer home page 
 
 **Drop Down Menu:** This contains the following Information 
 -    **Home:** This will take you back to the explorer home page 
--    **Top Wallets:** This will show you the wallets, descending from high to low, that hold the most ARK.  From there you will be able to see their numerical ranking (in relation to total balance), wallet address, balance and the percentage of total supply they control.  Currently the ARK development team holds the largest percentage of ARK, which is used to pay for projects and developers to improve network functionality and other projects that bring value to the ARK community.   If you'd like to know more about ARK community projects visit their page. **(INSERT LINK)**
--    **Delegate Monitor:** This shows the current list of delegates and their votes on the network.  ARK is run by its community who vote for delegates.  Delegates, among other things, vote on their behalf in community related matters and most importantly forge (verify) blocks.  The top 51 delegates perform these functions for the network and rely on community support to maintain their position within the network.  For more information on delegates and DPOS click here. **(INSERTLINK)**
-
-![Block Explorer Overview](/assets/DELEGATE MONITOR OVERVIEW.png)
-Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/DELEGATE MONITOR OVERVIEW.png)
+-    **Top Wallets:** This will show you the wallets, descending from high to low, that hold the most ARK.  From there you will be able to see their numerical ranking (in relation to total balance), wallet address, balance and the percentage of total supply they control.  Currently the ARK development team holds the largest percentage of ARK, which is used to pay for projects and developers to improve network functionality and other projects that bring value to the ARK community.
+-    **Delegate Monitor:** This shows the current list of delegates and their votes on the network.  ARK is run by its community who vote for delegates.  Delegates, among other things, vote on their behalf in community related matters and most importantly forge (verify) blocks.  The top 51 delegates perform these functions for the network and rely on community support to maintain their position within the network.  For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](http://ark.io/)
+![Delegate Monitor Overview](https://github.com/dustindreifuerst/docs/blob/blkexpl/assets/img/DELEGATEMONITOROVERVIEW.png)
 
 The delegate monitor shows two tabs, **"Active"** and **"Standby"**.
 Active will list the current top 51 active delegates, an overview of blocks recently forged, blocks missed, delegates who are not forging and those delegates waiting to forge the next blocks. 
 
-![Block Explorer Overview](/assets/DELEGATE OVERVIEW.png)
-Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/DELEGATE OVERVIEW.png)
+![Delegate Overview](https://github.com/dustindreifuerst/docs/blob/blkexpl/assets/img/DELEGATEOVERVIEW.png)
 
 If you click on a delegate’s username you will be taken to delegates wallet address page and see the following information.
 -    **Balance:** Total amount of ARK in delegates wallet.
@@ -77,8 +71,7 @@ If you click on a delegate’s username you will be taken to delegates wallet ad
 -    **Votes:** Who this wallet has cast their delegate vote towards .
 -    **Voters:** How many total voters this delegate has pledged to them.
 
-![Block Explorer Overview](/assets/HEADER overview.png)
-Format: ![Alt Text](https://github.com/dustindreifuerst/docs/upload/blkexpl/assets/HEADER overview.png)
+![Header Overview](https://github.com/dustindreifuerst/docs/blob/blkexpl/assets/img/HEADERoverview.png)
 
 The last three menu option are as follows
 
