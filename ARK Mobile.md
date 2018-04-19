@@ -21,7 +21,7 @@ Find and choose the Ark Mobile .ipa file we downloaded earlier. Impactor will pr
 
 Once you load the application you will be met with this screen:
 
-![Image of Ark Welcome Screen](/assets/img/arkWallet1.PNG)
+![Image of Ark Welcome Screen](/assets/img/arkWallet.PNG)
 
 You may skip the introduction or continue by hitting Next on the bottom right hand corner of your screen. If you hit Next, you will see the following screens:
 
@@ -59,26 +59,9 @@ The application may place you on a screen that shows your transactions, your pub
 
 ![Ark Mobile Wallet Transactions](/assets/img/arkWallet10.PNG)
 
-If you hit the triple bar on the top left corner, you get numerous options where you are able to view and select:
-- Main wallet balance screen
-- Vote for delegates
-- Change the peer to the network
-- Enter the settings, where you may change or view your:
-  - Language
-  - Currency
-  - PIN
-  - Clear your Data
-  - Privacy Policy
-  - Version Number
- - Contacts
-  - You are able to save contacts by name and Ark Address for quicker sending/receiving 
- - Sign Out
- 
-![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet11.PNG) ![Ark Mobile Wallet Settings](/assets/img/arkWallet12.PNG)
-
 ## The Ark Wallet <a id="theWallet"></a>
 
-After you reach the main Ark Wallet balance screen, you are able to add another wallet, touch the triple bar on the top left corner, or choose an existing wallet to view even closer. 
+You are able to hit the triple bar in the top left corner, doing so will give you numerous options for you to select. Choosing *'Wallets'*, will place you at the main Ark Wallet balance screen. After you reach the main Ark Wallet balance screen, you are able to add another wallet, touch the triple bar on the top left corner, or choose an existing wallet to view even closer. 
 If you want to add another wallet, you would push the blue circle we used earlier to create or import a wallet.
 If you hit the triple bar on the top left corner, you get numerous options where you are able to view and select:
 - Main wallet balance screen
@@ -109,6 +92,22 @@ Once inside a wallet, you are able to view incoming and receiving transaction hi
 - Delete your wallet
 
 ![Ark Mobile Wallet Subsettings](/assets/img/arkWallet15.PNG)
+
+## Voting <a id="theVoting"></a>
+
+To begin voting, we need ARK in our wallets. Once you've transferred ARK to your wallet, you will want to click on the wallet that was either imported or generated. 
+
+![Ark Mobile Wallet Balance](/assets/img/arkWallet14.PNG)
+
+Once the wallet has been selected, hit the triple bar and choose *'Delegates'*. This will show you the top 51 Active Delegates and the delegates on Standby
+
+![Ark Mobile Wallet Balance](/assets/img/arkWallet15.PNG) ![Ark Mobile Wallet Balance](/assets/img/arkWallet16.PNG)
+
+Choosing a Delegate will prompt you to vote for 1 ARK. 
+
+![Ark Mobile Wallet Balance](/assets/img/arkWallet17.PNG)
+
+If you have any questions regarding how much you will receive from voting for a delegate, you can find that [here](http://calculator.reconnico.com/).
 
 ## Conclusion <a id="theConclusion"></a>
 
