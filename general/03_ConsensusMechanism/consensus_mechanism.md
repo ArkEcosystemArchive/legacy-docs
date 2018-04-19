@@ -21,7 +21,7 @@ The validator aggregates the transactions to create the block, he then sends him
 
 A large part of the funds attributed to validation have to be in control of the attacker for successful falsification of the ledger, making it financially expensive to execute. Attacking is an unattractive prospect; failure yields a net cost in capital and repeating the attack after a recovered network would still require more capital.
 
-#Delegated Proof of Stake
+# Delegated Proof of Stake
 In delegated proof of stake, voters enable a fixed number of delegates to forge blocks by electing them with coins. Representatives can participate in creating valid blocks in the chain.
 
 This is the consensus mechanism used by [Ark].
