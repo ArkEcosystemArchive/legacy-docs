@@ -2,6 +2,7 @@ Blockchain protocols can be confusing at first. This quick guide shows the basic
 
 ### Requirements
 First and foremost, one needs an account to send and receive transactions on the network. An account includes a private key and a public key. The private key is used to sign transactions from the account, while a public key is the address to which others send funds to the account.
+![Account card][account]
 
 Secondly, an appropriate compatible wallet is required to perform network functions like sending the transaction to a peer, who can then validate and broadcast it across other members of the network. 
 
@@ -33,3 +34,5 @@ The block is a collection of transactions which travels through the network much
 * * *
 
 In many Blockchain-based protocols, the transaction can be considered complete when the block that contains it has been transmitted to enough peers and is followed by other agreeable blocks.
+
+[account]: /assets/png/account.png "Account image"
