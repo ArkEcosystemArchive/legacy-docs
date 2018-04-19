@@ -1,5 +1,6 @@
 # Peers and Nodes, what are they and what is their role in the network?
 
+![Peers_nodes](https://github.com/dustindreifuerst/docs/blob/Peers_nodes/assets/img/CommitARK_Nodes_Peers_Infographic.png)
 ## Peers
 
 A foundational aspect of blockchain and cryptocurrencies is the concept it being a peer to peer network (P2P) that is used in lieu of a centralized server/ hierarchy.  For example, in traditional hierarchal structure such as a company, there is a CEO at the top who directs supervisors, who in turn direct employees to accomplish the tasks required within that centralized network.  In a blockchain there is no CEO, all participants in the network are considered peers, defined by their equality of standing to each other; there is no boss within a blockchain.
