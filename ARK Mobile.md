@@ -101,11 +101,11 @@ To begin voting, we need ARK in our wallets. Once you've transferred ARK to your
 
 Once the wallet has been selected, hit the triple bar and choose *'Delegates'*. This will show you the top 51 Active Delegates and the delegates on Standby
 
-![Ark Mobile Wallet Balance](/assets/img/arkWallet15.PNG) ![Ark Mobile Wallet Balance](/assets/img/arkWallet16.PNG)
+![Ark Mobile Wallet Balance](/assets/img/arkWallet16.PNG) ![Ark Mobile Wallet Balance](/assets/img/arkWallet17.PNG)
 
 Choosing a Delegate will prompt you to vote for 1 ARK. 
 
-![Ark Mobile Wallet Balance](/assets/img/arkWallet17.PNG)
+![Ark Mobile Wallet Balance](/assets/img/arkWallet18.PNG)
 
 If you have any questions regarding how much you will receive from voting for a delegate, you can find that [here](http://calculator.reconnico.com/).
 
