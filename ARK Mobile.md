@@ -25,7 +25,7 @@ Once you load the application you will be met with this screen:
 
 You may skip the introduction or continue by hitting Next on the bottom right hand corner of your screen. If you hit Next, you will see the following screens:
 
-![Second image of Ark Welcome Screen](/assets/img/arkWallet2.PNG) ![Third image of Ark Welcome Screen](/assets/img/arkWallet3.PNG)
+![Second image of Ark Welcome Screen](/assets/img/arkWallet2.PNG)       ![Third image of Ark Welcome Screen](/assets/img/arkWallet3.PNG)
 
 When we've either skipped or proceeded, you will be asked to create your profile:
 
@@ -48,7 +48,7 @@ If you choose to generate a wallet and follow the prompts you will be shown your
 
 After hitting '*Next*', you will be asked to input 3 of the words in your Secret Passphrase. Once you've placed the appropriate numbered word into its field, you will be asked to put in your PIN again. The next screen will show you the amount of ARK tokens you have in your wallets, your shareable Public Address, the Market Value of ARK in USD, Satoshi's, and the 24 hour Change.
 
-![Ark Mobile Wallet Passphrase](/assets/img/arkWallet8.PNG) ![Ark Mobile Wallet Balance](/assets/img/arkWallet9.PNG)
+![Ark Mobile Wallet Passphrase](/assets/img/arkWallet8.PNG)             ![Ark Mobile Wallet Balance](/assets/img/arkWallet9.PNG)
 
 ## Importing a wallet <a id="importWallet"></a>
 
@@ -78,7 +78,7 @@ If you hit the triple bar on the top left corner, you get numerous options where
   - You are able to save contacts by name and Ark Address for quicker sending/receiving 
  - Sign Out
  
-![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet13.PNG) ![Ark Mobile Wallet Settings](/assets/img/arkWallet12.PNG)
+![Ark Mobile Wallet Triple Bar](/assets/img/arkWallet13.PNG)            ![Ark Mobile Wallet Settings](/assets/img/arkWallet12.PNG)
 
 If you want to view an existing wallet and the transaction history, you will need to touch the rectangle(s) right below the 'Total Balance' text.
 
@@ -101,7 +101,7 @@ To begin voting, we need ARK in our wallets. Once you've transferred ARK to your
 
 Once the wallet has been selected, hit the triple bar and choose *'Delegates'*. This will show you the top 51 Active Delegates and the delegates on Standby
 
-![Ark Mobile Wallet Balance](/assets/img/arkWallet16.PNG) ![Ark Mobile Wallet Balance](/assets/img/arkWallet17.PNG)
+![Ark Mobile Wallet Balance](/assets/img/arkWallet16.PNG)               ![Ark Mobile Wallet Balance](/assets/img/arkWallet17.PNG)
 
 Choosing a Delegate will prompt you to vote for 1 ARK. 
 
