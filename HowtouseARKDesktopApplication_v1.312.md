@@ -429,7 +429,7 @@ ___
 
 *Q: What does "top 51" delegates mean? Are there more delegates?*
 
-**A: Only the top 51 delegates with the most most are allowed to forge/validate/secure the Ark Network. It is up to the community to keep the most trusted/honest delegates in charge of doing so. This creates a democracy of sorts, giving power to the Ark holders.**
+**A: Only the top 51 delegates with the most votes are allowed to forge/validate/secure the Ark Network. It is up to the community to keep the most trusted/honest delegates in charge of doing so. This creates a democracy of sorts, giving power to the Ark holders.**
 
 *Q: Can I vote for 2 delegates at the same time with 1 wallet?*
 

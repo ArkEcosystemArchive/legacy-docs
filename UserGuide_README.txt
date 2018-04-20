@@ -11,7 +11,8 @@ complete with pictures and infographics.
 
 Personal goal: I aimed to write this guide in a tone that was softer than most software user guides. My intended
 audience is the average, everyday user that is not necassarily tech savy. I wanted to avoid the rigid and confusing nature
-of a lot of other user guides out there for software. 
+of a lot of other user guides out there for software.
+I also left specific items 'undefined' to avoid conflict/confusion for when ARKV2 releases and those variables change.  
 
 Result: I believe I accomplished that while also aligning my tone with how other
 Ark blogs and write-ups appear. 
