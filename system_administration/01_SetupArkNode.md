@@ -48,7 +48,7 @@ After creating a server we need to connect to it. Your provider should have give
 This information can usually be found somewhere in your providers dashboard for your
 new server.
 
-<center>![ssh information](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/ssh_information.png)</center>
+![ssh information](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/ssh_information.png)
 
 Depending on your operating system you will connect to your server in different ways.
 Window users will want to use something like [PuTTy](https://putty.org/).
@@ -58,7 +58,7 @@ Open PuTTy and place the `ip address` given to you by your provider in the
 `Host Name` field as shown below. You should probably save this host so you don't
 have to enter it every time.
 
-<center>![PuTTy Login](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/puTTy_login.jpeg)</center>
+![PuTTy Login](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/puTTy_login.jpeg)
 
 #### MacOS / Linux
 Open up a new terminal window and type in the following to connect to your new
@@ -71,13 +71,13 @@ ssh user@ipaddress
 When first connecting to your new server you will be asked to cache the servers
 host key and validate the rsa fingerprint, say or click yes.
 
-<center>![ssh information](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/ssh_fingerprint.png)</center>
+![ssh information](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/ssh_fingerprint.png)
 
 When prompted use the password given to you by your cloud provider. Some providers
 will require you to setup a a root password when creating the VM, while others may
 give you a temporary password.
 
-<center>![root_login](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/root_login.png)</center>
+![root_login](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/root_login.png)
 
 ### Setup a User
 Loging into our node and leaving root access open is not good security so we're going
@@ -92,7 +92,7 @@ adduser username
 You will be prompted to enter in the users `full name` and some other information.
 Feel free to just leave them all blank as they are optional. When prompted type `Y` and press enter.
 
-<center>![add_user](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/add_user.png)</center>
+![add_user](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/add_user.png)
 
 ### Giving our User Sudo Privileges
 
@@ -143,21 +143,21 @@ ARK Commander is then going to ask you for your `sudo` password. This is
 the password you used to login to the user account with. Enter your password
 and press enter.
 
-<center>![ark_commander_login](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/ark_commander_login.png)</center>
+![ark_commander_login](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/ark_commander_login.png)
 
 #### System Updates and Prerequisites
 The first time you run ARK Commander it is going to update your system and make sure
 you have the latest updates to required dependencies.
 
-<center>![ark_commander_login](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/update_ark_commander.png)</center>
+![ark_commander_login](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/update_ark_commander.png)
 
-<center>![prerequisites](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/prerequisites.png)</center>
+![prerequisites](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/prerequisites.png)
 
 #### Reboot System
 Once updates and prerequisites installation has finished reboot your system by
 typing the following command and pressing enter.
 
-<center>![reboot warning](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/reboot_warning.png)</center>
+![reboot warning](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/reboot_warning.png)
 
 ```
 sudo reboot
@@ -181,7 +181,7 @@ After reconnecting to the server go ahead and run ARK Commander
 Select option `1` to install ARK Node. Again, don't interrupt this process as it
 will take a few minutes to install the required packages.
 
-<center>![ark node installation](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/install_ark_node.png)</center>
+![ark node installation](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/install_ark_node.png)
 
 ### Setting up a Delegate Node
 After ARK Node installs you will be asked if you want to setup your secret key.
@@ -189,7 +189,7 @@ If you're just setting up a relay node, or not ready to setup your delegate node
 at this time select `N`. Otherwise select `Y` and enter your delegate node secret
 key now.
 
-<center>![setup secret](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/setup_secret.png)</center>
+![setup secret](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/setup_secret.png)
 
 ### Restoring your Database from a Snapshot
 Letting the ARK blockchain download from peers can take a long time. We have
@@ -199,13 +199,13 @@ database. Let's go ahead and do that now.
 Select option `4` from the menu and press enter. When asked if you would like to
 download the latest snapshot select `Y` and press enter.
 
-<center>![snapshot](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/snapshot.png)</center>
+![snapshot](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/snapshot.png)
 
 Once the download finishes you will be asked if you would like to restore from
 this snapshot. Select `Y` and press enter. If everything goes as planned you should
 see the following once the restoration is complete. Press enter and return to the main menu.
 
-<center>![snapshot restored](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/snapshot_restored.png)</center>
+![snapshot restored](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/snapshot_restored.png)
 
 ### Checking to See if Everything is Working
 If everything went as planned we should now be able to choose the `L` option
