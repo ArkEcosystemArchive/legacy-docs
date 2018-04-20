@@ -57,7 +57,7 @@ A Transport happens to data as it flows through the network from peer to peer.
 
 It is the interface that enables the formatted transfer of transactions from one peer to another. It is important to have a transport protocol that supports standardized communication between peers to reduce the overhead from converting or decyphering transaction information.
 
-> <pre>
+<pre>
         resp = transport.post_transaction(
         "dark", # Network
         "DDvQqwqPXKd5P8dLAroFsnKR5Q3tKUtvnp", # RecipientAddress
