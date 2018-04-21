@@ -17,18 +17,18 @@ To repeatedly affect the network negatively, a collection of peers would need to
 # Proof of Stake
 A more recent advancement in distributed computing consensus mechanisms, proof of stake (PoS), uses the validating peer’s economic stake in the network to calculate the weight of the peer’s vote, as seen originally with [Peercoin].
 
-The validator aggregates the transactions to create the block, he then sends himself a specified target amount of coins in a transaction in that same block to prove stake and signs the block. The target amount of coins is proportional to the total amount in transactions within the block and is adjusted based on the supply of staked coins, allowing stable block times.
+The validator is attributed a period to aggregate transactions to create the block, it then sends itself a specified target amount of coins in a transaction in that same block to prove stake and sign the block. The target amount of coins staked to proceed with the block creation is proportional to the total amount in transactions within the block and is adjusted based on the supply of staked coins, allowing stable block times.
 
-A large part of the funds attributed to validation have to be in control of the attacker for successful falsification of the ledger, making it financially expensive to execute. Attacking is an unattractive prospect; failure yields a net cost in capital and repeating the attack after a recovered network would still require more capital.
+A large part of the funds attributed to validation have to be in control of the attacker for successful falsification of the ledger, making it financially expensive to execute. Attacking is an unattractive prospect; failure yields a net cost in capital and repeating the attack after a recovered network would still require more capital. In case of success, the currency is then at risk of severe devaluation.
 
 # Delegated Proof of Stake
 In delegated proof of stake, voters enable a fixed number of delegates to forge blocks by electing them with coins. Representatives can participate in creating valid blocks in the chain.
 
 This is the consensus mechanism used by [Ark].
 
-Maintaining a distributed set of actors with specific jurisdictions and high trust allows the transactions in a dPoS consensus Blockchain to flow with much higher speed. The validation process doesn’t depend on long computational puzzles and there are only a few peers that need to process changes to the ledger history.
+Maintaining a distributed set of actors with specific jurisdictions, in this case evenly divided windows to forge blocks, and high trust allows the transactions in a dPoS consensus Blockchain to flow gracefully. The validation process doesn’t depend on long computational puzzles and there are only a few nodes needing to process changes to the ledger history. The forged blocks are passed to peers in the network who can then participate in broadcasting the newly created blocks.
 
-A significant amount of collusion would have to occur between the elected members to maintain false records. They could then lose their delegate status and revenue from occupying this role.
+There is little incentive for delegates to collude in maintaining falsy records. The functionality embeded in each node, even simple peers, prevents the inclusion of successive bad blocks. Forging a contravenous block would result in immediate flagging of the delegate in the network and following consequences for bad behaviour.
 
 
 -----------
