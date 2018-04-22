@@ -37,6 +37,7 @@ When you arrive on this page you will see multiple options for the ArkClient. Se
 	* [Adding a second passphrase](#2ndpass)
 	* [Remove wallet from ArkClient](#removewallet)
 	* [Import Account](#import)
+	* [Export Account](#export)
 	* [Timestamp a File](#timestamp)
 	* Different settings within ArkClient/Desktop Application
 		* [Currency](#currency)
@@ -309,6 +310,21 @@ You may want to import an account if you're on a new computer, newly downloaded 
 3. Input your passphrase and select "IMPORT".
 
 4. Your wallet is now imported into the ArkClient.
+
+___
+
+### <a name="export">Export Account</a>
+
+You may want to Export your account to keep track of the data within your wallet in a separate text file or there may be a program that will utilize the data and interpret it for you. The ArkClient will export your 
+account in a .csv file (commonly known as a flat file). 
+
+1. At the top right corner of your Ark Wallet box you will see a downward facing arrow to a horizontal line. When you hover your cursor over it it will display "Export Account". Select it. 
+
+2. A new window will appear titled "Export account". You will be prompted to select a start and end date to choose the range of transactions to be included in your export file. Choose your range and select "START EXPORT". 
+
+3. The next window will appear and show you how many transactions were included in your export. 
+
+4. Select "DOWNLOAD FILE". The default file name will be your Ark Wallet Address. Select where you'd like to save your file and save. You have exported your account.
 
 ___
 
