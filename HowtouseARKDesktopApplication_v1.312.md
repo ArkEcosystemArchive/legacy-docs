@@ -1,4 +1,4 @@
-<center>![Imgur](https://github.com/cambo666/Ark-User-Guide/blob/master/Pictures/Red-Toxic.png)</center>
+<center>![Imgur](https://i.imgur.com/kbcljUW.png)</center>
 
 # <center>**How to use ARK Desktop Application**</center>
 
