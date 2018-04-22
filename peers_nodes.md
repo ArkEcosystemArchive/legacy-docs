@@ -26,6 +26,8 @@ A peer to peer network differs from a client server model by its lack of central
 
 The reason for this is that every node on the network contains a copy of the entire blockchain, updated in real time as new blocks are verified and written onto it.  For any transaction to be verified a node must transmit to the network its validation of said transaction.  Once validated a majority of nodes must also signal to the network that their copy of the blockchain also indicates the validity of the transaction.  This ensures that only valid transactions are verified and allowed to be permanently written into a block.  The larger the network gets the less likely it is any malicious actor can gain access over enough of the nodes in a network to allow for fraudulent transactions to be passed as legitimate.    If you want to learn more refer to our section on [**What is a blockchain and why do we need it?**](http://ark.io/)
 
+# Traditional blockchain Infrastructure
+
 In traditional blockchain infrastructures you will have the following
 
 * **Miners**
@@ -44,11 +46,11 @@ A full node contains a complete copy of that networks blockchain and verify indi
 
 This is the most common form of node in a network and is associated with individuals like yourself, downloading and running a desktop wallet.  This wallet does not contain, as a full node would, a complete copy of the blockchain (see above); instead it connects to a trusted peer (full node) to access a copy of the blockchain.  Light nodes exist because most individual users do not wish to have an ever-increasing amount of their computers memory devoted to maintaining a full copy of the blockchain.  
 
-Early in a blockchain's life this sacrifice is quite small for a user’s computer, however over time this space can gradually overtake the capability of a normal home computer system to store it.  As of December 2017, the Bitcoin blockchain, the largest of all cryptocurrencies, was around 150 gigabytes.  A light node allows a user to access the network and transact with minimal impact to the system memory on their desktop or mobile device.  For more information refer to our sections on [**How to use your ARK Desktop wallet application**](http://ark.io/) or [**How to use your ARK mobile wallet**](http://ark.io/)
+Early in a blockchain's life this sacrifice is quite small for a user’s computer, however over time this space can gradually overtake the capability of a normal home computer system to store it.  As of December 2017, the Bitcoin blockchain, the largest of all cryptocurrencies, was around 150 gigabytes.  A light node allows a user to access the network and transact with minimal impact to the system memory on their desktop or mobile device.  
 
 
 
-## How does the ARK network differ
+# How does the ARK network work?
 
 ![ARK network overview](https://github.com/dustindreifuerst/docs/blob/Peers_nodes/assets/img/ARK%20NODE%20TYPES%20INFOGRAPHIC.png)
 
@@ -104,15 +106,17 @@ There are numerous companies that offer VPS services and this choice will be up 
 * Vultr [Vultr](http://www.vultr.com)
 * OVH [OVH](http://www.ovh.com)
 
-For Step by Step instructions on how to set up a ARK relay node, please refer to our article on the ARK Blog [How to Set up your ARK Node](http://www.ark.io/blog/). 
+For Step by Step instructions on how to set up a ARK relay node, please refer to our article on the ARK Blog [How to Set up your ARK Node](https://blog.ark.io/how-to-setup-a-node-for-ark-and-a-basic-cheat-sheet-4f82910719da). 
 
 After following these instructions to set up your node, whether VPS or home based  and is live you will connect to the ARK network via "Seed Nodes".  These are the first nodes on the network, run by the development team that can be queried to gather the listed of trusted peers and become an active node on the network. 
 
-Anyone is free to and encourage to run a full node in the ARK ecosystem.  Individuals who are forging delegates will be running a full node to verify transaction; this includes members who have registered as a delegate and are attempting to gain enough votes to become an actual forging delegate.  You may also not seek to be a delegate but wish to run a full node, whether for commercial, security or community support reasons.  This is called a relay node and can be set up a small amount of money in equipment costs and a low monthly fee for a dedicated server.  If you are interested in learning more refer to our section on [**How to setup you ARK node**](http://ark.io/)
+Anyone is free to and encourage to run a full node in the ARK ecosystem.  Individuals who are forging delegates will be running a full node to verify transaction; this includes members who have registered as a delegate and are attempting to gain enough votes to become an actual forging delegate.  You may also not seek to be a delegate but wish to run a full node, whether for commercial, security or community support reasons.  This is called a relay node and can be set up a small amount of money in equipment costs and a low monthly fee for a dedicated server.  If you are interested in learning more refer to our section on [**How to setup you ARK node**](https://blog.ark.io/how-to-setup-a-node-for-ark-and-a-basic-cheat-sheet-4f82910719da)
 
 **Client not Light Nodes**
 
 The ARK client doesn't differ from other cryptocurrency light nodes, in the that the ARK desktop wallet doesn't carry its own copy of the blockchain but refers to a trusted peer (relay node) on the network. 
+
+For more information refer to our sections on [**How to use your ARK Desktop wallet application**](http://ark.io/) or [**How to use your ARK mobile wallet**](http://ark.io/)
 
 **ACES nodes**
 
