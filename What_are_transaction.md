@@ -18,7 +18,7 @@ Let’s look over an ARK network transaction step by step so you can see how it 
 
 Dustin owned 50 ARK and yesterday Jim sent Dustin 100 ARK.  Dustin now has a balance of 150 ARK in his wallet.
 
-Today Dustin decided to send Cassandra her first 100 ARK.   Dustin will now go into his wallet to initiate the transaction by inputting Cassandras Public Key (address), Amount of ARK to send (100) and pressing Send.  When he presses send he will have to input his Private Key, which is like a password, and confirms the transaction.
+Today Dustin decided to send Cassandra her first 100 ARK.   Dustin will now go into his wallet to initiate the transaction by inputting Cassandra's Public Key (address), Amount of ARK to send (100) and pressing Send.  When he presses send he will have to input his Private Key, which is like a password, and confirms the transaction.
 
 ![Transactions 3](https://github.com/dustindreifuerst/docs/blob/Peers_nodes/assets/img/Transactions_03.png)
 
