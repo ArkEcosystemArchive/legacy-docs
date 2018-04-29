@@ -2,7 +2,7 @@
 
 Traditional network computing systems, are built around a centralized client server model where a central authority is queried by a client (user), information is passed to the client and then the connection is terminated.  This is similar to a Web Browser, which acts as a client program requesting a service from the server who then delivers the web page information to the client.
 
-![Systems Overview](https://github.com/dustindreifuerst/docs/blob/Peers_nodes/assets/img/Systems%20Overview.png)
+![Systems Overview](https://github.com/dustindreifuerst/docs/blob/Peers_nodes/assets/img/Systems.png)
 
 ## Centralized network system
 
@@ -15,6 +15,8 @@ A decentralized network system is compromised of nodes distributed across a disp
 ## Distributed network system
 
 A distributed network system has nodes that can span geographical boundaries and communicate/coordinate actions with other node with data and computation and work spread across nodes of the network.  Distributed systems can be centrally controlled, cloud computing systems for example distribute work across and data across a geographically diverse network but have a central authority.  Distributed systems can be decentralized or centralized.  
+
+![Networks Overview](https://github.com/dustindreifuerst/docs/blob/Peers_nodes/assets/img/Networks.png)
 
 ## Client server network
 
