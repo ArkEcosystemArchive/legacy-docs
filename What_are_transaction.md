@@ -6,7 +6,7 @@ To understand this concept better lets go over a brief explanation of transactio
 A **transaction** is nothing more than the transfer of data from a sender to a receiver through the blockchain network that they are using.   A basic cryptocurrency blockchain **transaction** usually includes information such as...
 
 * Value sent (asset price)
-* ownership information: Who owned this piece of data being sent and who is it going to
+* Ownership information: Who owned this piece of data being sent and who is it going to
 * Timestamp of transaction
 * Transaction Identification Number
 
