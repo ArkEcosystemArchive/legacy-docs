@@ -1,0 +1,135 @@
+## **Issue #3 –**  **Consensus Mechanism - The Underlying Protocol Delivering Trust**
+
+** **
+
+** **
+
+** **
+
+**Introduction**
+
+** **
+
+         The purpose of this article is to fundamentally explain what a consensus mechanism is, and why it is necessary to achieve immutability in a globally distributed computing networks. The breakdownof this piece is the following:
+
+1. Introducing the Byzantine Generals&#39; Problem
+2. Consensus Mechanism Basics
+3. Proof of Work
+4. Proof of Stake
+5. Delegated Proof of Stake
+6. Summary
+
+
+
+** **
+
+** **
+
+**The Problem and the Solution**
+
+** **
+
+Imagine a great medieval army surrounds a fortified city ready to lay siege to it. The command structure of the army is composed of many generals directing their specific legions. All the generals vote on which action to take until they reach a 51% consensus.
+
+During the siege, generals are not in close proximity and cannot communicate easily, yet the army must act as one in order to ensure success. To rectify the situation, they employ messengers to constantly relay their vote to &quot;attack&quot; or &quot;retreat&quot; so they may coordinate their strike against the city. The action that earns 50% of the votes is what the army decides to do. This scenario exemplifies a consensus mechanism; unfortunately, it is not the most effective for the following reasons:
+
+   I.         One (or more) of the generals could be a spy for the city, a so-called &quot;bad actor,&quot; who lies about what he plans to do in order to cause mass confusion within the ranks. He tells half of his messengers that he plans to attack and the other half that he plans to retreat. If multiple malicious actors do the same, then the army cannot achieve an accurate agreement, and will suffer defeat because they could not present a unified front.
+
+ II.         The army as a whole has no way to certify the veracity or the dependability of each general.
+
+This is called the **Byzantine Generals&#39; Problem** where actors must agree on strategy to avoid catastrophic system failure, but some of the actors cannot be trusted. Similarly, distributed computing networks cannot function if their consensus mechanism does not natively implement a solution to protect itself from anonymous bad actors. To solve this problem, distributed computing networks remove trust from the equation, thus removing the dependency on any single actor in the network. The common solutions we will overview and compare are called **Proof of Work** (PoW), **Proof of Stake** (PoS), and the Ark Ecosystem&#39;s **Delegated Proof of State** (DPoS).
+
+**Briefly Explaining Popular Consensus Mechanisms**
+
+** **
+
+**               ** In this section, we will provide an overview of the consensus mechanisms used by Bitcoin, Ethereum, and Ark.
+
+         We mentioned before that the main goal when designing a consensus mechanism is to incentivize anonymous parties to work together rather than betray one another. The invention of the blockchain achieves this result. To reference the previous scenario, it allows each general in the army to work together without trusting one another, and each is rewarded for participating constructively.
+
+Bitcoin&#39;s &quot;blockchain&quot;, a public distributed ledger, is an account of which party owes digital tokens to another.  When Bitcoin is sent from one account to another, this is called a transaction. Each transaction is packaged together with other new transactions — this is called a &quot;block&quot;.  Bookkeepers, called &quot;validator nodes&quot;, are the parties who are keeping their own record of these blocks.  To relate to the Byzantine Generals&#39; Problem, the generals are the bookkeepers — they are the validators.
+
+Most current networks provide validators a combination of three different incentives to remain virtuous:
+
+1.     Block Rewards — Each time a validator is the first to confirm a new block, the validator&#39;s  account is credited tokens.
+
+2.      Transactions fees — Each time a user sends a transaction, the user must pay a fee to the validator. Transaction fees exist to deter parties from &quot;spamming&quot; the network and rendering it non-functional.
+
+3.     Network Voting Rights — Networks are always trying to upgrade their performance. Validators vote on protocol improvement plans. This is called governance.
+
+
+
+**Consensus Mechanism: Proof of Work**
+
+** **
+
+**Networks: Bitcoin, Ethereum, Monero, etc**
+
+In Proof of Work protocols, each new block of transactions is encrypted and requires the validators to use large amounts of computational power in order to solve a complicated mathematical puzzle. The validator who is first to find the answer, also known as &quot;hash&quot;, receives the block reward as compensation. PoW validators are called &quot;miners&quot;. The more hashing power a miner has, the higher the likelihood he will mine the next block.
+
+It is important to note that the miners determine the rules for how the network operates. This means that a party who owns 5% of all the Bitcoin in existence does not have a 5% vote in how the network functions; the party that has 5% of the hashing power does though.
+
+**PoW Validator Incentives = Block Rewards + Transaction Fees + Voting Rights**
+
+
+
+**Consensus Mechanism: Proof of Stake**
+
+** **
+
+**Networks: Ethereum (Casper), Cardano, Stratis, etc**
+
+** **
+
+The Proof of Stake consensus mechanism is a different way to approve transactions without the need for spending incredibly large amounts of electricity.  Unlike PoW, where miners are rewarded to solve difficult mathematical puzzles to verify transactions and create new blocks, the PoS consensus mechanism deterministically chooses validators to perform these tasks based on size of their economic stake in the network.
+
+To simplify —
+
+- The term &quot;to stake&quot; means the validators are risking their tokens to insure the network.
+
+- The reason there is potential risk by staking tokens is because the network punishes bad actors that are caught trying to approve false transactions – bad actors&#39; staked tokens are burned.
+
+- A validator node&#39;s voting power is decided by the amount of tokens they have, not by the amount of mining hardware they have access to.
+
+Any token holder can stake their tokens and create a validator node, but token holders can also pool their funds together to increase the likelihood of forging a block. Pools share the transaction fees received. The term &quot;forging&quot; in PoS and DPoS  is synonymous with the word &quot;mining&quot; in PoW networks.
+
+Example:
+
+If a staking pool accrues 5% of the total supply of network tokens currently staked, then this party has a 5% likelihood of being chosen to forge the next block of transactions.
+
+Notice that this reward system is different from the one used in PoW networks because PoS validators do not receive block rewards, they only receive the transaction fees.
+
+**PoS Validator Incentives = Transaction Fees + Voting Rights**
+
+**Consensus Mechanism: Delegated Proof of Stake**
+
+** **
+
+**Networks: Ark Ecosystem, Persona, EOS, Bitshares, Steemit, etc**
+
+** **
+
+Delegated Proof of Stake is a consensus mechanism that is best described as blockchain democracy. Token holders vote for particular validator nodes to forge blocks for the network. Validator nodes are accountable for the integrity of the network. Remember,
+
+- Token holders are called &quot;voters&quot;
+- 1 token = 1 vote
+- Validator nodes are called &quot;delegates&quot;
+
+Delegates campaign for votes by sharing a percentage of the block rewards and/or transaction fees earned. The amount of forging delegates varies between DPoS networks, but all have a limit to how many can forge.
+
+Example: Ark Ecosystem
+
+- The Ark Ecosystem limits the amount of delegates who can forge blocks to the 51 with the most votes
+- Non-forging delegates are competing to out-vote the delegate with the 51
+# st
+ most votes.
+
+Unlike PoS, where staking validators have their tokens burned for malicious activity, DPoS voters can be punished if they do not monitor their delegate&#39;s activity. If a delegate stops sharing block rewards with its voters, voters will change their vote to another delegate, and the delegate will likely not have enough votes to forge anymore.
+
+
+
+**DPoS Validator Incentives = Block Rewards + Transaction Fees +Voting Rights**
+
+**Conclusion**
+
+Distributed computing systems utilize consensus mechanisms to achieve immutability in a trustelss environment. Concesnsus mechanisms differ in design and validator incentives. The types of mechanisms we covered are Proof of Work, Proof of Stake, and Delegated Proof of Stake.
