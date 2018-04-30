@@ -33,13 +33,25 @@ There is little incentive for delegates to collude in maintaining falsy records.
 # Proof of Elapsed Time
 In a proof of elapsed time powered blockchain, the consensus mechanism relies on a dedicated piece of hardware which can ensure the safety of code computation and thus its validity.
 
-[Hyperledger Sawtooth] uses PoET consensus.
+Hyperledger [Sawtooth] uses PoET consensus.
 
-This mechanism leverages Intel's Software Guard Extensions (SGX) to ensure that each participant in the blockchain network waits a random amount of time. When a participant has finished waiting for this random period, they are allowed to mine the next block. The reliability of the hardware is what determines the safety of this network. There is little benefit from having a smaller or larger number of nodes. This structure is best suited for permissioned blockchains, because only approved validator nodes are included in the selection equation.
+This mechanism leverages Intel's Software Guard Extensions (SGX) to ensure that each participant in the Blockchain network waits a random amount of time. When a participant has finished waiting for this random period, they are allowed to mine the next block. The reliability of the hardware is what determines the safety of this network. There is little benefit from having a smaller or larger number of nodes. This structure is best suited for permissioned Blockchains, because only approved validator nodes are included in the selection equation.
 
 There would need to be a substantially faulty random number generator at the core of the issuing CPU logic to generate predictable patterns in the way validators are allowed to mine blocks. Since there is little incentive to have a faulty node that you've personally permissioned on the network, the problems that can arise are mainly due to the potential exploitability of the structure of this consensus mechanism which is similar across all its implementations.
 
------------
+# Proof of Burn
+Proof of Burn is a unique kind of innovation that relies on the node burning Proof of Work issued coins to increase their chances at being selected for mining the next block.
+
+The initial coin using this mechanism is [Slimcoin].
+
+The coins are effectively burned by sending them to a verifiably unspendable address. This exposes naturally configurable coin supply scarcity and ensures the miners are exchanging something valuable for their right to participate in the validation process.
+
+The risks involved are similar to Proof of Stake. In both mechanisms there is a possibility of mining false blocks and propagating them, but gaining the right to even mine a block costs a lot of coins and an attack can be spotted by other nodes and remove from the Blockchain very reliably.
+
+# Proof of Capacity
+In the Proof of Capacity consensus mechanism, nodes are required to plot their storage capacity with a set of randomly generated nonces which are used against blocks to find if they are compatible and thus yield a mined block.
+
+
 
 There exists two principal kinds of applications for the protocols outlined: public and open networks of peers or permissioned ledgers.
 
@@ -56,4 +68,5 @@ For a delegated proof of stake system, the network supply capacity of a single p
 [bitcoin]: https://bitcoin.org/bitcoin.pdf 'Bitcoin whitepaper'
 [blackcoin]: https://blackcoin.co/blackcoin-pos-protocol-v2-whitepaper.pdf 'Blackcoin whitepaper'
 [peercoin]: https://peercoin.net/whitepaper 'Peercoin whitepaper'
-[sawtooth]: https://sawtooth.hyperledger.org/docs/core/releases/1.0/introduction.html
+[sawtooth]: https://sawtooth.hyperledger.org/docs/core/releases/1.0/introduction.html 'Hyperledger Sawtooth introduction'
+[slimcoin]: https://github.com/slimcoin-project/slimcoin-project.github.io/raw/master/whitepaperSLM.pdf 'Slimcoin whitepaper'
