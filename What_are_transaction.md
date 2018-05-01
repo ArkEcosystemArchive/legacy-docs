@@ -1,4 +1,4 @@
-# Transactions, Blocks and how they work on the ARK Network
+# Transactions & Blocks: How do they work on the ARK network?
 
 
 To understand this concept better lets go over a brief explanation of transaction and blocks inside a general blockchain transaction and afterwards we will go over exactly how these function on the ARK network.
