@@ -31,11 +31,11 @@ Maintaining a distributed set of actors with specific jurisdictions, in this cas
 There is little incentive for delegates to collude in maintaining falsy records. The functionality embeded in each node, even simple peers, prevents the inclusion of successive bad blocks. Forging a contravenous block would result in immediate flagging of the delegate in the network and following consequences for bad behaviour.
 
 # Proof of Elapsed Time
-In a proof of elapsed time powered blockchain, the consensus mechanism relies on a dedicated piece of hardware which can ensure the safety of code computation and thus its validity.
+A relatively unknown consensus mechanism, Proof of Elapsed Time, relies on a dedicated piece of hardware which can ensure the safety of code computation and thus its validity.
 
 Hyperledger [Sawtooth] uses PoET consensus.
 
-This mechanism leverages Intel's Software Guard Extensions (SGX) to ensure that each participant in the Blockchain network waits a random amount of time. When a participant has finished waiting for this random period, they are allowed to mine the next block. The reliability of the hardware is what determines the safety of this network. There is little benefit from having a smaller or larger number of nodes. This structure is best suited for permissioned Blockchains, because only approved validator nodes are included in the selection equation.
+This mechanism leverages Intel's Software Guard Extensions (SGX) to ensure that each validator in the Blockchain network waits a random amount of time before being granted validation rights. When a participant has finished waiting for this random period, they are allowed to mine the next block. The reliability of the hardware is what determines the safety of this network. There is little benefit from having a smaller or larger number of nodes. This structure is best suited for permissioned Blockchains, because only approved validator nodes are included in the selection equation and there is often only a single trusted node in charge of attributing the waiting times to validators.
 
 There would need to be a substantially faulty random number generator at the core of the issuing CPU logic to generate predictable patterns in the way validators are allowed to mine blocks. Since there is little incentive to have a faulty node that you've personally permissioned on the network, the problems that can arise are mainly due to the potential exploitability of the structure of this consensus mechanism which is similar across all its implementations.
 
