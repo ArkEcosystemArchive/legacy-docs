@@ -49,7 +49,9 @@ The coins are effectively burned by sending them to a verifiably unspendable add
 The risks involved are similar to Proof of Stake. In both mechanisms there is a possibility of mining false blocks and propagating them, but gaining the right to even mine a block costs a lot of coins and an attack can be spotted by other nodes and remove from the Blockchain very reliably.
 
 # Proof of Capacity
-In the Proof of Capacity consensus mechanism, nodes are required to plot their storage capacity with a set of randomly generated nonces which are used against blocks to find if they are compatible and thus yield a mined block.
+In the Proof of Capacity consensus mechanism, nodes are required to commit storage space to being unused in exchange for the possibility of mining blocks.
+
+Nodes interested in mining are required to plot their storage capacity with a set of randomly generated nonces which are computed passively and yield a sequence of waiting periods. At the end of every waiting period, the node has the right to mine the block if no other block has mined for that specific window. If two validators produce a block for the same window, a soft fork occurs much like in other consensus mechanisms, leaving one of the histories behind to the benefit of the other, often first, mined block.
 
 
 
