@@ -85,6 +85,8 @@ For a Delegated Proof of Stake system like Ark's, the network supply capacity of
 
 # Tangle
 
+# Yet Another Consensus
+
 [ark]: https://ark.io/Whitepaper.pdf 'Ark whitepaper'
 [bitcoin]: https://bitcoin.org/bitcoin.pdf 'Bitcoin whitepaper'
 [blackcoin]: https://blackcoin.co/blackcoin-pos-protocol-v2-whitepaper.pdf 'Blackcoin whitepaper'
