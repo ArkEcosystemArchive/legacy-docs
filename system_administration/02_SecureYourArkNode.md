@@ -108,9 +108,9 @@ sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 #### Configuration
 Find all the references that specify port = SSH (typically in the SSH header section) and change the port to the new one you selected in the SSH security section above.
 
-'''
+```
 sudo nano /etc/fail2ban/jail.local
-'''
+```
 
 ![fail2ban_config](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/fail2ban.png)
 
