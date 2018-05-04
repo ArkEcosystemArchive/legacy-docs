@@ -98,7 +98,7 @@ If everything was setup successfully you should be reconnected to your ARK node.
 The basic idea behind fail2ban is to monitor the logs of common services to spot patterns in authentication failures.
 
 #### Installation 
-Install Fail2Ban and create local configuration file
+Install Fail2Ban and create local configuration file.
 
 ```
 sudo apt-get install fail2ban
