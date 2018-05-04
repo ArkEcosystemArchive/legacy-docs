@@ -1,9 +1,9 @@
 # Blockchain Consensus Mechanisms
-With Blockchains and Distributed Ledgers, we have seen new kinds of consensus mechanisms which enables a decentralized to trust and validation on a large scale.
+With Blockchains and Distributed Ledgers, we have seen new kinds of consensus mechanisms which enable a decentralized network validate transactions.
 
 These protocols are made to be resilient to issues that can arise from the distributed nature of the network they serve. In a Byzantine Fault Tolerant system, the inconsistency of peers' prime status and the possibility of data channels being compromised are countered by smartly structured consensus mechanisms.
 
-Many Blockchains exist, some of them similar and others unique in what they can provide to network participants. The first protocols mainly relied on Proof of Work to establish conensus among nodes. This process being slow and energy intensive is what stimulated advancements in more energy and time efficient consensus models like (delegated) Proof of Stake or Federated Byzantine Agreement. There is also a range of other consensus mechanisms which are often used for a small subset of Blockchains like Proof of Capacity, Proof of Burn or Proof of Elapsed Time.
+Many Blockchains exist, some of them similar and others unique in what they can provide to network participants. The first protocols mainly relied on Proof of Work to establish conensus among nodes. This process being slow and energy intensive is what stimulated advancements in more energy and time efficient consensus models like (delegated) Proof of Stake or Federated Byzantine Agreement. There is also a range of other consensus mechanisms which are often used for a small subset of Blockchains like Proof of Capacity, Proof of Burn or Proof of Elapsed Time. 
 
 Each consensus mechanism has its advantages and drawbacks. The field is continuously evolving. It is important to get accustomed to these mechanisms; they enable trustless proliferation of data through distributed networks.
 
@@ -65,14 +65,25 @@ Nodes interested in mining are required to plot their storage capacity with a se
 
 The expected decentralization granted by PoC comes from the fact that it would be relatively inefficient to purchase storage capacity only to mine blocks. Participants will make use of older hardware they have laying around or devices with unused memory storage. There is an incentive to develop more cost effective solutions for storage, but this would be a welcomed advancement.
 
+# Proof of Authority
+
+# Proof of Integrity
+
+# Federated Byzantine Agreement
+
 There exists two principal kinds of applications for the protocols outlined: public and open networks of peers or permissioned ledgers.
 
 Public and open networks function best with a high level of transparency and number of active nodes, whereas a permissioned ledger doesn't require the same balance. Confirming a transaction is always very straight forward: get the verifiable data to whoever is in charge.
 
 For a Delegated Proof of Stake system like Ark's, the network supply capacity of a single permissioned node is far greater than a Proof of Work node's share in the computing power. A more redundant path to validity ensures users of the network always keep the time to confirm at a minimum in exchange for possible errors in computation that could be buried and nullified by a more extensive group of validators. Traditional Proof of Stake has reduced redundancy by randomly selecting from a larger pool of peers.
 
-# Stellar Consensus Protocol
-let's go!
+# Delegated Byzantine Fault Tolerance
+
+# Simplified Byzantine Fault Tolerance
+
+# Redundant Byzantine Fault Tolerance
+
+# Tangle
 
 [ark]: https://ark.io/Whitepaper.pdf 'Ark whitepaper'
 [bitcoin]: https://bitcoin.org/bitcoin.pdf 'Bitcoin whitepaper'
