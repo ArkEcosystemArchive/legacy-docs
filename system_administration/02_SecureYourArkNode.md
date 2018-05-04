@@ -93,6 +93,36 @@ ssh user@yournode -p 55555
 
 If everything was setup successfully you should be reconnected to your ARK node. Replace `55555` with the port you chose when setting up your `sshd_config`
 
+### Install Fail2Ban
+#### What is Fail2Ban
+The basic idea behind fail2ban is to monitor the logs of common services to spot patterns in authentication failures.
+
+#### Installation 
+Install Fail2Ban and create local configuration file
+
+```
+sudo apt-get install fail2ban
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+```
+
+#### Configuration
+Find all the references that specify port = SSH (typically in the SSH header section) and change the port to the new one you selected in the SSH security section above.
+
+'''
+sudo nano /etc/fail2ban/jail.local
+'''
+
+![fail2ban_config](https://github.com/ArkEcosystem/docs/blob/master/assets/img/system_administration/fail2ban.png)
+
+#### Save your config file
+Press `CTRL+X` to exit the file, `Y` to save the file and then `Enter` to write to the file and return to the command line.
+
+#### Restart Fail2Ban daemon
+```
+sudo service fail2ban restart
+exit
+```
+
 ### Port Knocking
 #### What is Port Knocking?
 Port knocking is a technique used which obscures the port you're actually connecting on to prevent port scanning by opening and closing it when you need it. We will use a series of ports to essentially "knock" and your server will open your configured port for you to connect on by listening for connection attempts on those ports in a specific order.
