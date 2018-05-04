@@ -66,7 +66,13 @@ Nodes interested in mining are required to plot their storage capacity with a se
 The expected decentralization granted by PoC comes from the fact that it would be relatively inefficient to purchase storage capacity only to mine blocks. Participants will make use of older hardware they have laying around or devices with unused memory storage. There is an incentive to develop more cost effective solutions for storage, but this would be a welcomed advancement.
 
 # Proof of Authority
+Mainly used as a hypothetical comparison point, Proof of Authority refers to the validator's identity being at stake as the main deterrent of bad action.
 
+Transactions can flow quickly in PoA, as there are only a subset of nodes that are required to process them and they can work in tandem. These kinds of protocols are best suited for permissioned ledgers and most likely won't be used in public blockchains due to the ease of refining this consensus. There already exist similar mechanisms that bother from the underlying logic of Authority Proof.
+
+The risks involved in a network with transactions or blocks being validated by only a small subset of nodes is mainly attached to the possibility of them being corrupted. This problem can occur voluntarily (maliciously) or due to software errors which can cause faulty behaviour or downtime in the network.
+
+On the scale of centralization, this kind of approach to consensus relies on a small set of people who are proven to have an incentive to participate positively in the stability of the network; this means there is an inherent risk of collusion due to each participant's relative proximity from a practical standpoint.
 # Proof of Integrity
 
 # Federated Byzantine Agreement
