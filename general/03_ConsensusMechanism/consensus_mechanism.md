@@ -92,7 +92,13 @@ This mechanism is similar to dPoS, where the main difference relies on the block
 
 This way of agreeing on the history of blocks poses centralization issues in the sense that there is an elite group of people who are responsible for maintaining the ledger. The risks of fraudulent behaviour could be high depending on the initial repartition of wealth.
 # Simplified Byzantine Fault Tolerance
+This is a staple of the permissioned ledger architectures prevalant in Chain (a Blockchain commissioned by financial giants) and Hyperledger Fabric (a Blockchain framework for Businesses). It uses a unique block generator, also called an orderer, to create blocks and a set of signers to vote for its validity.
 
+The generator is in most cases a single trusted node who gets sent transactions and periodically batches them into a block. The newly created block is submitted via peer-to-peer networking to the block signers who are in charge of validating the block's transactions and approving it with their signature. Sometimes, there is a third class of nodes called committers. Committers are in charge of gathering the signed blocks and verifying them again before committing them to their locally stored Blockchain. Signers are also committers in this case, and the generator node doesn't keep track of the Blockchain, it is only in charge of creating new blocks and submitting them to signers.
+
+The inherent risks brought forth by this model are very simple. Namely, if the system doesn't use a cryptocurrency to mediate transactions sent, like Ethereum's Ether for gas, participants in the network could flood the generator with false transactions and a throughput bottlneck would be reached. This is why a solid client-server structure is very important for a Simplified Byzantine Fault Tolerant consensus-powered Blockchain.
+
+Centraliztion is not a concern with permissioned ledgers, as it is  often a key component in the system's integrity and maintainability. This feature allows for a quick and verifiable solution to Blockchains for a closed group of trusting entities. This mechanism is not suited for an open ledger, as an increase in the transactions submitted is fatal to a single generator node and a break point in this kind of system.
 # Redundant Byzantine Fault Tolerance
 
 # Tangle
