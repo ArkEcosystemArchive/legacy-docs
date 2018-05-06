@@ -84,7 +84,13 @@ Public and open networks function best with a high level of transparency and num
 For a Delegated Proof of Stake system like Ark's, the network supply capacity of a single permissioned node is far greater than a Proof of Work node's share in the computing power. A more redundant path to validity ensures users of the network always keep the time to confirm at a minimum in exchange for possible errors in computation that could be buried and nullified by a more extensive group of validators. Traditional Proof of Stake has reduced redundancy by randomly selecting from a larger pool of peers.
 
 # Delegated Byzantine Fault Tolerance
+This algorithm, abbreviated dBFT, is mainly used by the Blockchain giant NEO (previously Antshares). It relies on delegated book-keepers to reach a threshold and establish blocks as being valid.
 
+The voters use their coins to elect a set of nodes who are in charge of agreeing on whether or not blocks are valid. This mechanism provides a high level of finality, where once a block is validated there is no chance of it being obfuscated in the future; there are no forks. For Neo, the minimum number of book-keepers must be in accord regarding the block. This also accounts for nodes being unavailable or acting arbitrarily.
+
+This mechanism is similar to dPoS, where the main difference relies on the block validation properties. In dPoS, the nodes with larger stakes have a higher chance of being awarded the right to mine a single block, whereas in dBFT consensus the book-keepers validate the blocks together. The risks of bad behaviour leading to a faulty ledger are reduced, as the validation process isn't up to a single node at a time.
+
+This way of agreeing on the history of blocks poses centralization issues in the sense that there is an elite group of people who are responsible for maintaining the ledger. The risks of fraudulent behaviour could be high depending on the initial repartition of wealth.
 # Simplified Byzantine Fault Tolerance
 
 # Redundant Byzantine Fault Tolerance
