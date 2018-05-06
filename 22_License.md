@@ -1,0 +1,9 @@
+# Licenses used in the ARK ecosystem
+![Transactions overview](https://github.com/dustindreifuerst/docs/blob/Peers_nodes/assets/img/ARK%20TRANSACTION%20NO%20WATERMARK.png)
+
+Everything that the ARK team produces or is in the ARK ecosystem falls under what is called the MIT License and reads as follows.
+**"Copyright (c) <year> <copyright holders> 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."**
+This license originated at the Massachusetts Institute of Technology (MIT) and is what is called a permissive free software license.  This allows for proprietary software to be distributed open source to the public as long as the original MIT license is included along with the code in all distributable copies.  The ARK MIT license only requires the original MIT license that includes attribution to the ARK team be distributed when proprietary software is used.
