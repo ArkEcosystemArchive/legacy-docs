@@ -73,15 +73,9 @@ Transactions can flow quickly in PoA, as there are only a subset of nodes that a
 The risks involved in a network with transactions or blocks being validated by only a small subset of nodes is mainly attached to the possibility of them being corrupted. This problem can occur voluntarily (maliciously) or due to software errors which can cause faulty behaviour or downtime in the network.
 
 On the scale of centralization, this kind of approach to consensus relies on a small set of people who are proven to have an incentive to participate positively in the stability of the network; this means there is an inherent risk of collusion due to each participant's relative proximity from a practical standpoint.
-# Proof of Integrity
 
 # Federated Byzantine Agreement
-
-There exists two principal kinds of applications for the protocols outlined: public and open networks of peers or permissioned ledgers.
-
-Public and open networks function best with a high level of transparency and number of active nodes, whereas a permissioned ledger doesn't require the same balance. Confirming a transaction is always very straight forward: get the verifiable data to whoever is in charge.
-
-For a Delegated Proof of Stake system like Ark's, the network supply capacity of a single permissioned node is far greater than a Proof of Work node's share in the computing power. A more redundant path to validity ensures users of the network always keep the time to confirm at a minimum in exchange for possible errors in computation that could be buried and nullified by a more extensive group of validators. Traditional Proof of Stake has reduced redundancy by randomly selecting from a larger pool of peers.
+This consensus mechanism is used by Stellar and has been modified by a handful of other Blockchain projects in attempts to optimize it further. The underlying principle is simple: nodes each select a group of nodes as their trusted nodes. Nodes with related trust form quorums and consensus is driven on a per-quorum basis. Quorums also have quorums, which are required to be in agreement for valid consensus.
 
 # Delegated Byzantine Fault Tolerance
 This algorithm, abbreviated dBFT, is mainly used by the Blockchain giant NEO (previously Antshares). It relies on delegated book-keepers to reach a threshold and establish blocks as being valid.
@@ -91,15 +85,29 @@ The voters use their coins to elect a set of nodes who are in charge of agreeing
 This mechanism is similar to dPoS, where the main difference relies on the block validation properties. In dPoS, the nodes with larger stakes have a higher chance of being awarded the right to mine a single block, whereas in dBFT consensus the book-keepers validate the blocks together. The risks of bad behaviour leading to a faulty ledger are reduced, as the validation process isn't up to a single node at a time.
 
 This way of agreeing on the history of blocks poses centralization issues in the sense that there is an elite group of people who are responsible for maintaining the ledger. The risks of fraudulent behaviour could be high depending on the initial repartition of wealth.
-# Simplified Byzantine Fault Tolerance
-This is a staple of the permissioned ledger architectures prevalant in Chain (a Blockchain commissioned by financial giants) and Hyperledger Fabric (a Blockchain framework for Businesses). It uses a unique block generator, also called an orderer, to create blocks and a set of signers to vote for its validity.
 
-The generator is in most cases a single trusted node who gets sent transactions and periodically batches them into a block. The newly created block is submitted via peer-to-peer networking to the block signers who are in charge of validating the block's transactions and approving it with their signature. Sometimes, there is a third class of nodes called committers. Committers are in charge of gathering the signed blocks and verifying them again before committing them to their locally stored Blockchain. Signers are also committers in this case, and the generator node doesn't keep track of the Blockchain, it is only in charge of creating new blocks and submitting them to signers.
+# Simplified Byzantine Fault Tolerance
+This is a staple of the permissioned ledger architectures prevalant in Chain -- a Blockchain commissioned by financial giants. It uses a unique block generator, also called an orderer, to create blocks and a set of signers, also called endorsers, to vote for its validity.
+
+The generator is in most cases a single trusted node who gets sent transactions and periodically batches them into a block. The newly created block is submitted via peer-to-peer networking to the block signers who are in charge of validating the block's transactions and approving it with their signature.
 
 The inherent risks brought forth by this model are very simple. Namely, if the system doesn't use a cryptocurrency to mediate transactions sent, like Ethereum's Ether for gas, participants in the network could flood the generator with false transactions and a throughput bottlneck would be reached. This is why a solid client-server structure is very important for a Simplified Byzantine Fault Tolerant consensus-powered Blockchain.
 
 Centraliztion is not a concern with permissioned ledgers, as it is  often a key component in the system's integrity and maintainability. This feature allows for a quick and verifiable solution to Blockchains for a closed group of trusting entities. This mechanism is not suited for an open ledger, as an increase in the transactions submitted is fatal to a single generator node and a break point in this kind of system.
+
 # Redundant Byzantine Fault Tolerance
+RBFT is not a very popular mechanism when it comes to currently active and maintained Blockchain protocols. It is a modified version of the Simplified Byzantine Fault Tolerance model, where a multitude of nodes perform ordering tasks and the orderer-in-effect is subject to losing his role at the benefit of another node also running ordering operations.
+
+Hyperledger Indy makes use of Redundancy in a BFT consensus mechanism.
+
+# Practical Byzantine Fault Tolerance
+Closely-related to SBFT, PBFT follows a similar structure of nodes. It includes an orderer, committers and super-committers (endorsers).
+
+This mechanism is primarily used by Hyperledger Fabric.
+
+In Practical Byzantine Fault Tolerance, the client has access to sending his proposed transaction to a collection of endorsers. The endorsers simulate the transaction and, if it passes their tests, send it back alongside their signature for approval. Once the client receives a defined amount of signatures for his transaction, he sends the transaction and its signatures to the orderer, who takes care of creating blocks periodically; the orderer doesn't compute transactions or alter the ledger state. Once a block is created by the orderer, it is shared with committing peers, who are in charge of making sure that the changes suggested by the proposed transaction are still valid regarding the state of the Blockchain, as simulated. Transactions that fail the verification from the committing peers still gets included in the Blockchain, but is marked as invalid. The client knows the transaction was successful when it receives notification from the committers.
+
+Similarly to other Byzantine Fault Tolerant models, practical BFT assumes there aren't more than a third of the nodes in the network which are actively trying to propagate falsehood among the Blockchain.
 
 # Tangle
 
