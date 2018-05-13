@@ -85,7 +85,7 @@ That's a lot of Hyperledger! And even more Byzantine Fault Tolerance...
 
 The underlying processes between these three presented solutions are very similar -- trading here and there to maximize speed or increase accuracy.
 
-One example of a more decentralized agreement alternative is Proof of Elapsed Time, which is only used by Sawtooth... another Hyperledger framework. What's special about this framework is its use of a group of validators who are randomly appointed a time period to wait before being granted authoritatize status by a secured, proprietary CPU chip instruction set, called SGX, made by Intel. Out of the permissioned solutions, this one is best suited for configurable open networks shared between multiple organizations - i.e. supply chains.
+One example of a more decentralized agreement alternative is Proof of Elapsed Time, which is mainly used by Sawtooth -- another Hyperledger framework. What's special about this agreement procedure is its use of a group of validators who are randomly appointed a time period to wait before being granted authoritatize status by a secure code execution environment. The initial implementation relies on a specific instruction set available on Intel chips called SGX. Out of the permissioned solutions, this one is best suited for configurable open networks shared between multiple organizations -- i.e. supply chains.
 
 Identity management is done in various ways accross these implementations:
 - Sawtooth makes use of *settings* transactions, instantiated through validation
