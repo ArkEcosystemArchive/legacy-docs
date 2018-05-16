@@ -21,44 +21,32 @@ The various kinds of agreement that come with different protocols are in most ca
 
 Alright, let's get started!
 
-We separate the categories as follows:
-- [Open ledgers]()
-- [Permissioned ledgers]()
-- [Odd innovations]()
-
-Briefly: open ledgers are public protocols where all blocks can be viewed by anyone holding the Blockchain history, permissioned ledgers make use of different clearance levels for structured responsibilities, and odd innovations are implementations of either kind which are unique.
-
-Don't forget that  agreement algorithms can be very similar across categories, yet the agreement flow will differ based on the power structure of the network.
-
-## Open Ledgers
+## Equal Proof agreement, purely decentralized network validation repartition
 These are the original implementations, there are many kinds of agreement that occur depending on the specific protocol. 
 
-The most wide-spread example of open ledger agreement is Proof of Work (PoW), used by protocols like Bitcoin and Ethereum. It relies on block mining, which is a term used to describe the computational work load necessary to achieve block validity. It is common to have pools of contributing miners to solve the increasingly difficult puzzles required for validation. Block miners are rewarded with a standardized amount of coins for every block. The difficulty adjustment ensures the reduction of inflation relative to the total amount of blocks, thus increasing the coin's value over network use (time).
+The most wide-spread example of Equal Proof agreement is Proof of Work (PoW), used by protocols like Bitcoin and Ethereum. It relies on block ***mining***, which is a term used to describe the computational work load necessary to achieve block validity. It is common to have pools of contributing miners to solve the increasingly difficult puzzles required for validation. Block miners are rewarded with a standardized amount of coins for every block. The difficulty adjustment ensures the reduction of inflation relative to the total amount of blocks, thus increasing the coin's value over network use (time).
 
-The criticism regarding Proof of Work is related to its ascending energy requirements as the puzzles get harder. This leads us into the development of more energy-efficient agreement, notably Proof of Stake (Pos). It maintains block validation by ensuring that accounts wanting to mine are instead required to lock up a desired amount of coins from their balance, inreasing their chance of being selected to mine a block.
+The criticism regarding Proof of Work is related to its ascending energy requirements as the puzzles get harder. This leads us into the development of more energy-efficient agreement, notably Proof of Stake (PoS). It maintains block validation by ensuring that accounts wanting to mine are instead required to lock up a desired amount of coins from their balance, inreasing their chance of being selected to mine a block.
 
 Proof of Stake generally makes use of Proof of Work for the initial issuance of coins from mined blocks, then gradually shifting the proof load towards stakers instead of miners, thus making staked coins a more valuable economic resource than mining (hardware, energy) for validation. Another approach for the initial coin supply issue is to mint coins to investors through fundraising.
 
+## Delegated Proof agreement, concentrated network validation with economic incentives
 The problem with PoS is that in most implementations, there is a lack of cost for participating poorly in the validation process. It is trivial to simply not mine a block when selected as the next miner, thereby delaying the entire network in terms of transactions per second (TPS). This is an important factor in the development of delegated agreement, as seen in Delegated Proof of Stake (DPoS) - with Ark - or Delegated Byzantine Fault Tolerance (DBFT) - with NEO.
 
-Both of these agreement structures rely on the delegation of a specific number of peers, through the use of votes with coins, which gain privileges when in power. For every delegation cycle, the delegates are in charge of *forging* blocks. A greater speed is achieved in these two implementations, considering that it is unlikely for a delegate to remain in power after acting poorly towards the other peers.
+Both of these agreement structures rely on the delegation of a specific number of peers, through the use of votes with coins, which gain privileges when in power. For every delegation cycle, the delegates are in charge of ***forging*** blocks. A greater speed is achieved in these two implementations, considering that it is unlikely for a delegate to remain in power after acting poorly towards the other peers.
 
 Mainly, the two just outlined agreement solutions differ in terms of their respective validation process. In the Proof of Stake version, the delegates are randomly selected to forge blocks on a turn basis, whereas in Delegated Byzantine Fault Tolerance the required number of delegates must validate every new block for it to be forged. The forged block is considered increasingly valid every time another block is added to the chain in DPOS. In DBFT, the block is considered valid as soon as the minimum number of delegates (typically 2/3 +1) agree on its validity.
 
 There are valid points to be made for holding a more centralized structure for agreement as seen with delegation. Having closer physical relationships between delegates can increase network speed in the case of DBFT and, in both cases, network participants benefit from the increased incentive for delegatd peers to act properly.
 
-In contrast, some argue that centralization is what peer-to-peer technology is made to avoid. This emphasizes the development of novel solutions for agreement which don't rely on economic resources or delegated peers; something like Federated Byzantine Agreement (FBA) and Tangle - native to Stellar and IOTA respectively.
+## Network Incentive agreement, cultivation of healthy network participation habits
+Some argue that centralization is what peer-to-peer technology is made to avoid. This emphasizes the development of novel solutions for agreement which don't rely on economic resources or delegated peers - which use intrinsic protocol-level settings to guide peers; something like Federated Byzantine Agreement (FBA) and Tangle - native to Stellar and IOTA respectively.
 
-Agreement in FBA is reached gradually, through the use of a network of trusted peer groups, or quorums. A quorum is the term used to describe a group of peers through which a single peer is able to gather block validity information. The peers themselves are not required to validate blocks, but they could be left out of being included in certain quorums which validate every block if they are found to propagate faulty ones. It is therefore to the peer's advantage to exude a standard level of truth through its trust affiliations and validations procedures.
+Agreement in FBA is reached gradually, through the use of a network of trusted peer groups, or quorums. The network itself operates on rules that can be changed through voting with the coin. A quorum is the term used to describe a group of peers through which a single peer is able to gather block validity information. The peers themselves are not required to validate blocks, but they could be left out of being included in certain quorums which validate every block if they are found to propagate faulty ones. It is therefore to the peer's best interest to exude a standard level of truth through its trust affiliations and validations procedures.
 
-As you can see, there are many interesting ways people have integrated into network protocols for dealing with vast reaches and open access.
-
-If you've made it here and still have thirst for more, check out the following:
-- Proof of Capacity makes use of *plotted* storage space to allow the peer to mine a block every calculated time period;
-- Proof of Burn is the sacrificing of coins to increase block mining chance;
+IOTA, on the other hand, requires every new transaction to endorse two prior ones and creates a Tangle of trust.
 
 ## Permissioned Ledgers
-The name says it all: permissions are granted to specified peers in a Permissioned Ledger to maintain trust and restrictions in a familiar way.
 
 These networks are orchestrated much like traditional entreprise networks which make use of clearance levels, individual-or-group specific responsibilities and identity management.
 
