@@ -1,9 +1,11 @@
 # Using the ARK CLI Client
+![ARKCLIENT2](https://github.com/dustindreifuerst/docs/blob/27_ARKCLIENT/assets/img/ARK_CLI_HEADER.png)
+
 
 Some users may wish to interact with the ARK blockchain directly and not through the desktop or mobile client.
 
 
-The Ark-client is available for users running windows, linux, Ubuntu and apple operating systems.  Raspberry Pi users can also run the client by installing a qemu emulator and downloading the debian version. Links can be found below.
+The Ark-client is available for users running windows, Linux, Ubuntu and apple operating systems.  Raspberry Pi users can also run the client by installing a qemu emulator and downloading the debian version. Links can be found below.
 
 ## Requirements
 
@@ -16,7 +18,7 @@ You will need to download and install NPM prior to installing and running the AR
 ![ARKCLIENT2](https://github.com/dustindreifuerst/docs/blob/27_ARKCLIENT/assets/img/ARKCLIENT2.png)
 
 
-Download [Node.js](http://www.nodjs.org)through this link
+Download [Node.js](http://www.nodjs.org) through this link
 
 
 **Windows PowerShell (PS)**
@@ -27,7 +29,7 @@ PowerShell is in short an command line tool that allows you to work with the ARK
 ![ARKCLIENT2](https://github.com/dustindreifuerst/docs/blob/27_ARKCLIENT/assets/img/ARKCLIENT1A.png)
 
 
-If you are using Linux, Ubuntu, Raspbian or Apple Operating systems PowerShell is available for download.  Follow instructions in installation wizard for your operating system.  Only Download from trusted sources.
+If you are using Linux, Ubuntu, Raspbian or Apple operating systems PowerShell is available for download.  Follow instructions in installation wizard for your operating system.  Only download from trusted sources.
 
 [PowerShell for Linux](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-powershell-core-on-linux?view=powershell-6)
 
@@ -48,7 +50,7 @@ In PowerShell you will copy/past the command: *npm install -g arkecosystem/ark-c
 ![ARKCLIENT2](https://github.com/dustindreifuerst/docs/blob/27_ARKCLIENT/assets/img/ARKCLIENT4.png)
 
 
-Once you have executed this command you will be able to launch the progam by typing *ark-client*
+Once you have executed this command you will be able to launch the program by typing *ark-client*
 
 
 ![ARKCLIENT2](https://github.com/dustindreifuerst/docs/blob/27_ARKCLIENT/assets/img/ARKCLIENT3.png)
@@ -64,7 +66,7 @@ Once you have executed this command you will be able to launch the progam by typ
 
 
 
-You are now operating within the ark-client and can interact with it by using the list of commands availble.
+You are now operating within the ark-client and can interact with it by using the list of commands available.
 
 to use these commands fill in appropriate information within the area <> to properly execute them.
 
@@ -108,13 +110,13 @@ Votes for delegate < name >.  Removes previous vote if applicable
 
 Removes previous vote
 
-**accound send < amount > < recipient >**
+**account send < amount > < recipient >**
 
-Sends < amount > of ARK to < recipient >.  Formats allowed are "10" to denominate 10 ARK or "USD10" or "EUR10"to send (based on network USD/EURO value) $10 in USD/EURO value of ARK to <address>
+Sends < amount > of ARK to < recipient >.  Formats allowed are "10" to denominate 10 ARK or "USD10" or "EUR10" to send (based on network USD/EURO value) $10 in USD/EURO value of ARK to <address>
 
 **account delegate < username >**
 
-Register a new deligate with < username > 
+Register a new delegate with < username > 
 
 **account create**
 
@@ -130,14 +132,14 @@ Sign a message
 
 **message verify < message > < publickey >**
 
-Verify the < message > signed byt the owner of a the < publickey >
+Verify the < message > signed by the owner of a the < publickey >
 
 **shARK**
 
-Dont use this command.
+Don't use this command.
 
 
-Before you can interact with the ARK blockchain you will need to connect to the network.  It is reocmmended that you FIRST connect to the Devnet which is a clone of the ARK mainnet.  This allows you to test and fail without real world consequences vis a vis your wallet holdings, etc.
+Before you can interact with the ARK blockchain you will need to connect to the network.  It is recommended that you FIRST connect to the Devnet which is a clone of the ARK mainnet.  This allows you to test and fail without real world consequences vis a vis your wallet holdings, etc.
 
 Enter the command *connect devnet*
 
@@ -150,10 +152,11 @@ Now enter command *account create* to create a new devnet account
 
 ![ARKCLIENT2](https://github.com/dustindreifuerst/docs/blob/27_ARKCLIENT/assets/img/ARKCLIENT5.png)
 
-It is vitally important tha you write down BOTH your passphrase and address so that you can continue to access your devnet account in the future. Remember ther are NO RECOVERY SERVICES.
+It is vitally important that you write down BOTH your passphrase and address so that you can continue to access your devnet account in the future. Remember there are NO RECOVERY SERVICES.
 
 You will also need to deposit into your devnet wallet, which is the native currency on the devnet to distinguish it from ARK that resides on the mainnet.  
 
-If you need DARK head over to the [ArkEcosystem on Slack](http://www.ark.io/contact) and request access to the ArkEcoystem channel at the bottom of the page of the link provided
+If you need DARK head over to the [ArkEcosystem on Slack](http://www.ark.io/contact) and request access to the ArkEcosystem channel at the bottom of the page of the link provided
 
-Once you are given access to the Slack channel you can request DARK from one of the admins by providing them your DARK address
+Once you are given access to the Slack channel you can request DARK from one of the admins by providing them your DARK address.  If you have any further questions regarding how to use the arkclient contact the very helpful and friendly peopel in the ARK community via the 
+[ARK.io FORUM](https://forum.ark.io/)
