@@ -102,7 +102,7 @@ The documentation bounty rewards you for contributing to the ArkEcosystem [docs 
 
 ### Custom projects
 
-If you didn't find something for you, but you have another idea, get in contact with **boldninja** on Slack to talk about it.
+If you didn't find something for you, but you have another idea, get in contact with **boldninja** on [Slack](https://ark.io/slack) to talk about it.
 
 It can be (almost) anything : from an Ark-related app to a Ark design project or educational video... Your imagination is the limit !
 
@@ -119,7 +119,7 @@ Now that you have chosen one or more repos, here is what you can do to get start
 - Set up your development environment, and start using the product : go through the use cases, test it. You might find a bug or something you can improve.
 - You can also check the closed issues to see what's been done : it can give you some ideas on what to do next.
 
-When you've found something to work on, check and follow the GitHub workflow (link).
+When you've found something to work on, check and follow the GitHub workflow in the next section.
 
 ### Documentation
 
