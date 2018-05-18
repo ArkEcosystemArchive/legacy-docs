@@ -97,7 +97,7 @@ The documentation bounty rewards you for contributing to the ArkEcosystem [docs 
 
 #### Conditions :
 - Write in English
-- Follow the workflow described in "how to get started - Documentation"
+- Follow the workflow described in the next section *How to get started / Documentation*
 - Don't plagiarize : we take this seriously. It could get you excluded from participating in this or others bounties.
 
 ### Custom projects
