@@ -13,7 +13,7 @@ and securing the Ark Network.
 ## Recommended Specifications
 - 2 CPU Cores+
 - 8GB Ram+
-- Ubuntu 16.04
+- Ubuntu 17.10
 - 40GB+ SSD
 
 ## Prerequisite Setup
@@ -28,7 +28,7 @@ server when running a delegate nodes. These nodes are the security of our networ
 and their uptime is of most importance in making sure the network runs smoothly.
 
 The recommended specifications are what we would consider the minimum specifications
-for delegate nodes. Smaller nodes are fine for relays or development purposes. We recommend using Ubuntu 16.04 however you are free to use any version of Linux you're comfortable with. These guides will use debian flavored Linux variants though.
+for delegate nodes. Smaller nodes are fine for relays or development purposes. We recommend using Ubuntu 17.10 however you are free to use any version of Linux you're comfortable with. These guides will use debian flavored Linux variants though.
 
 With each provider, the setup process for creating a new virtual server is going to
 be different. If choosing one of the listed providers, we have created quick

@@ -128,7 +128,7 @@ exit
 Port knocking is a technique used which obscures the port you're actually connecting on to prevent port scanning by opening and closing it when you need it. We will use a series of ports to essentially "knock" and your server will open your configured port for you to connect on by listening for connection attempts on those ports in a specific order.
 
 #### Disable UFW
-By default UFW comes enabled with Ubuntu 16.04. If you get `ufw command not found` then run
+By default UFW comes enabled with Ubuntu 17.10. If you get `ufw command not found` then run
 
 ```
 sudo apt-get install ufw
@@ -232,7 +232,7 @@ Install a client for your operating system to make knocking easier. There even a
 
 After knocking your port will remain open until you send the closing knock sequence.
 
-##### Ubuntu 16.04
+##### Ubuntu 17.10
 ```
 sudo apt-get install knockd
 ```
