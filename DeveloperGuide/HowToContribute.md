@@ -137,13 +137,11 @@ To go through this workflow, you must have a GitHub account. You must also have 
 
 ### Fork the repository
 
-To fork the repository, go to its GitHub page and click on the "Fork" button :
+To fork the repository, go to its GitHub page and click on the "Fork" button that is in the upper right :
 
-(Image du bouton Fork)
+![Github Fork button](./img/GithubForkButton.png)
 
 It should take a few seconds for your fork to be ready !
-
-(Image du fork créé)
 
 So now you have your own repository you can work on.
 
@@ -177,9 +175,15 @@ GitHub might auto detect that you want to create a pull request and suggest it t
 
 ![Github PR suggestion](./img/GithubPRSuggestion.png)
 
-If not you can do it manually :
+If not you can do it manually : go to the "Pull requests" tab and click on the "New pull request" button.
 
-(Image)
+![Github manual PR](./img/GithubNewPR.png)
+
+You will then be able to compare your changes between the Ark master branch and your own branch (click on the link "compare accross forks").
+
+![Github PR compare changes](./img/GithubPRCompare.png)
+
+If you're satisfied with the changes, then you can add a clear title and description to your PR and submit it !
 
 ### Additional tips
 
