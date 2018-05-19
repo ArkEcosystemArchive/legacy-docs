@@ -1,22 +1,22 @@
 # Consensus Mechanisms
-There is a multitude of mechanisms used in Blockchain protocols to maintain a valid state in the ledger, some more common than others.
-In this (document,post,article), we review a wide range of algorithms so you can familiarize yourself with many different kinds of consensus mechanisms.
+There is a multitude of mechanisms used in peer-to-peer protocols to maintain a valid state in the ledger, some more common than others. In this (document,post,article,section), we review a wide range of algorithms so you can familiarize yourself with many different kinds of consensus mechanisms.
 
-For simplicity, we will use the term "agreement" when referring to the underlying algorithm or mechanism of consensus in peer-to-peer protocols including but not limited to Blockchains.
+For simplicity, we will use the term "agreement" when referring to the underlying algorithm or mechanism of consensus in peer-to-peer protocols, including but not limited to Blockchains.
 
-Now, it is important to take note of the temporal progression relating to the advancement and improvement of various agreement systems for distributed networks. Many are variations on previous existing and tested solutions, and every single one most definitely borrows some of its core design from past works.
+Now, it is important to take note of the progression and improvement of various agreement systems for distributed networks. Many are variations on previous existing and tested solutions, and every single one most definitely borrows some of its core design from past works.
 
 Before we dive into the various categories and break them down in detail, let us iterate quickly the problem we're trying to solve with all of these implimentations.
 
 ## Byzantine Agreement
-The problems that occur most often in a network of decentralized peers, where the power structure can be split between its members, are often referred to as being solved through Byzantine Agreement (BA). This nomanclature comes from a popularized decision-making problem that arises when any number of soldiers (or peers) in an army (or network) have the potential to act arbitrarily and potentially cause harm to other members of the group - the [General's Problem](https://en.wikipedia.org/wiki/Byzantine_fault_tolerance). A network which can successfully prevent issues arrising from bad actors and node unavailability is said to be Byzantine Fault Tolerant (BFT). As many of your know, Bitcoin is claimed to be the first proven application of such category in modern times.
+The problems that occur most often in a network of decentralized peers, where the power structure can be split between its members, are often referred to as being solved through Byzantine Agreement (BA). This nomanclature comes from a popularized decision-making problem that arises when any number of soldiers (or peers) in an army (or network) have the option of acting arbitrarily and potentially cause harm to other members of the group - the [General's Problem](https://en.wikipedia.org/wiki/Byzantine_fault_tolerance). A network which can successfully prevent and heal from issues produced by bad actors and unavailable peers is said to be Byzantine Fault Tolerant (BFT). As many of your know, Bitcoin is claimed to be the first practical application of such category in modern times.
 
 ## Basics
-Before exploring agreement styles, one should be familiar with the general flow of decentralized ledgers like Blockchains. Typically, accounts have a pair of keys, one used to recieve coins and the other to send them. The members of the network often have accounts and are connected to other peers. The peer's role is to propagate data, like transactions, to other peers. Peers can optionally participate in creating blocks of transactions which could be added to the chain, depending on agreement. The Blockchain is the series of blocks which are said to contain the official transaction history, is immutable and distributed.
+Before exploring agreement styles, one should be familiar with the general flow of decentralized ledgers like Blockchains. Typically, accounts have a pair of keys, one used to recieve coins and the other to send them. The members of the network can create accounts and are connected to other peers. The peer's role is to propagate data, like transactions, to other peers. Peers can optionally participate in creating blocks of transactions which could be added to the chain, depending on agreement. The Blockchain is the series of blocks which are said to contain the official transaction history, is immutable and distributed.
 
 That's it.
 
 The various kinds of agreement that come with different protocols are in most cases results of trade-offs and optimizations regarding decentralization, speed and accuracy.
+
 ---
 
 Alright, let's get started!
@@ -26,56 +26,38 @@ These are the original implementations, there are many kinds of agreement that o
 
 The most wide-spread example of Equal Proof agreement is Proof of Work (PoW), used by protocols like Bitcoin and Ethereum. It relies on block ***mining***, which is a term used to describe the computational work load necessary to achieve block validity. It is common to have pools of contributing miners to solve the increasingly difficult puzzles required for validation. Block miners are rewarded with a standardized amount of coins for every block. The difficulty adjustment ensures the reduction of inflation relative to the total amount of blocks, thus increasing the coin's value over network use (time).
 
-The criticism regarding Proof of Work is related to its ascending energy requirements as the puzzles get harder. This leads us into the development of more energy-efficient agreement, notably Proof of Stake (PoS). It maintains block validation by ensuring that accounts wanting to mine are instead required to lock up a desired amount of coins from their balance, inreasing their chance of being selected to mine a block.
+The criticism regarding Proof of Work is related to the increase in energy requirements as the puzzles get harder. This leads us into the development of more energy-efficient agreement, notably Proof of Stake (PoS). It maintains block validation by ensuring that accounts wanting to mine are instead required to lock up a desired amount of coins from their balance, inreasing their chance of being selected to mine a block.
 
 Proof of Stake generally makes use of Proof of Work for the initial issuance of coins from mined blocks, then gradually shifting the proof load towards stakers instead of miners, thus making staked coins a more valuable economic resource than mining (hardware, energy) for validation. Another approach for the initial coin supply issue is to mint coins to investors through fundraising.
 
 ## Delegated Proof agreement, concentrated network validation with economic incentives
 The problem with PoS is that in most implementations, there is a lack of cost for participating poorly in the validation process. It is trivial to simply not mine a block when selected as the next miner, thereby delaying the entire network in terms of transactions per second (TPS). This is an important factor in the development of delegated agreement, as seen in Delegated Proof of Stake (DPoS) - with Ark - or Delegated Byzantine Fault Tolerance (DBFT) - with NEO.
 
-Both of these agreement structures rely on the delegation of a specific number of peers, through the use of votes with coins, which gain privileges when in power. For every delegation cycle, the delegates are in charge of ***forging*** blocks. A greater speed is achieved in these two implementations, considering that it is unlikely for a delegate to remain in power after acting poorly towards the other peers.
+Both of these agreement structures rely on the delegation of a specific number of peers, through the use of votes with coins or other symbols, whom gain privileges when in power. For every delegation cycle, the delegates are in charge of ***forging*** blocks. A greater speed is achieved in these two implementations, considering that it is unlikely for a delegate to remain in power after acting poorly towards the other peers and the lack of significantly time-consiming computations.
 
 Mainly, the two just outlined agreement solutions differ in terms of their respective validation process. In the Proof of Stake version, the delegates are randomly selected to forge blocks on a turn basis, whereas in Delegated Byzantine Fault Tolerance the required number of delegates must validate every new block for it to be forged. The forged block is considered increasingly valid every time another block is added to the chain in DPOS. In DBFT, the block is considered valid as soon as the minimum number of delegates (typically 2/3 +1) agree on its validity.
 
-There are valid points to be made for holding a more centralized structure for agreement as seen with delegation. Having closer physical relationships between delegates can increase network speed in the case of DBFT and, in both cases, network participants benefit from the increased incentive for delegatd peers to act properly.
+There are valid points to be made for holding a more centralized structure for agreement as seen with delegation: having closer physical relationships between delegates can increase network speed in the case of DBFT and, in both cases, network participants benefit from the increased incentive for delegatd peers to act properly.
 
 ## Network Incentive agreement, cultivation of healthy network participation habits
 Some argue that centralization is what peer-to-peer technology is made to avoid. This emphasizes the development of novel solutions for agreement which don't rely on economic resources or delegated peers - which use intrinsic protocol-level settings to guide peers; something like Federated Byzantine Agreement (FBA) and Tangle - native to Stellar and IOTA respectively.
 
-Agreement in FBA is reached gradually, through the use of a network of trusted peer groups, or quorums. The network itself operates on rules that can be changed through voting with the coin. A quorum is the term used to describe a group of peers through which a single peer is able to gather block validity information. The peers themselves are not required to validate blocks, but they could be left out of being included in certain quorums which validate every block if they are found to propagate faulty ones. It is therefore to the peer's best interest to exude a standard level of truth through its trust affiliations and validations procedures.
+Agreement in FBA is reached gradually, through the use of a network of trusted peer groups, or quorums. The network itself operates on rules that can be changed through voting with the coin. A quorum is the term used to define a group of peers through which a single member is able to gather block validity information. The members themselves are not required to validate blocks, but they could be left out of being included in certain quorums which validate every block if they are found to propagate faulty ones. It is therefore in the peer's best interest to exude a standard level of truth through its trust affiliations and validation procedures.
 
-IOTA, on the other hand, requires every new transaction to endorse two prior ones and creates a Tangle of trust.
+IOTA, on the other hand, requires every new transaction to endorse two prior ones and creates a Tangle of trust rather than a Blockchain. Transactions are graded with a weight: a combination of the weight of transactions is directly or indirectly validates and the weight of transactions endorsing it.
 
-## Permissioned Ledgers
+## Permissioned Ledgers, entreprise solutions and hierarchical design of distributed computing
+Many networks have emerged which offer similar functionality to the open ledgers reviewed. The permissioned distributed ledgers are orchestrated much like traditional entreprise networks which make use of clearance levels, individual-or-group specific responsibilities and identity management. These are imporant to understand because they are inspired by open protocols, often innovating upon them, and offer alternative means to manage distributed networks.
 
-These networks are orchestrated much like traditional entreprise networks which make use of clearance levels, individual-or-group specific responsibilities and identity management.
+The core functionality of a permissioned ledger is basically the same as any other distributed network, the main differences being how identity, rights and responsibilities are shared across peers - e.g. in many implementations, a specific peer class is responsible for creating an order of transactions in a block and to propagate it, while others verify those transactions and decide whether or not they commit them to the chain as being valid.
 
-Goals sought by these solutions are very simple:
-1. Maintain a clear, verifiable history
-2. Adjust the agreement structure to suit per-case needs
-3. Improve upon existing distributed computing models
+This kind of structure has a few spinoffs, notably: Practical, Simplified and Redundant BFT; each describing a different set of procedures to follow for the maintenance of a healthy Blockchain.
 
-So, let's touch on how agreement is reached in this different category of ledgers.
+Perhaps the most significant approach to solving efficient peer-to-peer networking from a permissioned standpoint is Hashgraph, in which validation occurs through the simulation of other peers' votes. The role of the protocol is ensuring peers have access to what other peers have access to, this is called gossip and is made redundant. Effectively, an entire peer's collection of information about other network members is the basis for establishing whether or not this peer will endorse a given transaction, and this can all be calculated locally (given the information about the peer is up-to-date).
 
-The previously mentionned interchangeability between open and permissioned protocols can be demonstrated by examining another Byzantine Fault Tolerant design: Practical Byzantine Fault Tolerance (PBFT).
+Permissioned ledgers are often marketed as having higher TPS than open ledgers, however this is mainly due to the reduction of the need to have a heavy confirmation weight from subsequent transactions or block. There is no intrinsic protocol improvement for these kinds of ledgers, they instead rely on the probability of having an army of good soldiers. This can be suitable for networks with high accountability and repercussions for bad behaviour, but it fails when applied to a broader audience of individuals because the improved speed is only a result of the lack of bad acting and few peers.
 
-PBFT is used in Hyperledger Fabric, which is an entreprise Blockchain framework supported by the Linux Foundation. In Practical BFT, the transactions issued by peers must be verified and signed by a minimum amount of Endorsers, then made into a block by a single dedicated Orderer. Once the ordered block has been created, another group of participants -- committing peers -- take charge of verifying that the changes proposed by the endorsed transactions still apply to the current state of the Blockchain. The committing peers will each individually push the block containing a collection of valid and invalid transactions to the ledger, based on the last verification step.
+## Further implications
+As demonstrated, the many existing solutions for solving consensus in peer-to-peer networks are often individually similar and offer trade-offs when compared to one another. There are novel innovations claiming to be superior, though the natural evolution of agreement tends to flow between existing implementations and they are subject to improve or adapt then adopt each other's structural advantages when needed.
 
-Another approach very similar to PBFT is SBFT, or Simplified Byzantine Fault Tolerance. The transaction is initially sent to a peer and forwarded to the ordering service if valid. The ordering service creates proposals from transactions, then sends them to committing peers. The ordering service is also in charge of determining an order for the committers, one of them being the leader, for vote collection and proposed block validity agreement.
-
-Chain (the company) is an example of a framework that uses SBFT. They are in charge of developing Blockchains for international fintech corporations like card processors and banking institutions.
-
-An interesting adaptation of Simplified BFT is Redundant BFT, where every committing peer performs the leader's task even if they're unappointed. The fastest peer is awarded the position of leader until it is outpaced by another committing peer who holds a newer block. This mechanism ensures, with an extra check, that the speed of committing is always at its highest potential. A framework making use of this flow is Hyperledger Indy.
-
-That's a lot of Hyperledger! And even more Byzantine Fault Tolerance... 
-
-The underlying processes between these three presented solutions are very similar -- trading here and there to maximize speed or increase accuracy.
-
-One example of a more decentralized agreement alternative is Proof of Elapsed Time, which is mainly used by Sawtooth -- another Hyperledger framework. What's special about this agreement procedure is its use of a group of validators who are randomly appointed a time period to wait before being granted authoritatize status by a secure code execution environment. The initial implementation relies on a specific instruction set available on Intel chips called SGX. Out of the permissioned solutions, this one is best suited for configurable open networks shared between multiple organizations -- i.e. supply chains.
-
-Identity management is done in various ways accross these implementations:
-- Sawtooth makes use of *settings* transactions, instantiated through validation
-- Chain has user roles which are modified programmatically through APIs (Application Programming Interface-s)
-- Iroha standardizes user interaction in the classes of: clients, peers and orderer
-- Fabric utilizes a pluggable Membership Service Provider which can live on-chain or act as an oracle
-
+Depending on the specific case, a particular option is more suitable than another. In a scenario where the goal changes frequently, a network equipped with the functionality to fundamentaly alter its underlying agreement mechanism is likely to be a long-lasting solution.

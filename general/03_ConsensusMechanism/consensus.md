@@ -1,15 +1,14 @@
 # Consensus Mechanisms
-There is a multitude of mechanisms used in Blockchain protocols to maintain a valid state in the ledger, some more common than others.
-In this (document,post,article), we review a wide range of algorithms so you can familiarize yourself with many different kinds of consensus mechanisms.
+There is a multitude of mechanisms used in peer-to-peer protocols to maintain a valid state in the ledger, some more common than others. In this (document,post,article,section), we review a wide range of algorithms so you can familiarize yourself with many different kinds of consensus mechanisms.
 
-For simplicity, we will use the term "agreement" when referring to the underlying algorithm or mechanism of peer-to-peer protocols including but not limited to Blockchains.
+For simplicity, we will use the term "agreement" when referring to the underlying algorithm or mechanism of peer-to-peer protocols, including but not limited to Blockchains.
 
-Now, it is important to take note of the temporal progression relating to the advancement and improvement of various agreement systems for distributed networks. Many are variations on previous existing and tested solutions, and every single one most definitely borrows some of its core design from past works.
+Now, it is important to take note of the progression and improvement of various agreement systems for distributed networks. Many are variations on previous existing and tested solutions, and every single one most definitely borrows some of its core design from past works.
 
 Before we dive into the various categories and break them down in detail, let us iterate quickly the problem we're trying to solve with all of these implimentations.
 
 ## Byzantine Agreement
-The problems that occur most often in a network of decentralized peers, where the power structure can be split between its members, are often referred to as being solved through Byzantine Agreement (BA). This nomanclature comes from a popularized decision-making problem that arises when any number of peers (or nodes) in an army (or network) have the potential to act arbitrarily and potentially cause harm to other members of the group - the [General's Problem](https://en.wikipedia.org/wiki/Byzantine_fault_tolerance). A network which can successfully prevent issues arrising from bad actors and node unavailability is said to be Byzantine Fault Tolerant (BFT). As many of your know, Bitcoin is claimed to be the first proven application of such category in modern times.
+The problems that occur most often in a network of decentralized peers, where the power structure can be split between its members, are often referred to as being solved through Byzantine Agreement (BA). This nomanclature comes from a popularized decision-making problem that arises when any number of soliders (or peers) in an army (or network) have the potential to act arbitrarily and potentially cause harm to other members of the group - the [General's Problem](https://en.wikipedia.org/wiki/Byzantine_fault_tolerance). A network which can successfully prevent issues arrising from bad actors and node unavailability is said to be Byzantine Fault Tolerant (BFT). As many of your know, Bitcoin is claimed to be the first proven application of such category in modern times.
 
 ## Basics
 Before exploring agreement styles, one should be familiar with the general flow of decentralized ledgers like Blockchains. Typically, accounts have a pair of keys, one used to recieve coins and the other to send them. The members of the network often have accounts and are connected to other peers. The peer's role is to propagate data, like transactions, to other peers. Peers can optionally participate in creating blocks of transactions which could be added to the chain, depending on agreement.
