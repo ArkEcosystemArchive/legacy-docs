@@ -1,121 +1,65 @@
-# Blockchain Consensus Mechanisms
-With Blockchains and Distributed Ledgers, we have seen new kinds of consensus mechanisms which enable a decentralized network validate transactions.
+# Consensus Mechanisms
+There is a multitude of mechanisms used in peer-to-peer sharing protocols to maintain a valid history, some more common than others. In this document, we review a wide range of algorithms so you can familiarize yourself with many different kinds of consensus mechanisms.
 
-These protocols are made to be resilient to issues that can arise from the distributed nature of the network they serve. In a Byzantine Fault Tolerant system, the inconsistency of peers' prime status and the possibility of data channels being compromised are countered by smartly structured consensus mechanisms.
+For simplicity, we will use the term "agreement" when referring to the underlying algorithm or mechanism of consensus in peer-to-peer protocols, including but not limited to Blockchains.
 
-Many Blockchains exist, some of them similar and others unique in what they can provide to network participants. The first protocols mainly relied on Proof of Work to establish conensus among nodes. This process being slow and energy intensive is what stimulated advancements in more energy and time efficient consensus models like (delegated) Proof of Stake or Federated Byzantine Agreement. There is also a range of other consensus mechanisms which are often used for a small subset of Blockchains like Proof of Capacity, Proof of Burn or Proof of Elapsed Time. 
+Now, it is important to take note of the progression and improvement of various agreement systems for distributed networks. Many are variations on previous existing and tested solutions, and every single one most definitely borrows some of its core design from past works.
 
-Each consensus mechanism has its advantages and drawbacks. The field is continuously evolving. It is important to get accustomed to these mechanisms; they enable trustless proliferation of data through distributed networks.
+Before we dive into the various categories and break them down in detail, let us iterate quickly the problem we're trying to solve with all of these implementations.
 
-# Proof of Work
-The original consensus mechanism used in the [Bitcoin] protocol, proof of work, allows validating peers (miners) to weigh their vote with computational power.
+## Byzantine Agreement
+The problems that occur most often in a network of decentralized peers, where the power structure can be split between its members, are often referred to as being solved through Byzantine Agreement (BA). This nomenclature comes from a popularized decision-making problem that arises when any number of soldiers (or peers) in an army (or network) have the option of acting arbitrarily and potentially cause harm to other members of the group - the [General's Problem](https://en.wikipedia.org/wiki/Byzantine_fault_tolerance). A network which can successfully prevent and heal from issues produced by bad actors and unavailable peers is said to be Byzantine Fault Tolerant (BFT). As many of your know, Bitcoin is claimed to be the first practical application of such category in modern times.
 
-The valid block structure is obtained from combining a collection of transactions, the last block’s header and a nonce. The nonce is the variable part of the equation, it must be changed and tested until the block has the required properties. These calculations are what guards the network from double spending problems or other malicious acts.
+## Basics
+Before exploring agreement styles, one should be familiar with the general flow of decentralized ledgers like Blockchains. Typically, accounts have a pair of keys, one used to receive coins and the other to send them. The members of the network can create accounts and are connected to other peers. The peer's role is to propagate data, like transactions, to other peers. Peers can optionally participate in creating blocks of transactions which could be added to the chain, depending on agreement. The Blockchain is the series of blocks which are said to contain the official transaction history, is immutable and distributed.
 
-To repeatedly affect the network negatively, a collection of peers would need to collude with over half of the network’s power. Further, a reward is given to miners in proportion to their computational contribution, which reduces the incentive to corrupt the network and potentially reduce the value of the coin.
+That's it.
 
-Proof of Work is designed to be inherently decentralized, however there is a rather high barrier to entry for having a noticeable impact on the validation process of the network. Major hardware costs are needed to mine competitively, which leads to a more centralized distribution of power.
+The various kinds of agreement that come with different protocols are in most cases results of trade-offs and optimizations regarding decentralization, speed and accuracy.
 
-# Proof of Stake
-A more recent advancement in distributed computing consensus mechanisms, proof of stake (PoS), uses the validating peer’s economic stake in the network to calculate the weight of the peer’s vote, as seen originally with [Peercoin].
+---
 
-The validator is attributed a period to aggregate transactions to create the block, it then sends itself a specified target amount of coins in a transaction in that same block to prove stake and sign the block. The target amount of coins staked to proceed with the block creation is proportional to the total amount in transactions within the block and is adjusted based on the supply of staked coins, allowing stable block times.
+Alright, let's get started!
 
-A large part of the funds attributed to validation have to be in control of the attacker for successful falsification of the ledger, making it financially expensive to execute. Attacking is an unattractive prospect; failure yields a net cost in capital and repeating the attack after a recovered network would still require more capital. In case of success, the currency is then at risk of severe devaluation.
+## Equal Proof agreement, purely decentralized network validation repartition
+These are the original implementations, there are many kinds of agreement that occur depending on the specific protocol. 
 
-Centralization can arise when the funds are concentrated in a few stakers' wallets. There is however a significantly small barrier to entry in terms of technical skills. Many people can easily get together and stake their coins under a same node if they don't have the required minimal amount to stake by themselves.
+The most wide-spread example of Equal Proof agreement is Proof of Work (PoW), used by protocols like [Bitcoin](https://medium.com/@BlockchainDeal/bitcoin-info-sheet-d9bad20800fd) and [Ethereum](https://medium.com/@BlockchainDeal/ethereum-info-sheet-cccaa21b9a6b). It relies on block ***mining***, which is a term used to describe the computational work load necessary to achieve block validity. It is common to have pools of contributing miners to solve the increasingly difficult puzzles required for validation. Block miners are rewarded with a standardized amount of coins for every block. The difficulty adjustment ensures the reduction of inflation relative to the total amount of blocks, thus increasing the coin's value over network use (time).
 
-# Delegated Proof of Stake
-In delegated proof of stake, voters enable a fixed number of delegates to forge blocks by electing them with coins. Representatives can participate in creating valid blocks in the chain.
+The criticism regarding Proof of Work is related to the increase in energy requirements as the puzzles get harder. This leads us into the development of more energy-efficient agreement, notably Proof of Stake (PoS). It maintains block validation by ensuring that accounts wanting to mine are instead required to lock up a desired amount of coins from their balance, increasing their chance of being selected to mine a block.
 
-This is the consensus mechanism used by [Ark].
+For an example of a protocol using such agreement, see [NXT](https://nxtplatform.org/).
 
-Maintaining a distributed set of actors with specific jurisdictions, in this case evenly divided windows to forge blocks, and high trust allows the transactions in a dPoS consensus Blockchain to flow gracefully. The validation process doesn’t depend on long computational puzzles and there are only a few nodes needing to process changes to the ledger history. The forged blocks are passed to peers in the network who can then participate in broadcasting the newly created blocks.
+Proof of Stake generally makes use of Proof of Work for the initial issuance of coins from mined blocks, then gradually shifting the proof load towards stakeholders instead of miners, thus making staked coins a more valuable economic resource than mining (hardware, energy) for validation. Another popular approach for the initial coin supply issuance is to mint coins to investors through fundraising.
 
-There is little incentive for delegates to collude in maintaining falsy records. The functionality embeded in each node, even simple peers, prevents the inclusion of successive bad blocks. Forging a contravenous block would result in immediate flagging of the delegate in the network and following consequences for bad behaviour.
+## Delegated Proof agreement, concentrated network validation with economic incentives
+The problem with PoS is that in most implementations, there is a lack of cost for participating poorly in the validation process. It is trivial to simply not mine a block when selected as the next miner, thereby delaying the entire network in terms of transactions per second (TPS). This is an important factor in the development of delegated agreement, as seen in Delegated Proof of Stake (DPoS) - with [Ark](https://github.com/ArkEcosystem/docs/blob/master/general/01_WhatIsARK/01_WhatIsArk.md) - or Delegated Byzantine Fault Tolerance (DBFT) - with [NEO](http://docs.neo.org/en-us/index.html).
 
-DPoS tends to lend way to a rather centralized repartition of power in a given network. Although from a protocol standpoint there is no advantage given to any node, the project structure often benefits early adopters and people who already have a large capital reach. There are several attempts at reducing the potential weight of a voter based on its total stake held, necessiting more evenly spread out votes to maintain its influence.
+Both of these agreement structures rely on the delegation of a specific number of peers, through the use of votes with coins or other symbols, whom gain privileges when in power. For every delegation cycle, the delegates are in charge of ***forging*** blocks. A greater speed is achieved in these two implementations, considering that it is unlikely for a delegate to remain in power after acting poorly towards the other peers and the lack of significantly time-consuming computations.
 
-# Proof of Elapsed Time
-A relatively unknown consensus mechanism, Proof of Elapsed Time, relies on a dedicated piece of hardware which can ensure the safety of code computation and thus its validity.
+Mainly, the two just outlined agreement solutions differ in terms of their respective validation process. In the Proof of Stake version, the delegates are randomly selected to forge blocks on a turn basis, whereas in Delegated Byzantine Fault Tolerance the required number of delegates must validate every new block for it to be forged. The forged block is considered increasingly valid every time another block is added to the chain in DPoS. In DBFT, the block is considered valid as soon as the minimum number of delegates (typically 2/3 +|-1) agree on its validity.
 
-Hyperledger [Sawtooth] uses PoET consensus.
+There are valid points to be made for holding a more centralized structure for agreement as seen with delegation: having closer physical relationships between delegates can increase network speed in the case of DBFT and, in both cases, network participants benefit from the increased incentive for delegated peers to act properly.
 
-This mechanism leverages Intel's Software Guard Extensions (SGX) to ensure that each validator in the Blockchain network waits a random amount of time before being granted validation rights. When a participant has finished waiting for this random period, they are allowed to mine the next block. The reliability of the hardware is what determines the safety of this network. There is little benefit from having a smaller or larger number of nodes. This structure is best suited for permissioned Blockchains, because only approved validator nodes are included in the selection equation and there is often only a single trusted node in charge of attributing the waiting times to validators.
+## Network Incentive agreement, cultivation of healthy network participation habits
+Some argue that centralization is what peer-to-peer technology is made to avoid. This emphasizes the development of novel solutions for agreement which don't rely on economic resources or delegated peers - which use intrinsic protocol-level settings to guide peers; something like Federated Byzantine Agreement (FBA) and Tangle - native to [Stellar]() and [IOTA]() respectively.
 
-There would need to be a substantially faulty random number generator at the core of the issuing CPU logic to generate predictable patterns in the way validators are allowed to mine blocks. Since there is little incentive to have a faulty node that you've personally permissioned on the network, the problems that can arise are mainly due to the potential exploitability of the structure of this consensus mechanism which is similar across all its implementations.
+Agreement in FBA is reached gradually, through the use of a network of trusted peer groups, or quorums. The network itself operates on rules that can be changed through voting with the coin. A quorum is the term used to define a group of peers through which a single member is able to gather block validity information. The members themselves are not required to validate blocks, but they could be left out of being included in certain quorums which validate every block if they are found to propagate faulty ones. It is therefore in the peer's best interest to exude a standard level of truth through its trust affiliations and validation procedures.
 
-This mechanism is a respectful representation of a centralized Blockchain. Sawtooth doesn't need to be very evenly distributed because of the permissioned nature of its intended use case. If this was meant to be used in a global protocol, it probably wouldn't be used at all.
+IOTA, on the other hand, requires every new transaction to endorse two prior ones and creates a Tangle of trust rather than a Blockchain. Transactions are graded with a weight: a combination of the weight of transactions is directly or indirectly validates and the weight of transactions endorsing it.
 
-# Proof of Burn
-Proof of Burn is a unique kind of innovation that relies on the node burning Proof of Work issued coins to increase their chances at being selected for mining the next block.
+## Permissioned Ledgers, enterprise solutions and hierarchical design of distributed computing
+Many networks have emerged which offer similar functionality to the open ledgers reviewed. The permissioned distributed ledgers are orchestrated much like traditional enterprise networks which make use of clearance levels, individual-or-group specific responsibilities and identity management. These are important to understand because they are inspired by open protocols, often innovating upon them, and offer alternative means to manage distributed networks.
 
-The initial coin using this mechanism is [Slimcoin].
+The core functionality of a permissioned ledger is basically the same as any other distributed network, the main differences being how identity, rights and responsibilities are shared across peers - e.g. in many implementations, a specific peer class is responsible for creating an order of transactions in a block and to propagate it, while others verify those transactions and decide whether or not they commit them to the chain as being valid.
 
-The coins are effectively burned by sending them to a verifiably unspendable address. This exposes naturally configurable coin supply scarcity and ensures the miners are exchanging something valuable for their right to participate in the validation process.
+This kind of structure has a few spin-offs, notably: Practical, Simplified and Redundant BFT; each describing a different set of procedures to follow for the maintenance of a healthy Blockchain.
 
-The risks involved are similar to Proof of Stake. In both mechanisms there is a possibility of mining false blocks and propagating them, but gaining the right to even mine a block costs a lot of coins and an attack can be spotted by other nodes and remove from the Blockchain very reliably.
+Perhaps the most significant approach to solving efficient peer-to-peer networking from a permissioned standpoint is, in which validation occurs through the simulation of other peers' votes. The role of the protocol is ensuring peers have access to what other peers have access to, this is called gossip and is made redundant. Effectively, an entire peer's collection of information about other network members is the basis for establishing whether or not this peer will endorse a given transaction, and this can all be calculated locally (given the information about the peer is up-to-date).
 
-There is no intrinsic centralization with PoB, although there is more power in the hands of nodes with a higher effective burned coin rate, i.e. nodes with more capital tend to dominate the validation process.
+Permissioned ledgers are often marketed as having higher TPS than open ledgers, however this is mainly due to the reduction of the need to have a heavy confirmation weight from subsequent transactions or block. There is no intrinsic protocol improvement for these kinds of ledgers, they instead rely on the probability of having an army of good soldiers. This can be suitable for networks with high accountability and repercussions for bad behavior, but it fails when applied to a broader audience of individuals because the improved speed is only a result of the lack of bad acting and few peers.
 
-# Proof of Capacity
-In the Proof of Capacity consensus mechanism, nodes are required to commit storage space to being unused in exchange for the possibility of mining blocks.
+## Further implications
+As demonstrated, the many existing solutions for solving consensus in peer-to-peer networks are often individually similar and offer trade-offs when compared to one another. There are novel innovations claiming to be superior, though the natural evolution of agreement tends to flow between existing implementations and they are subject to improve or adapt then adopt each other's structural advantages when needed.
 
-Nodes interested in mining are required to plot their storage capacity with a set of randomly generated nonces which are computed passively and yield a sequence of waiting periods. At the end of every waiting period, the node has the right to mine the block if no other block has mined for that specific window. If two validators produce a block for the same window, a soft fork occurs much like in other consensus mechanisms, leaving one of the histories behind to the benefit of the other, often first, mined block.
-
-The expected decentralization granted by PoC comes from the fact that it would be relatively inefficient to purchase storage capacity only to mine blocks. Participants will make use of older hardware they have laying around or devices with unused memory storage. There is an incentive to develop more cost effective solutions for storage, but this would be a welcomed advancement.
-
-# Proof of Authority
-Mainly used as a hypothetical comparison point, Proof of Authority refers to the validator's identity being at stake as the main deterrent of bad action.
-
-Transactions can flow quickly in PoA, as there are only a subset of nodes that are required to process them and they can work in tandem. These kinds of protocols are best suited for permissioned ledgers and most likely won't be used in public blockchains due to the ease of refining this consensus. There already exist similar mechanisms that bother from the underlying logic of Authority Proof.
-
-The risks involved in a network with transactions or blocks being validated by only a small subset of nodes is mainly attached to the possibility of them being corrupted. This problem can occur voluntarily (maliciously) or due to software errors which can cause faulty behaviour or downtime in the network.
-
-On the scale of centralization, this kind of approach to consensus relies on a small set of people who are proven to have an incentive to participate positively in the stability of the network; this means there is an inherent risk of collusion due to each participant's relative proximity from a practical standpoint.
-
-# Federated Byzantine Agreement
-This consensus mechanism is used by Stellar and has been modified by a handful of other Blockchain projects in attempts to optimize it further. The underlying principle is simple: nodes each select a group of nodes as their trusted nodes. Nodes with related trust form quorums and consensus is driven on a per-quorum basis. Quorums also have quorums, which are required to be in agreement for valid consensus.
-
-# Delegated Byzantine Fault Tolerance
-This algorithm, abbreviated dBFT, is mainly used by the Blockchain giant NEO (previously Antshares). It relies on delegated book-keepers to reach a threshold and establish blocks as being valid.
-
-The voters use their coins to elect a set of nodes who are in charge of agreeing on whether or not blocks are valid. This mechanism provides a high level of finality, where once a block is validated there is no chance of it being obfuscated in the future; there are no forks. For Neo, the minimum number of book-keepers must be in accord regarding the block. This also accounts for nodes being unavailable or acting arbitrarily.
-
-This mechanism is similar to dPoS, where the main difference relies on the block validation properties. In dPoS, the nodes with larger stakes have a higher chance of being awarded the right to mine a single block, whereas in dBFT consensus the book-keepers validate the blocks together. The risks of bad behaviour leading to a faulty ledger are reduced, as the validation process isn't up to a single node at a time.
-
-This way of agreeing on the history of blocks poses centralization issues in the sense that there is an elite group of people who are responsible for maintaining the ledger. The risks of fraudulent behaviour could be high depending on the initial repartition of wealth.
-
-# Simplified Byzantine Fault Tolerance
-This is a staple of the permissioned ledger architectures prevalant in Chain -- a Blockchain commissioned by financial giants. It uses a unique block generator, also called an orderer, to create blocks and a set of signers, also called endorsers, to vote for its validity.
-
-The generator is in most cases a single trusted node who gets sent transactions and periodically batches them into a block. The newly created block is submitted via peer-to-peer networking to the block signers who are in charge of validating the block's transactions and approving it with their signature.
-
-The inherent risks brought forth by this model are very simple. Namely, if the system doesn't use a cryptocurrency to mediate transactions sent, like Ethereum's Ether for gas, participants in the network could flood the generator with false transactions and a throughput bottlneck would be reached. This is why a solid client-server structure is very important for a Simplified Byzantine Fault Tolerant consensus-powered Blockchain.
-
-Centraliztion is not a concern with permissioned ledgers, as it is  often a key component in the system's integrity and maintainability. This feature allows for a quick and verifiable solution to Blockchains for a closed group of trusting entities. This mechanism is not suited for an open ledger, as an increase in the transactions submitted is fatal to a single generator node and a break point in this kind of system.
-
-# Redundant Byzantine Fault Tolerance
-RBFT is not a very popular mechanism when it comes to currently active and maintained Blockchain protocols. It is a modified version of the Simplified Byzantine Fault Tolerance model, where a multitude of nodes perform ordering tasks and the orderer-in-effect is subject to losing his role at the benefit of another node also running ordering operations.
-
-Hyperledger Indy makes use of Redundancy in a BFT consensus mechanism.
-
-# Practical Byzantine Fault Tolerance
-Closely-related to SBFT, PBFT follows a similar structure of nodes. It includes an orderer, committers and super-committers (endorsers).
-
-This mechanism is primarily used by Hyperledger Fabric.
-
-In Practical Byzantine Fault Tolerance, the client has access to sending his proposed transaction to a collection of endorsers. The endorsers simulate the transaction and, if it passes their tests, send it back alongside their signature for approval. Once the client receives a defined amount of signatures for his transaction, he sends the transaction and its signatures to the orderer, who takes care of creating blocks periodically; the orderer doesn't compute transactions or alter the ledger state. Once a block is created by the orderer, it is shared with committing peers, who are in charge of making sure that the changes suggested by the proposed transaction are still valid regarding the state of the Blockchain, as simulated. Transactions that fail the verification from the committing peers still gets included in the Blockchain, but is marked as invalid. The client knows the transaction was successful when it receives notification from the committers.
-
-Similarly to other Byzantine Fault Tolerant models, practical BFT assumes there aren't more than a third of the nodes in the network which are actively trying to propagate falsehood among the Blockchain.
-
-# Tangle
-
-# Yet Another Consensus
-
-[ark]: https://ark.io/Whitepaper.pdf 'Ark whitepaper'
-[bitcoin]: https://bitcoin.org/bitcoin.pdf 'Bitcoin whitepaper'
-[blackcoin]: https://blackcoin.co/blackcoin-pos-protocol-v2-whitepaper.pdf 'Blackcoin whitepaper'
-[peercoin]: https://peercoin.net/whitepaper 'Peercoin whitepaper'
-[sawtooth]: https://sawtooth.hyperledger.org/docs/core/releases/1.0/introduction.html 'Hyperledger Sawtooth introduction'
-[slimcoin]: https://github.com/slimcoin-project/slimcoin-project.github.io/raw/master/whitepaperSLM.pdf 'Slimcoin whitepaper'
+Depending on the specific case, a particular option is more suitable than another. In a scenario where the goal changes frequently, a network equipped with the functionality to fundamentally alter its underlying agreement mechanism is likely to be a long-lasting solution.
