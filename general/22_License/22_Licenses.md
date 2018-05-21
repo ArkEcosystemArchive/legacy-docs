@@ -1,5 +1,5 @@
 # Licenses used in the ARK ecosystem
-![License Overview](./assets/img/header.png)
+![License Overview](../../assets/img/99f195e8-cc47-4119-bf52-1448a0604187.png)
 
 
 Everything that the ARK team produces or is in the ARK ecosystem falls under what is called the MIT License and reads as follows

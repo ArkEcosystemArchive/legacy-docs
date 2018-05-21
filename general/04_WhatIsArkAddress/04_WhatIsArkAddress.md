@@ -18,7 +18,7 @@ The passphrase is a written in simple readable text. It often consists of twelve
 
 **From a passphrase to private and public keys**
 
-![Diagram 001](./assets/img/arkDiagram04-001.png)
+![Diagram 001](../../assets/img/arkDiagram04-001.png)
 
 ## ARK address
 
@@ -35,7 +35,7 @@ The ARK address is like a bank account where only the owner of the private key c
 
 **From a public key to an ARK address**
 
-![Diagram 002](./assets/img/arkDiagram04-002.png)
+![Diagram 002](../../assets/img/arkDiagram04-002.png)
 
 A modifier is a byte used to customize the address. It is useful to differentiate networks&nbsp;:
  + On ARK mainnet modifier = `0x17` so ARK address starts with `A`
