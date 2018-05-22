@@ -1,38 +1,16 @@
-Blockchain protocols can be confusing at first. This quick guide shows the basics of how communication occurs in a peer-to-peer network using a forged Blockchain to record transaction history.
+# Blockchain Communication
+To maintain a healthy peer-to-peer network like those empowered by distributed Blockchains, it is important to have a secure and fault tolerant network communication implementation.
 
-### Requirements
-First and foremost, one needs an account to send and receive transactions on the network. An account includes a private key and a public key. The private key is used to sign transactions from the account, while a public key is the address to which others send funds to the account.
-![Account][account]
+On a broad level, there can be many different kinds of users interfacing with the network; some will do so via third-parties and won't have direct access to peer-to-peer communication, while others will actively participate in various network tasks - like transaction and block propagation or general validation. Therefore, many peers will be required to be connected through internet ports and utilize clearly defined protocols to execute necessary tasks.
 
-Secondly, an appropriate compatible wallet is required to perform network functions like sending the transaction to a peer, who can then validate and broadcast it across other members of the network. 
+The principal function of a third-party client is often to manage a user's account actions. This requires the service employed by the user to have access to an updated version of the Blockchain to promote reliable operability. For example, if a web form is used on the third-party client to create a transaction, that client then becomes responsible of sharing this transaction with other peers - typically by forwarding it to its Blockchain peer server(s) - for it to be added to a block and validated.
 
-The network takes care of bringing the transaction to a pool of transactions from which nodes forge blocks. Once a block is forged, it is broadcast across the network similarly to a transaction, but this time it gets added to every peer's record of the Blockchain.
+Once a transaction is created and propagated, the consensus mechanism used determines the further steps that should be taken to properly follow the network (Blockchain) protocol. There are many variations for creating blocks and some implementations even disregard blocks entirely by using transactions themselves as the validated bases for the ledger.
 
-This type of architecture allows anyone in the network to download a copy of transactions and create elegant interfaces to browse the history of the network's states or changes, this way even people with no accounts can make use of the Blockchain's underlying data.
+In a more centralized ledger, where the validation process is executed by a smaller proportion of peers, the transaction must initially be routed efficiently to the responsible nodes. Sometimes there is a delegated node that a particular peer is required to share transactions they encounter with. In a decentralized structure, the speed at which a transaction has a chance of being validated (added to a block and further confirmed with future blocks in the sequence) is dependent on its availability to validating peers like miners.
 
-### Writing
-To begin sending a transaction, one enters the recipient public key and amount of funds to send in the application.
+In any case, the initial transaction data is shared through peer-to-peer protocols to the nodes responsible of validation and block creation, then the block goes through the same peer-to-peer protocol to be propagated as the newest one in the Blockchain and confirmed to be valid by other peers' acceptance of it.
 
-### Signing
-A message, in this case a transaction, needs to be cryptographically confirmed as authentically written by the owner of the private key associated with the account.
+The number of steps often varies and there can be many sub-groups of confirmation queries executed between peers, validating peers, clients and users to complete the cycles required to appropriately use the Blockchain.
 
-### Sending
-A connection to peers is required to propagate the signed transaction through the network. Peers are continuously querying each other and sending new data to one another through internet protocol ports.
-
-### Validating
-A peer's role, at this stage, is to validate that the transaction doesn't contravene with the current state of affairs. When a peer faces different versions of a transaction, the one that was first received is determined valid by the peer.
-
-### Broadcasting
-Validated transactions get passed from peer to peer through their mutual connections. The broadcasting of the transaction enables the global transaction pool to grow steadily.
-
-### Forging
-A responsible node takes transactions straight from the pool that was built from peer to peer broadcasting. Always respecting the consensus mechanism, transactions are added to an immutable block which the node signs into existence.
-
-### Blocked
-The block is a collection of transactions which travels through the network much like a transaction. The block containing the original transaction and many others is added to every peer's Blockchain gradually through networking.
-
-* * *
-
-In many Blockchain-based protocols, the transaction can be considered complete when the block that contains it has been transmitted to enough peers and is followed by other agreeable blocks.
-
-[account]: ./assets/png/account.png
+In short, the communication necessary in Blockchain networks is handled by many levels of networking layers which are each tailored to a specific need. This enables developers and users to interact with familiar interfaces and reduces learning overhead. The actual underlying data exchanges in Blockchain communication vary depending on the particular intricacies of the given Blockchain.
