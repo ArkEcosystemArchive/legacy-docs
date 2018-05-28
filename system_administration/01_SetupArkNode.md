@@ -107,19 +107,16 @@ By default this is a `superuser`.
 usermod -a -G sudo username
 ```
 
-Type `exit` and press enter. This will disconnect you from your server.
-
 ## Installing your ARK Node
 We're now ready to begin installing ARK. The initial install may take awhile
 and at times appear to not be doing anything. Please have patience and let the process
 finish.
 
-### Reconnect to Your Server
-Next we need to reconnect to our server using the new user we just created.
-In our example we created a user with the name `ark`. So we would login as follows.
+### Switch to the ARK user
+While installing ARK, we should use the ARK user that we created above. To switch to it, run
 
 ```
-ssh ark@ipaddress
+sudo su - ark
 ```
 ### Download ARK Commander
 
