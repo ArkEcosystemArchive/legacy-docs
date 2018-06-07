@@ -16,4 +16,4 @@ The number of steps often varies and there can be many sub-groups of confirmatio
 In short, the communication necessary in Blockchain networks is handled by many levels of networking layers which are each tailored to a specific need. This enables developers and users to interact with familiar interfaces and reduces learning overhead. The actual underlying data exchanges in Blockchain communication vary depending on the particular intricacies of the given Blockchain.
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

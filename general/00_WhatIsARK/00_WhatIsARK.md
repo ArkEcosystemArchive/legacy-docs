@@ -18,4 +18,4 @@ The fast transaction times, ability to scale without limits, and an ecosystem of
 ## Vision 
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

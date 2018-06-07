@@ -112,4 +112,4 @@ If you have any questions regarding how much you will receive from voting for a 
 Your Ark Mobile Wallet is now ready for use! That's all it takes to install the Ark wallet. If you have any questions regarding voting and delegates, take a look at Ark's [FAQ](https://blog.ark.io/ark-frequently-asked-questions-faq-bcb90a0537cc)!
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

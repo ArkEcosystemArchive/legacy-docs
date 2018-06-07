@@ -66,5 +66,4 @@ Depending on the specific case, a particular option is more suitable than anothe
 
 
 ----------------
-[contributor information](./assets/info)
-
+[contributor information](./assets/info).md)

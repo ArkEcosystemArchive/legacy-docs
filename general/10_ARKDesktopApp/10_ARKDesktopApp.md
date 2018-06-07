@@ -505,4 +505,4 @@ Slack name: cam
 GitHub name: cambo666
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

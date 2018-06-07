@@ -100,4 +100,4 @@ Encoded Listener Nodes (ECL) operate by containing certain amounts of the coins/
 
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

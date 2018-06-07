@@ -8,3 +8,7 @@ Everything that the ARK team produces or is in the ARK ecosystem falls under wha
 
 
 This license originated at the Massachusetts Institute of Technology (MIT) and is what is called a permissive free software license.  This allows for proprietary software to be distributed open source to the public as long as the original MIT license is included along with the code in all distributable copies.  The ARK MIT license only requires the original MIT license that includes attribution to the ARK team be distributed when proprietary software is used.
+
+----------------
+[contributor information](./assets/info.md)
+

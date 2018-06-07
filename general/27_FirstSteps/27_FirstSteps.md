@@ -162,4 +162,4 @@ Once you are given access to the Slack channel you can request DARK from one of 
 [ARK.io FORUM](https://forum.ark.io/)
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

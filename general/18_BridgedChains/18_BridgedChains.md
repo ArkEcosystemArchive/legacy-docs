@@ -1,2 +1,2 @@
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

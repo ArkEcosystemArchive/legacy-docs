@@ -225,4 +225,4 @@ more prevalent. Defending against DDOS and other various attacks is extremely
 important in securing the network.
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

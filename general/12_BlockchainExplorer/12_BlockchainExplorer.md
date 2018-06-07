@@ -53,6 +53,7 @@ Across the top of the page you will also see a list of information about the cur
 -    **Home:** This will take you back to the explorer home page 
 -    **Top Wallets:** This will show you the wallets, descending from high to low, that hold the most ARK.  From there you will be able to see their numerical ranking (in relation to total balance), wallet address, balance and the percentage of total supply they control.  Currently the ARK development team holds the largest percentage of ARK, which is used to pay for projects and developers to improve network functionality and other projects that bring value to the ARK community.
 -    **Delegate Monitor:** This shows the current list of delegates and their votes on the network.  ARK is run by its community who vote for delegates.  Delegates, among other things, vote on their behalf in community related matters and most importantly forge (verify) blocks.  The top 51 delegates perform these functions for the network and rely on community support to maintain their position within the network.  For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](http://ark.io/)
+![Top Wallets](./assets/img/TOPWALLETS.png)
 ![Delegate Monitor Overview](./assets/img/DELEGATEMONITOROVERVIEW.png)
 
 The delegate monitor shows two tabs, **"Active"** and **"Standby"**.
@@ -91,4 +92,4 @@ it is important to note that there are few minor differences between the desktop
 With this information you can now take advantage of the full breadth of functionality contained within the ARK explorer.  While this may seem like a simple tool, this is a window into why cryptocurrencies are so powerful.  Block explorers help individuals like yourself to see that the blockchain is a permanent record of transactions so that trust can be placed in a trustless system. 
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

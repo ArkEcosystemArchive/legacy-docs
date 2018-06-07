@@ -108,4 +108,4 @@ Choosing 12 words randomly from the [2048 words](https://github.com/bitcoin/bips
 1. WebSite GlobalSign, https://www.globalsign.com/en/ssl-information-center/what-is-public-key-cryptography/
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

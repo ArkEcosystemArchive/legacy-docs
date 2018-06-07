@@ -449,4 +449,4 @@ remotely using a secret knocking technique as well as sign in using cryptographi
 keys.
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

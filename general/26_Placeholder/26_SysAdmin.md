@@ -1,2 +1,0 @@
-----------------
-[contributor information](./assets/info)

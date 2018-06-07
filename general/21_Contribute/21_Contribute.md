@@ -202,4 +202,4 @@ If you have any doubt or questions, talk about it in the [Slack](https://ark.io/
 Welcome to the Ark Ecosystem, and have fun contributing 😀
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)

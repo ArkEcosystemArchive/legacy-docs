@@ -127,4 +127,4 @@ A voter holds the power to elect a delegate with his account.
 A voter decides where his vote(s) are placed for every delegation cycle and can change them often. Placing a vote is like making a transaction, though it costs a higher fee and has different network implications than a simple value transfer. The voter is incentivized to take a strong position in the placement of its vote.
 
 ----------------
-[contributor information](./assets/info)
+[contributor information](./assets/info.md)
