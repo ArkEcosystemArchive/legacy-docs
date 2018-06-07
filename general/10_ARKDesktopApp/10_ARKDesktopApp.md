@@ -102,7 +102,7 @@ Your Ark Wallet stores your Ark for you. In order to interface with Ark you need
 
 4. You will be presented with a 'Confirm Ark Withdrawal' page. Enter your Ark Address to your wallet (simply click on the address in your Ark Desktop Application, within your wallet) and paste. Then, enter the amount of Ark you'd like to send to your Ark Wallet. Then select "Withdrawal", and "Confirm" the transaction.
 
-<center>![Imgur](https://i.imgur.com/vqYrwRJ.png)</center>
+[Imgur](https://i.imgur.com/vqYrwRJ.png)
 
 **Note:** Bittrex, like many exchanges, will send you an email that you need to open and select a link in to confirm the transaction. This is a typical security measure most exchanges perform. 
 
@@ -122,7 +122,7 @@ Now that your have a balance of Ark in your wallet, you may want to send it out.
 
 2. Now you are in the send box. The 1st line you see will be the Ark Address line you are *sending* your Ark to. To the left of the line is a QR Scan function. If you click it (and have a web cam hooked up to your computer) you will be able to scan the QR code of the Ark Address you wish to send to and the address will automatically propagate to the Ark Address line. Otherwise you will simply copy and paste the address you're sending to.
 
-<center>![Imgur](https://i.imgur.com/ozzPeL6.png)</center>
+![Imgur](https://i.imgur.com/ozzPeL6.png)
 
 3. The next line is the amount of Ark you wish to send. If you'd like to send you're entire balance select the "SEND ALL" option and your entire balance will propagate to that line.
 
@@ -134,7 +134,7 @@ Now that your have a balance of Ark in your wallet, you may want to send it out.
 
 7. You'll now see a Transaction box, confirm all information is correct and select "SEND NOW".
 
-<center>![Imgur](https://i.imgur.com/k9l1oKy.png)</center>
+![Imgur](https://i.imgur.com/k9l1oKy.png)
 
 8. All done! Your Ark is on its way to its destination address!
 
@@ -156,11 +156,11 @@ Each delegate is unique and brings different skill sets to the Ark Ecosystem, so
 
 4. You will now see a list of the top 51 delegates that are currently forging Ark. (*learn more about what this means in FAQ*) 
 
-<center>![Imgur](https://i.imgur.com/AOWHMvV.png)</center>
+![Imgur](https://i.imgur.com/AOWHMvV.png)
 
 5. For the sake of example we are selecting delegate "arkland". Input your passphrase on the next line and select "NEXT". 
 
-<center>![Imgur](https://i.imgur.com/mYmxxGc.png)</center>
+![Imgur](https://i.imgur.com/mYmxxGc.png)
 
 6. In the next window you will be prompted to send Ark in order to vote, this is a voting fee required that may change over time. When you're ready to vote for your selected delegate select "SEND NOW".
 
@@ -170,7 +170,7 @@ Each delegate is unique and brings different skill sets to the Ark Ecosystem, so
 
 ___
 
-<center>![Imgur](https://i.imgur.com/iANRMHt.png)</center>
+![Imgur](https://i.imgur.com/iANRMHt.png)
 
 ___
 
@@ -201,7 +201,7 @@ You may change the background or theme in your ArkClient to fit your personal st
 
 1. From the homescreen or within your wallet the ribbon along the top of the client remains stationary. There is a gear icon for settings. Select it. 
 
-<center>![Imgur](https://i.imgur.com/oknZKq1.png)</center>
+![Imgur](https://i.imgur.com/oknZKq1.png)
 
 2. A dropdown list will appear, you will see "APPEARANCE" at the bottom. Select it.
 
@@ -213,7 +213,7 @@ You may also choose to set a background picture from your personal selection of 
 
 1. From the homescreen or within your wallet the ribbon along the top of the client remains stationary. There is a gear icon for settings. Select it. 
 
-<center>![Imgur](https://i.imgur.com/oknZKq1.png)</center>
+![Imgur](https://i.imgur.com/oknZKq1.png)
 
 2. A dropdown list will appear, you will see "APPEARANCE" at the bottom. Select it.
 
@@ -236,7 +236,7 @@ Instead of your Ark Wallet Address displaying on the homescreen of the ArkClient
 
 3. You will notice a new ribbon of options appear at the bottom of your ArkClient. Select the "LABEL" option. 
 
-<center>![Imgur](https://i.imgur.com/CDmJYvd.png)</center>
+![Imgur](https://i.imgur.com/CDmJYvd.png)
 
 4. A new box will appear titled "Label". You will see your current Ark Address prefilled on the line. Overwrite it with what you wish to name your wallet. When you're done, select "SET". (*don't worry, this doesn't 'delete' your Ark Address.*)
 
@@ -244,7 +244,7 @@ Instead of your Ark Wallet Address displaying on the homescreen of the ArkClient
 
 **Note:** This new label can only be seen by you in your ArkClient.
 
-<center>![Imgur](https://i.imgur.com/5LwiPOR.png)</center>
+![Imgur](https://i.imgur.com/5LwiPOR.png)
 
 6. If you navigate to the ArkClient homescreen (by selecting "Ark Client" in the upper left hand corner) you will also see the newly labeled wallet there. You have completed Renaming your Ark Wallet.
 
@@ -262,7 +262,7 @@ You can add a second passphrase to your Ark Wallet for an added layer of securit
 
 2. You will notice a new ribbon of options appear at the bottom of your ArkClient. Select the "SECOND PASSPHRASE" option. 
 
-<center>![Imgur](https://i.imgur.com/elDLZXw.png)</center>
+![Imgur](https://i.imgur.com/elDLZXw.png)
 
 3. A warning box will appear advising you it will cost you 5 Ark to add a second passphrase. Select "CONTINUE".
 
@@ -270,7 +270,7 @@ You can add a second passphrase to your Ark Wallet for an added layer of securit
 
 5. The next window titled "Create Second Passphrase" will ask for your first passphrase and your new second passphrase. Input them and select "CREATE". 
 
-<center>![Imgur](https://i.imgur.com/xtefgQh.png)</center>
+![Imgur](https://i.imgur.com/xtefgQh.png)
 
 6. The next window will provide transaction details. To add the second passphrase select "SEND 5 ARK NOW". 
 
@@ -291,7 +291,7 @@ You may want to remove a wallet from the ArkClient if you have multiple wallets 
 
 2. You will notice a new ribbon of options appear at the bottom of your ArkClient. Select the "REMOVE" option. 
 
-<center>![Imgur](https://i.imgur.com/I3ZhmLN.png)</center>
+![Imgur](https://i.imgur.com/I3ZhmLN.png)
 
 3. A box will appear titled "Remove Account (your-ark-address)". Select "REMOVE ACCOUNT". 
 
@@ -340,11 +340,11 @@ With the ArkClient you can timestamp a file on the Ark Blockchain. ArkClient wil
 
 2. You will notice a new ribbon of options appear at the bottom of your ArkClient. Select the "TIMESTAMP DOCUMENT" option. 
 
-<center>![Imgur](https://i.imgur.com/0Ijop1i.png)</center>
+![Imgur](https://i.imgur.com/0Ijop1i.png)
 
 3. A new box will appear titled "Timestamp Document On (wallet address)". Select "OPEN FILE" to be hashed and timestamped and select your file. Input your passphrase and select "NEXT". 
 
-<center>![Imgur](https://i.imgur.com/9DG3y0i.png)</center>
+![Imgur](https://i.imgur.com/9DG3y0i.png)
 
 4. On the next screen transaction details will be provided. Select "SEND NOW" to complete. 
 
@@ -364,7 +364,7 @@ ArkClient is automatically set to USD. If you want the ArkClient to display Arks
 
 1. From the homescreen or within your wallet the ribbon along the top of the client remains stationary. There is a gear icon for settings. Select it. 
 
-<center>![Imgur](https://i.imgur.com/oknZKq1.png)</center>
+![Imgur](https://i.imgur.com/oknZKq1.png)
 
 2. A dropdown list will appear, you will see "CURRENCY" and a dropdown to the right of it defaulted on "USD". 
 
@@ -380,7 +380,7 @@ You can view the current price each Ark is trading for on your homescreen, it wi
 
 The price is retrieved from <https://coinmarketcap.com/>
 
-<center>![Imgur](https://i.imgur.com/Jjw61rl.png)</center>
+![Imgur](https://i.imgur.com/Jjw61rl.png)
 
 ___
 
@@ -390,7 +390,7 @@ ArkClient is automatically set to English as the default language. You can chang
 
 1. From the homescreen or within your wallet the ribbon along the top of the client remains stationary. There is a gear icon for settings. Select it. 
 
-<center>![Imgur](https://i.imgur.com/oknZKq1.png)</center>
+![Imgur](https://i.imgur.com/oknZKq1.png)
 
 2. A dropdown list will appear, you will see "LANGUAGE" and a dropdown to the right of it defaulted on "ENGLISH". 
 
@@ -412,7 +412,7 @@ You may want to Add Contacts within your ArkClient to easily identify owners of 
 
 5. You will now see that contact added on the left hand side of the ArkClient. If you hover your cursor over the "i" (information) icon within that contact you can see transactions between you and that wallet/contact. You have completed Add Contacts.
 
-<center>![Imgur](https://i.imgur.com/1d68aU8.png)</center>
+![Imgur](https://i.imgur.com/1d68aU8.png)
 
 ___
 
