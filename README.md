@@ -1,4 +1,4 @@
-
+** pssst! if you've already contributed, please fill out the info file under the folder with your project -- names can be weird just refer to the numbers as seen on the project. **
 ![ARK Documentations](https://github.com/ArkEcosystem/docs/blob/master/assets/img/arkDocumentation.png)
 
 ## How to Contribute to ARK Documentation
