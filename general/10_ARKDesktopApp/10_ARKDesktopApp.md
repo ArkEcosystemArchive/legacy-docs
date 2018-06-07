@@ -1,4 +1,4 @@
-<center>![Imgur](https://i.imgur.com/kbcljUW.png)</center>
+![Imgur](https://i.imgur.com/kbcljUW.png)
 
 # <center>**How to use ARK Desktop Application**</center>
 
