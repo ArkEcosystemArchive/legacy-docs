@@ -152,6 +152,15 @@ To get your local copy of your repository, you have to run the Git clone command
     git clone https://github.com/<your-username>/<your-repo>.git
     
    This will get you the files from the repository in a local folder.
+   
+### Have a look at ARK Development Guidelines
+
+We've written [development guidelines](https://github.com/ArkEcosystem/ARK-Development-Guidelines/) with some of our recommendations. Guidelines are not an absolute requirement or need to be enforced by tools, but they are recommendations based on what we have been doing in our projects.
+
+**Current style guides:**
+
+- [JavaScript](https://github.com/ArkEcosystem/ARK-Development-Guidelines/blob/master/JavaScript/README.md)
+- [Python](https://github.com/ArkEcosystem/ARK-Development-Guidelines/blob/master/Python/README.md)
 
 ### Work locally and push changes to your repo
 
