@@ -97,7 +97,7 @@ If everything was setup successfully you should be reconnected to your ARK node.
 #### What is Fail2Ban
 The basic idea behind fail2ban is to monitor the logs of common services to spot patterns in authentication failures.
 
-#### Installation 
+#### Installation
 Install Fail2Ban and create local configuration file.
 
 ```
@@ -278,12 +278,12 @@ Status: active
 
 To                         Action      From
 --                         ------      ----
-2086/tcp                   ALLOW       Anywhere                  
-4002/tcp                   ALLOW       Anywhere                  
-55555/tcp                  ALLOW       Anywhere                  
-2086/tcp (v6)              ALLOW       Anywhere (v6)             
-4002/tcp (v6)              ALLOW       Anywhere (v6)             
-55555/tcp (v6)             ALLOW       Anywhere (v6)   
+2086/tcp                   ALLOW       Anywhere
+4002/tcp                   ALLOW       Anywhere
+55555/tcp                  ALLOW       Anywhere
+2086/tcp (v6)              ALLOW       Anywhere (v6)
+4002/tcp (v6)              ALLOW       Anywhere (v6)
+55555/tcp (v6)             ALLOW       Anywhere (v6)
 ```
 
 ##### Close SSH Port
@@ -373,7 +373,7 @@ sudo apt-get install nginx
 
 #### Edit Nginx Config
 ```
-sudo nano /etc/nginx/enabled-sites/default
+sudo nano /etc/nginx/sites-available/default
 ```
 
 Paste in the following config, making sure you edit the `server_name` and `proxy_pass`. You may need to change `ssl_certificate` and `ssl_certificate_key`
@@ -428,7 +428,7 @@ cd /etc/nginx/ssl
 touch ark.crt ark.key
 ```
 
-Copy the `PRIVATE KEY` to the file `ark.key` and the `CERTIFICATE` to `ark.crt`.
+Copy the `CERTIFICATE` to `ark.crt` and the `PRIVATE KEY` to the file `ark.key`.
 
 ##### Start Nginx
 ```
