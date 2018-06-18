@@ -118,6 +118,17 @@ While installing ARK, we should use the ARK user that we created above. To switc
 ```
 sudo su - ark
 ```
+
+### Update the system
+To make sure that the Commander works on the first run we should update ubuntu to the latest available updates.
+Execute the commands one after the other.
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+```
+
 ### Download ARK Commander
 
 ```
