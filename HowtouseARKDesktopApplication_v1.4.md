@@ -532,7 +532,7 @@ Slack name: cam
 
 GitHub name: cambo666
 
-Email: cmage1018@yahoo.com
+Email: cam.ark.eco@gmail.com
 
 
 
