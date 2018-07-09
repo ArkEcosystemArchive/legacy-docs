@@ -38,12 +38,12 @@ When you arrive on this page you will see multiple options for the ArkClient. Se
 	* [Remove wallet from ArkClient](#removewallet)
 	* [Import Account](#import)
 	* [Timestamp a File](#timestamp)
-	* [Purchase Ark Within Wallet] (#purchaseark)
+	* [Purchase Ark Within Wallet](#purchaseark)
 	* Different settings within Ark Client/Desktop Application
 		* [Currency](#currency)
 			* Price
 		* [Language](#lang)
-		* [Passphrase Language] (#passphraselanguage)
+		* [Passphrase Language](#passphraselanguage)
 	* [Add Contacts](#contacts) 	
 * **[Frequently Asked Questions](#FAQ)**
 * **[Appendix/Useful Links](#appen)**
